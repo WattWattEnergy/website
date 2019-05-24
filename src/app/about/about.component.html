@@ -1,0 +1,183 @@
+<div class="ea-card" unset>
+  <div class="ea-card-content">
+    <p style="text-align:center;padding-top:50px;">
+      As a customer focused company, WattWatt consists of people that are passionate about advancing solar generation through low
+      cost financing.
+      <br>Our team has extensive experience with the issues our customers face and knowledge on how to solve them.
+    </p>
+  </div>
+</div>
+
+
+<div class="ea-card" unset>
+  <div style="text-align:center;">
+    <h1>About Us</h1>
+    <div style="--ea-card-content-grid:repeat(3,1fr);grid-gap:2rem;">
+      <h2>
+        Meet our team!
+      </h2>
+
+      <div>
+        <img src="../../assets/images/Vincenz.png" style="width:15%;height:15%;">
+        <p>Vincenz Buhler</p>
+        <p>Founder, Chief Executive Officer</p>
+        <a href="https://www.linkedin.com/in/vincenz/">
+          <img src=".../assets/images/linkedin.png" alt="">
+        </a>
+      </div>
+
+      <div>
+          <img src="../../assets/images/Rafael.png" style="width:15%;height:15%;">
+          <p>Rafael Silva Serrano</p>
+          <p>Chief Liquidity Officer</p>
+          <a href="https://www.linkedin.com/in/rafael-silva-serrano-00233953/">
+            <img src=".../assets/images/linkedin.png" alt="">
+          </a>
+  
+        </div>
+
+      <div>
+        <img src="../../assets/images/Eddie.png" style="width:15%;height:15%;">
+        <p>Eddie Lee</p>
+        <p>Chief Financial Officer</p>
+        <a href="https://www.linkedin.com/in/edwardswlee/">
+          <img src=".../assets/images/linkedin.png" alt="">
+        </a>
+
+      </div>
+    </div>
+    <div>
+      <h2>
+        Advisors
+      </h2>
+      <div style="--ea-card-content-grid:repeat(3,1fr);grid-gap:2rem;">
+        <img src="../../assets/images/Ameen.png" style="width:15%;height:15%;">
+        <p>Ameen Soleimani</p>
+        <p>Founder, Chief Executive Officer at Spankchain</p>
+        <a href="https://www.linkedin.com/in/ameen-soleimani-97181942">
+          <img src=".../assets/images/linkedin.png" alt="">
+        </a>
+      </div>
+      <div>
+        <img src="../../assets/images/Jarrett.png" style="width:15%;height:15%;">
+        <p>Jarrett 'Jarrito' Leinweber</p>
+        <p>Cencus Consulting</p>
+        <a href="https://www.linkedin.com/in/jleinweber1/">
+          <img src=".../assets/images/linkedin.png" alt="">
+        </a>
+
+        <div>
+          <img src="../../assets/images/Shannon.png" style="width:15%;height:15%;">
+          <p>Shannon Wu</p>
+          <p>Sorcerers, Consultant at MakerDAO and Bloom</p>
+          <a href="https://www.linkedin.com/in/shannonwu/">
+            <img src=".../assets/images/linkedin.png" alt="">
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<script src="/js/web3.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<p>Current count: <span id="count">??</span></p>
+<button id="getcount">Get current count</button>
+<button id="increment">Increment count</button>
+<div id="log"></div>
+
+<script>
+  function log(message) {
+    $('#log').append($('<p>').text(message));
+    $('#log').scrollTop($('#log').prop('scrollHeight'));
+  }
+
+  function error(message) {
+    $('#log').append($('<p>').addClass('dark-red').text(message));
+    $('#log').scrollTop($('#log').prop('scrollHeight'));
+  }
+
+  function waitForReceipt(hash, cb) {
+    web3.eth.getTransactionReceipt(hash, function (err, receipt) {
+      if (err) {
+        error(err);
+      }
+
+      if (receipt !== null) {
+        // Transaction went through
+        if (cb) {
+          cb(receipt);
+        }
+      } else {
+        // Try again in 1 second
+        window.setTimeout(function () {
+          waitForReceipt(hash, cb);
+        }, 1000);
+      }
+    });
+  }
+
+  var address = "0xf15090c01bec877a122b567e5552504e5fd22b79";
+  var abi = [{"constant":true,"inputs":[],"name":"getCount","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"increment","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"inputs":[{"name":"_count","type":"uint256"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"}];
+
+  $(function () {
+    var counter;
+
+    $('#getcount').click(function (e) {
+      e.preventDefault();
+
+      log("Calling getCount...");
+
+      counter.getCount.call(function (err, result) {
+        if (err) {
+          return error(err);
+        } else {
+          log("getCount call executed successfully.");
+        }
+
+        // The return value is a BigNumber object
+        $('#count').text(result.toString());
+      });
+    });
+
+    $('#increment').click(function (e) {
+      e.preventDefault();
+
+      if(web3.eth.defaultAccount === undefined) {
+        return error("No accounts found. If you're using MetaMask, " +
+                     "please unlock it first and reload the page.");
+      }
+
+      log("Calling increment...");
+
+      counter.increment.sendTransaction(function (err, hash) {
+        if (err) {
+          return error(err);
+        }
+
+        waitForReceipt(hash, function () {
+          log("Transaction succeeded. " +
+              "Call getCount again to see the latest count.");
+        });
+      });
+    });
+
+    if (typeof(web3) === "undefined") {
+      error("Unable to find web3. " +
+            "Please run MetaMask (or something else that injects web3).");
+    } else {
+      log("Found injected web3.");
+      web3 = new Web3(web3.currentProvider);
+      if (web3.version.network != 3) {
+        error("Wrong network detected. Please switch to the Ropsten test network.");
+      } else {
+        log("Connected to the Ropsten test network.");
+        counter = web3.eth.contract(abi).at(address);
+        $('#getcount').click();
+      }
+    }
+  });
+</script>
+-->

@@ -1,0 +1,118 @@
+// div {
+//     text-align:center;
+//     }
+    // ul {
+    // padding:0;
+    // margin:0;
+    // display: inline-block;
+    // text-align:left;
+    // width: 90px;
+    // }
+
+.title {
+    margin: 0 10rem 0 10rem;
+}
+
+ea-tabs {
+    width:1000px;
+    text-align:center;
+    overflow:auto;
+    // padding: 0 0.95em 0 0.95em;
+    padding-left: 0.95em;
+    padding-right: 0.95em;
+}
+
+#top {
+    margin: 0 2rem 0 2rem;
+}
+
+#ea-tab {
+    margin: 0.1em !important;
+}
+
+    .glossary {
+    border: 2px solid #305b8a;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    width: 100%;
+    height: 400px;
+    background-color: rgba(128, 128, 128, 0.201);
+    }
+
+    .info {
+    // background-color: rgb(203, 194, 194);
+    margin-bottom: 50px;
+    // border: 1px solid blue;
+    padding: auto;
+    text-align: justify;
+    }
+
+    .llist {
+        list-style-type: square;
+        margin-top: 2rem;
+    }
+
+    .contractlist {
+        // text-align: left;
+    }
+
+    .smartlist {
+        text-align: left;
+    }
+
+    ul li {
+    // padding-left:0px;
+    // text-align:center;
+    text-indent: 1rem;
+    list-style-type: square;
+    display: block;
+    margin: 1rem 0 1rem 0;
+    }
+    ul li p {
+        padding-right:24px;
+        list-style:none;
+        margin-bottom:4px;
+        // text-align:left;
+        text-indent: 0px;
+        text-align:left;
+        
+    }
+
+    .floatleft {
+        float:left;
+        margin-top:80px;
+    }
+
+    .titles {
+        margin-bottom:5%;
+    }
+
+    img {
+        width: 25%;
+        height: 25%;
+        border-radius: 8px;
+    }
+
+    .sections {
+        margin-top: 3rem;
+    }
+
+    #ether {
+        width:20%;
+        height:20%;
+    }
+    // li:before{
+    //     padding-right: 4px;
+    //     content: url("../images/mod-bullet-green.png");
+    // }
+
+    app-education {
+      display: flex;
+      justify-content: center;
+      & > section {
+        width: 60%;
+      }
+    }
+

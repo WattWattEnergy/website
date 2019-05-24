@@ -1,0 +1,248 @@
+<svg width="100%" height="100%" viewBox="0 0 91 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Group 3</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(973 -4069)">
+<g id="Group 3">
+<g id="Rectangle 5">
+<use xlink:href="#path0_fill" transform="translate(-973 4069)" fill="#FFFFFF"/>
+<mask id="mask0_outline_ins">
+<use xlink:href="#path0_fill" fill="white" transform="translate(-973 4069)"/>
+</mask>
+<g mask="url(#mask0_outline_ins)">
+<use xlink:href="#path1_stroke_2x" transform="translate(-973 4069)" fill="#BDBDBD"/>
+</g>
+</g>
+<g id="Group">
+<g id="Rectangle 93">
+<use xlink:href="#path2_fill" transform="translate(-962 4082.03)" fill="#F2F2F2"/>
+<mask id="mask1_outline_out">
+<rect id="mask1_outline_inv" fill="white" x="-1" y="-1" width="20" height="14" transform="translate(-962 4082.03)"/>
+<use xlink:href="#path2_fill" fill="black" transform="translate(-962 4082.03)"/>
+</mask>
+<g mask="url(#mask1_outline_out)">
+<use xlink:href="#path3_stroke_2x" transform="translate(-962 4082.03)"/>
+</g>
+</g>
+<g id="Vector 112">
+<use xlink:href="#path4_fill" transform="translate(-960.478 4083.05)" fill="#FFFFFF"/>
+</g>
+<g id="Vector 112">
+<use xlink:href="#path4_fill" transform="translate(-941.71 4098.81)" fill="#BDBDBD"/>
+</g>
+<g id="Ellipse 18">
+<use xlink:href="#path5_fill" transform="translate(-946.275 4086.1)" fill="#FFFFFF"/>
+<mask id="mask2_outline_ins">
+<use xlink:href="#path5_fill" fill="white" transform="translate(-946.275 4086.1)"/>
+</mask>
+<g mask="url(#mask2_outline_ins)">
+<use xlink:href="#path6_stroke_2x" transform="translate(-946.275 4086.1)"/>
+</g>
+</g>
+<g id="Ellipse 18">
+<use xlink:href="#path5_fill" transform="translate(-954.899 4092.2)" fill="#FFFFFF"/>
+<mask id="mask3_outline_ins">
+<use xlink:href="#path5_fill" fill="white" transform="translate(-954.899 4092.2)"/>
+</mask>
+<g mask="url(#mask3_outline_ins)">
+<use xlink:href="#path6_stroke_2x" transform="translate(-954.899 4092.2)"/>
+</g>
+</g>
+<g id="Vector 115">
+<use xlink:href="#path7_stroke" transform="translate(-953.884 4093.22)" fill="#219653"/>
+</g>
+<g id="Vector 115">
+<use xlink:href="#path7_stroke" transform="translate(-945.261 4087.12)" fill="#219653"/>
+</g>
+<g id="Vector 116">
+<use xlink:href="#path8_stroke" transform="translate(-953.377 4095.76)"/>
+</g>
+<g id="Rectangle 94">
+<use xlink:href="#path9_fill" transform="translate(-939.174 4108.98)" fill="#219653"/>
+</g>
+<g id="Vector 117">
+<use xlink:href="#path10_fill" transform="translate(-959.464 4080)" fill="#333333"/>
+</g>
+<g id="Vector 118">
+<use xlink:href="#path11_stroke" transform="translate(-958.956 4080.51)" fill="#F2F2F2"/>
+</g>
+<g id="Vector 118">
+<use xlink:href="#path11_stroke" transform="translate(-954.899 4080.51)" fill="#F2F2F2"/>
+</g>
+<g id="Vector 118">
+<use xlink:href="#path11_stroke" transform="translate(-950.841 4080.51)" fill="#F2F2F2"/>
+</g>
+<g id="Vector 119">
+<use xlink:href="#path12_stroke" transform="matrix(1 -4.38172e-08 4.36058e-08 1 -955.913 4080)" fill="#F2F2F2"/>
+</g>
+<g id="Vector 119">
+<use xlink:href="#path12_stroke" transform="matrix(1 -4.38172e-08 4.36058e-08 1 -951.855 4080)" fill="#F2F2F2"/>
+</g>
+</g>
+<g id="Rectangle 5">
+<use xlink:href="#path0_fill" transform="translate(-954 4072)" fill="#FFFFFF"/>
+<mask id="mask4_outline_ins">
+<use xlink:href="#path0_fill" fill="white" transform="translate(-954 4072)"/>
+</mask>
+<g mask="url(#mask4_outline_ins)">
+<use xlink:href="#path1_stroke_2x" transform="translate(-954 4072)" fill="#BDBDBD"/>
+</g>
+</g>
+<g id="Group">
+<g id="Rectangle 93">
+<use xlink:href="#path2_fill" transform="translate(-942 4082.03)" fill="#F2F2F2"/>
+<mask id="mask5_outline_out">
+<rect id="mask5_outline_inv" fill="white" x="-1" y="-1" width="20" height="14" transform="translate(-942 4082.03)"/>
+<use xlink:href="#path2_fill" fill="black" transform="translate(-942 4082.03)"/>
+</mask>
+<g mask="url(#mask5_outline_out)">
+<use xlink:href="#path3_stroke_2x" transform="translate(-942 4082.03)"/>
+</g>
+</g>
+<g id="Vector 112">
+<use xlink:href="#path4_fill" transform="translate(-940.478 4083.05)" fill="#FFFFFF"/>
+</g>
+<g id="Vector 112">
+<use xlink:href="#path4_fill" transform="translate(-921.71 4098.81)" fill="#BDBDBD"/>
+</g>
+<g id="Ellipse 18">
+<use xlink:href="#path5_fill" transform="translate(-926.275 4086.1)" fill="#FFFFFF"/>
+<mask id="mask6_outline_ins">
+<use xlink:href="#path5_fill" fill="white" transform="translate(-926.275 4086.1)"/>
+</mask>
+<g mask="url(#mask6_outline_ins)">
+<use xlink:href="#path6_stroke_2x" transform="translate(-926.275 4086.1)"/>
+</g>
+</g>
+<g id="Ellipse 18">
+<use xlink:href="#path5_fill" transform="translate(-934.899 4092.2)" fill="#FFFFFF"/>
+<mask id="mask7_outline_ins">
+<use xlink:href="#path5_fill" fill="white" transform="translate(-934.899 4092.2)"/>
+</mask>
+<g mask="url(#mask7_outline_ins)">
+<use xlink:href="#path6_stroke_2x" transform="translate(-934.899 4092.2)"/>
+</g>
+</g>
+<g id="Vector 115">
+<use xlink:href="#path7_stroke" transform="translate(-933.884 4093.22)" fill="#219653"/>
+</g>
+<g id="Vector 115">
+<use xlink:href="#path7_stroke" transform="translate(-925.261 4087.12)" fill="#219653"/>
+</g>
+<g id="Vector 116">
+<use xlink:href="#path8_stroke" transform="translate(-933.377 4095.76)"/>
+</g>
+<g id="Rectangle 94">
+<use xlink:href="#path9_fill" transform="translate(-919.174 4108.98)" fill="#219653"/>
+</g>
+<g id="Vector 117">
+<use xlink:href="#path10_fill" transform="translate(-939.464 4080)" fill="#333333"/>
+</g>
+<g id="Vector 118">
+<use xlink:href="#path11_stroke" transform="translate(-938.956 4080.51)" fill="#F2F2F2"/>
+</g>
+<g id="Vector 118">
+<use xlink:href="#path11_stroke" transform="translate(-934.899 4080.51)" fill="#F2F2F2"/>
+</g>
+<g id="Vector 118">
+<use xlink:href="#path11_stroke" transform="translate(-930.841 4080.51)" fill="#F2F2F2"/>
+</g>
+<g id="Vector 119">
+<use xlink:href="#path12_stroke" transform="matrix(1 -4.38172e-08 4.36058e-08 1 -935.913 4080)" fill="#F2F2F2"/>
+</g>
+<g id="Vector 119">
+<use xlink:href="#path12_stroke" transform="matrix(1 -4.38172e-08 4.36058e-08 1 -931.855 4080)" fill="#F2F2F2"/>
+</g>
+</g>
+<g id="Rectangle 5">
+<use xlink:href="#path0_fill" transform="translate(-933 4075)" fill="#FFFFFF"/>
+<mask id="mask8_outline_ins">
+<use xlink:href="#path0_fill" fill="white" transform="translate(-933 4075)"/>
+</mask>
+<g mask="url(#mask8_outline_ins)">
+<use xlink:href="#path1_stroke_2x" transform="translate(-933 4075)" fill="#BDBDBD"/>
+</g>
+</g>
+<g id="Group">
+<g id="Rectangle 93">
+<use xlink:href="#path2_fill" transform="translate(-925 4085.03)" fill="#F2F2F2"/>
+<mask id="mask9_outline_out">
+<rect id="mask9_outline_inv" fill="white" x="-1" y="-1" width="20" height="14" transform="translate(-925 4085.03)"/>
+<use xlink:href="#path2_fill" fill="black" transform="translate(-925 4085.03)"/>
+</mask>
+<g mask="url(#mask9_outline_out)">
+<use xlink:href="#path3_stroke_2x" transform="translate(-925 4085.03)"/>
+</g>
+</g>
+<g id="Vector 112">
+<use xlink:href="#path4_fill" transform="translate(-923.478 4086.05)" fill="#FFFFFF"/>
+</g>
+<g id="Vector 112">
+<use xlink:href="#path4_fill" transform="translate(-904.71 4101.81)" fill="#BDBDBD"/>
+</g>
+<g id="Ellipse 18">
+<use xlink:href="#path5_fill" transform="translate(-909.275 4089.1)" fill="#FFFFFF"/>
+<mask id="mask10_outline_ins">
+<use xlink:href="#path5_fill" fill="white" transform="translate(-909.275 4089.1)"/>
+</mask>
+<g mask="url(#mask10_outline_ins)">
+<use xlink:href="#path6_stroke_2x" transform="translate(-909.275 4089.1)"/>
+</g>
+</g>
+<g id="Ellipse 18">
+<use xlink:href="#path5_fill" transform="translate(-917.899 4095.2)" fill="#FFFFFF"/>
+<mask id="mask11_outline_ins">
+<use xlink:href="#path5_fill" fill="white" transform="translate(-917.899 4095.2)"/>
+</mask>
+<g mask="url(#mask11_outline_ins)">
+<use xlink:href="#path6_stroke_2x" transform="translate(-917.899 4095.2)"/>
+</g>
+</g>
+<g id="Vector 115">
+<use xlink:href="#path7_stroke" transform="translate(-916.884 4096.22)" fill="#219653"/>
+</g>
+<g id="Vector 115">
+<use xlink:href="#path7_stroke" transform="translate(-908.261 4090.12)" fill="#219653"/>
+</g>
+<g id="Vector 116">
+<use xlink:href="#path8_stroke" transform="translate(-916.377 4098.76)"/>
+</g>
+<g id="Rectangle 94">
+<use xlink:href="#path9_fill" transform="translate(-902.174 4111.98)" fill="#219653"/>
+</g>
+<g id="Vector 117">
+<use xlink:href="#path10_fill" transform="translate(-922.464 4083)" fill="#333333"/>
+</g>
+<g id="Vector 118">
+<use xlink:href="#path11_stroke" transform="translate(-921.956 4083.51)" fill="#F2F2F2"/>
+</g>
+<g id="Vector 118">
+<use xlink:href="#path11_stroke" transform="translate(-917.899 4083.51)" fill="#F2F2F2"/>
+</g>
+<g id="Vector 118">
+<use xlink:href="#path11_stroke" transform="translate(-913.841 4083.51)" fill="#F2F2F2"/>
+</g>
+<g id="Vector 119">
+<use xlink:href="#path12_stroke" transform="matrix(1 -4.38172e-08 4.36058e-08 1 -918.913 4083)" fill="#F2F2F2"/>
+</g>
+<g id="Vector 119">
+<use xlink:href="#path12_stroke" transform="matrix(1 -4.38172e-08 4.36058e-08 1 -914.855 4083)" fill="#F2F2F2"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 0L 51 0L 51 51L 0 51L 0 0Z"/>
+<path id="path1_stroke_2x" d="M 0 0L 0 -1L -1 -1L -1 0L 0 0ZM 51 0L 52 0L 52 -1L 51 -1L 51 0ZM 51 51L 51 52L 52 52L 52 51L 51 51ZM 0 51L -1 51L -1 52L 0 52L 0 51ZM 0 1L 51 1L 51 -1L 0 -1L 0 1ZM 50 0L 50 51L 52 51L 52 0L 50 0ZM 51 50L 0 50L 0 52L 51 52L 51 50ZM 1 51L 1 0L -1 0L -1 51L 1 51Z"/>
+<path id="path2_fill" d="M 0 0L 17.2464 0L 17.2464 11.6949L 0 11.6949L 0 0Z"/>
+<path id="path3_stroke_2x" d="M 0 0L 0 -0.5L -0.5 -0.5L -0.5 0L 0 0ZM 17.2464 0L 17.7464 0L 17.7464 -0.5L 17.2464 -0.5L 17.2464 0ZM 17.2464 11.6949L 17.2464 12.1949L 17.7464 12.1949L 17.7464 11.6949L 17.2464 11.6949ZM 0 11.6949L -0.5 11.6949L -0.5 12.1949L 0 12.1949L 0 11.6949ZM -0.5 0L -0.5 0.974576L 0.5 0.974576L 0.5 0L -0.5 0ZM -0.5 2.92373L -0.5 4.87288L 0.5 4.87288L 0.5 2.92373L -0.5 2.92373ZM -0.5 6.82203L -0.5 8.77119L 0.5 8.77119L 0.5 6.82203L -0.5 6.82203ZM -0.5 10.7203L -0.5 11.6949L 0.5 11.6949L 0.5 10.7203L -0.5 10.7203ZM 0 12.1949L 1.0779 12.1949L 1.0779 11.1949L 0 11.1949L 0 12.1949ZM 3.2337 12.1949L 5.38949 12.1949L 5.38949 11.1949L 3.2337 11.1949L 3.2337 12.1949ZM 7.54529 12.1949L 9.70109 12.1949L 9.70109 11.1949L 7.54529 11.1949L 7.54529 12.1949ZM 11.8569 12.1949L 14.0127 12.1949L 14.0127 11.1949L 11.8569 11.1949L 11.8569 12.1949ZM 16.1685 12.1949L 17.2464 12.1949L 17.2464 11.1949L 16.1685 11.1949L 16.1685 12.1949ZM 17.7464 11.6949L 17.7464 10.7203L 16.7464 10.7203L 16.7464 11.6949L 17.7464 11.6949ZM 17.7464 8.77119L 17.7464 6.82203L 16.7464 6.82203L 16.7464 8.77119L 17.7464 8.77119ZM 17.7464 4.87288L 17.7464 2.92373L 16.7464 2.92373L 16.7464 4.87288L 17.7464 4.87288ZM 17.7464 0.974576L 17.7464 0L 16.7464 0L 16.7464 0.974576L 17.7464 0.974576ZM 17.2464 -0.5L 16.1685 -0.5L 16.1685 0.5L 17.2464 0.5L 17.2464 -0.5ZM 14.0127 -0.5L 11.8569 -0.5L 11.8569 0.5L 14.0127 0.5L 14.0127 -0.5ZM 9.70109 -0.5L 7.54529 -0.5L 7.54529 0.5L 9.70109 0.5L 9.70109 -0.5ZM 5.38949 -0.5L 3.2337 -0.5L 3.2337 0.5L 5.38949 0.5L 5.38949 -0.5ZM 1.0779 -0.5L 0 -0.5L 0 0.5L 1.0779 0.5L 1.0779 -0.5ZM 0 0L 0 -1L -1 -1L -1 0L 0 0ZM 17.2464 0L 18.2464 0L 18.2464 -1L 17.2464 -1L 17.2464 0ZM 17.2464 11.6949L 17.2464 12.6949L 18.2464 12.6949L 18.2464 11.6949L 17.2464 11.6949ZM 0 11.6949L -1 11.6949L -1 12.6949L 0 12.6949L 0 11.6949ZM -1 0L -1 0.974576L 1 0.974576L 1 0L -1 0ZM -1 2.92373L -1 4.87288L 1 4.87288L 1 2.92373L -1 2.92373ZM -1 6.82203L -1 8.77119L 1 8.77119L 1 6.82203L -1 6.82203ZM -1 10.7203L -1 11.6949L 1 11.6949L 1 10.7203L -1 10.7203ZM 0 12.6949L 1.0779 12.6949L 1.0779 10.6949L 0 10.6949L 0 12.6949ZM 3.2337 12.6949L 5.38949 12.6949L 5.38949 10.6949L 3.2337 10.6949L 3.2337 12.6949ZM 7.54529 12.6949L 9.70109 12.6949L 9.70109 10.6949L 7.54529 10.6949L 7.54529 12.6949ZM 11.8569 12.6949L 14.0127 12.6949L 14.0127 10.6949L 11.8569 10.6949L 11.8569 12.6949ZM 16.1685 12.6949L 17.2464 12.6949L 17.2464 10.6949L 16.1685 10.6949L 16.1685 12.6949ZM 18.2464 11.6949L 18.2464 10.7203L 16.2464 10.7203L 16.2464 11.6949L 18.2464 11.6949ZM 18.2464 8.77119L 18.2464 6.82203L 16.2464 6.82203L 16.2464 8.77119L 18.2464 8.77119ZM 18.2464 4.87288L 18.2464 2.92373L 16.2464 2.92373L 16.2464 4.87288L 18.2464 4.87288ZM 18.2464 0.974576L 18.2464 0L 16.2464 0L 16.2464 0.974576L 18.2464 0.974576ZM 17.2464 -1L 16.1685 -1L 16.1685 1L 17.2464 1L 17.2464 -1ZM 14.0127 -1L 11.8569 -1L 11.8569 1L 14.0127 1L 14.0127 -1ZM 9.70109 -1L 7.54529 -1L 7.54529 1L 9.70109 1L 9.70109 -1ZM 5.38949 -1L 3.2337 -1L 3.2337 1L 5.38949 1L 5.38949 -1ZM 1.0779 -1L 0 -1L 0 1L 1.0779 1L 1.0779 -1Z"/>
+<path id="path4_fill" d="M 12.1931 0L 2.68052 0L 0 4.83051L 2.68052 9.66102L 12.1931 9.66102L 14.7101 4.83051L 12.1931 0Z"/>
+<path id="path5_fill" d="M 3.04348 1.52542C 3.04348 2.36789 2.36217 3.05085 1.52174 3.05085C 0.681306 3.05085 0 2.36789 0 1.52542C 0 0.682955 0.681306 0 1.52174 0C 2.36217 0 3.04348 0.682955 3.04348 1.52542Z"/>
+<path id="path6_stroke_2x" d="M 2.54348 1.52542C 2.54348 2.09289 2.08489 2.55085 1.52174 2.55085L 1.52174 3.55085C 2.63945 3.55085 3.54348 2.64289 3.54348 1.52542L 2.54348 1.52542ZM 1.52174 2.55085C 0.958588 2.55085 0.5 2.09289 0.5 1.52542L -0.5 1.52542C -0.5 2.64289 0.404024 3.55085 1.52174 3.55085L 1.52174 2.55085ZM 0.5 1.52542C 0.5 0.957957 0.958588 0.5 1.52174 0.5L 1.52174 -0.5C 0.404024 -0.5 -0.5 0.407954 -0.5 1.52542L 0.5 1.52542ZM 1.52174 0.5C 2.08489 0.5 2.54348 0.957957 2.54348 1.52542L 3.54348 1.52542C 3.54348 0.407954 2.63945 -0.5 1.52174 -0.5L 1.52174 0.5Z"/>
+<path id="path7_stroke" d="M 0.257246 0L 0.257246 0.508475L 0.757246 0.508475L 0.757246 0L 0.257246 0ZM 0.257246 0.508475L 0.257246 1.01695L 0.757246 1.01695L 0.757246 0.508475L 0.257246 0.508475ZM 0.507246 0.258475L 0 0.258475L 0 0.758475L 0.507246 0.758475L 0.507246 0.258475ZM 0 0.758475L 1.01449 0.758475L 1.01449 0.258475L 0 0.258475L 0 0.758475Z"/>
+<path id="path8_stroke" d="M 0 7.62712L -0.5 7.62712L -0.5 8.12712L 0 8.12712L 0 7.62712ZM -0.5 0L -0.5 0.95339L 0.5 0.95339L 0.5 0L -0.5 0ZM -0.5 2.86017L -0.5 4.76695L 0.5 4.76695L 0.5 2.86017L -0.5 2.86017ZM -0.5 6.67373L -0.5 7.62712L 0.5 7.62712L 0.5 6.67373L -0.5 6.67373ZM 0 8.12712L 0.972222 8.12712L 0.972222 7.12712L 0 7.12712L 0 8.12712ZM 2.91667 8.12712L 4.86111 8.12712L 4.86111 7.12712L 2.91667 7.12712L 2.91667 8.12712ZM 6.80556 8.12712L 8.75 8.12712L 8.75 7.12712L 6.80556 7.12712L 6.80556 8.12712ZM 10.6944 8.12712L 11.6667 8.12712L 11.6667 7.12712L 10.6944 7.12712L 10.6944 8.12712Z"/>
+<path id="path9_fill" d="M 0 0L 2.02899 0L 2.02899 1.01695L 0 1.01695L 0 0Z"/>
+<path id="path10_fill" d="M 5.07246 2.28814L 5.83333 3.30508L 6.34058 2.28814L 11.413 2.28814L 11.413 0L 0 0L 0 2.28814L 5.07246 2.28814Z"/>
+<path id="path11_stroke" d="M 0.507246 0.762712L 0.595742 0.67443L 0.507246 0.585721L 0.418751 0.67443L 0.507246 0.762712ZM 0.76087 1.01695L 0.672374 1.10523L 0.76087 1.19394L 0.849365 1.10523L 0.76087 1.01695ZM 1.26812 0.508475L 1.35661 0.420193L 1.26812 0.331484L 1.17962 0.420193L 1.26812 0.508475ZM 1.52174 0.762712L 1.43324 0.850993L 1.52174 0.939703L 1.61023 0.850993L 1.52174 0.762712ZM 0.0884952 1.35947L 0.595742 0.850993L 0.418751 0.67443L -0.0884952 1.18291L 0.0884952 1.35947ZM 0.418751 0.850993L 0.672374 1.10523L 0.849365 0.928668L 0.595742 0.67443L 0.418751 0.850993ZM 0.849365 1.10523L 1.35661 0.596756L 1.17962 0.420193L 0.672374 0.928668L 0.849365 1.10523ZM 1.17962 0.596756L 1.43324 0.850993L 1.61023 0.67443L 1.35661 0.420193L 1.17962 0.596756ZM 1.61023 0.850993L 2.3711 0.0882814L 2.19411 -0.0882814L 1.43324 0.67443L 1.61023 0.850993Z"/>
+<path id="path12_stroke" d="M -0.125 0L -0.125 2.0339L 0.125 2.0339L 0.125 0L -0.125 0Z"/>
+</defs>
+</svg>

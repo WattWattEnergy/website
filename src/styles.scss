@@ -1,0 +1,171 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@eamode/eang/css/all.css";
+
+.mode {
+  & ea-tabs{
+    & ea-menu {
+      // padding-right: 1.1em;
+        min-width:fit-content;
+        & .ea-tree-children {
+            overflow: scroll;
+            margin-right: 3em;
+            padding-right: .95em;
+            text-align: center;
+        & app-education  {
+          width: 100%}
+        }
+    }
+}
+
+  --ea-color-1: hsl(208, 39%, 34%);
+  --ea-color-1-light:hsl(208, 39%, 40%);
+  & ea-layout {
+    & ea-body {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  & span[icon] {
+    &[discord] {
+      background-image: url("assets/images/discord.svg");
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    & li {
+      display: grid;
+      grid-template-columns: repeat(1, 3rem 1fr);
+      align-items: center;
+      justify-items: center;
+      & span[icon] {
+        height: 1.4rem;
+        width: 100%;
+      }
+    }
+  }
+
+  & ea-layout {
+    & ea-drawer {
+      --ea-drawer-background: #ececec;
+      display: none;
+      @media only screen and (max-width: 650px) {
+        display: flex;
+      }
+      & section {
+        & a,
+        a:visited {
+          color: black;
+          border-bottom: 1px solid #355a7a3b;
+        }
+        & a:hover {
+          background-color: var(--ea-color-background-2);
+          color: white;
+        }
+        & .mobile {
+          @media only screen and (min-width: 640px) {
+            display: none;
+          }
+          @media only screen and (max-width: 640px) {
+            display: block;
+          }
+        }
+      }
+    }
+    & ea-toolbar {
+      & > button:first-child {
+        display: none;
+        @media only screen and (max-width: 650px) {
+          display: block;
+          margin-right: 0.5rem;
+        }
+      }
+      & .whitepaper-link, .about-link {
+        @media only screen and (max-width: 650px) {
+          display: none;
+        }
+      }
+      & .education-link, .about-link {
+        @media only screen and (max-width: 650px) {
+          display: none;
+        }
+      }
+      & aside {
+        --ea-toolbar-aside-padding: 0;
+        & button {
+          margin: 1rem;
+        }
+        @media only screen and (max-width: 640px) {
+          display: block;
+        }
+        & a {
+          margin: 0;
+          min-height: 100%;
+          width: 100%;
+          padding: 0.5rem 0;
+        }
+      }
+    }
+    & ea-body {
+      margin: 0.5em 10vw;
+      & .header-img {
+        position: absolute;
+        top: -6vw;
+        width: 39%;
+        right: -7vw;
+        height: 40rem;
+
+        @media only screen and (max-width: 600px) {
+          position: absolute;
+          top: -16vw;
+          width: 99%;
+          right: -47vw;
+          height: 20rem;
+        }
+      }
+      & .content-wrap {
+        --ea-card-content-grid: repeat(2, 1fr);
+        @media only screen and (max-width: 600px) {
+          --ea-card-content-grid: repeat(1, 1fr);
+        }
+        & .buttons {
+          display: flex;
+          & button:nth-child(1) {
+            margin: 0 1rem 0 0;
+            @media only screen and (max-width: 600px) {
+              margin: 0 0 1rem 0;
+            }
+          }
+          @media only screen and (max-width: 600px) {
+            flex-direction: column;
+          }
+        }
+      }
+      & .discord-button {
+        @media only screen and (max-width: 600px) {
+          width: 100%;
+          margin-top: 1.5rem;
+        }
+      }
+    }
+    & ea-toolbar {
+      & a {
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+      }
+    }
+    & ea-footer {
+      --ea-footer-height: auto;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+      & main {
+        display: flex;
+        width: 20em;
+        justify-content: space-between;
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+<svg width="100%" height="100%" viewBox="0 0 77 67" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Group</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(1832 -4186)">
+<g id="Group">
+<g id="Vector 113">
+<use xlink:href="#path0_stroke" transform="translate(-1831 4186)" fill="#333333"/>
+</g>
+<g id="Rectangle 92">
+<use xlink:href="#path1_fill" transform="translate(-1823 4189)" fill="#4F4F4F"/>
+</g>
+<g id="Rectangle 92">
+<use xlink:href="#path1_fill" transform="translate(-1823 4213)" fill="#4F4F4F"/>
+</g>
+<g id="Rectangle 92">
+<use xlink:href="#path1_fill" transform="translate(-1823 4238)" fill="#4F4F4F"/>
+</g>
+<g id="Rectangle 92">
+<use xlink:href="#path2_fill" transform="translate(-1787 4215)" fill="#E0E0E0"/>
+</g>
+<g id="Ellipse 17">
+<use xlink:href="#path3_fill" transform="translate(-1819 4217)" fill="#219653"/>
+</g>
+<g id="Rectangle 92">
+<use xlink:href="#path4_fill" transform="translate(-1795 4240)" fill="#E0E0E0"/>
+</g>
+<g id="Ellipse 17">
+<use xlink:href="#path3_fill" transform="translate(-1819 4242)" fill="#EB5757"/>
+</g>
+<g id="Rectangle 92">
+<use xlink:href="#path5_fill" transform="translate(-1808 4191)" fill="#828282"/>
+</g>
+<g id="Rectangle 92">
+<use xlink:href="#path6_fill" transform="translate(-1808 4215)" fill="#828282"/>
+</g>
+<g id="Group">
+<g id="Rectangle 92">
+<use xlink:href="#path7_fill" transform="translate(-1801 4228)" fill="#4F4F4F"/>
+</g>
+<g id="Rectangle 92">
+<use xlink:href="#path8_fill" transform="translate(-1778.76 4229.23)" fill="#E0E0E0"/>
+</g>
+<g id="Ellipse 17">
+<use xlink:href="#path9_fill" transform="translate(-1798.53 4230.46)" fill="#219653"/>
+</g>
+<g id="Rectangle 92">
+<use xlink:href="#path10_fill" transform="translate(-1791.74 4229.23)" fill="#828282"/>
+</g>
+</g>
+<g id="Rectangle 92">
+<use xlink:href="#path11_fill" transform="translate(-1808 4240)" fill="#828282"/>
+</g>
+<g id="Rectangle 92">
+<use xlink:href="#path12_fill" transform="translate(-1790 4191)" fill="#E0E0E0"/>
+</g>
+<g id="Ellipse 17">
+<use xlink:href="#path3_fill" transform="translate(-1819 4193)" fill="#F2C94C"/>
+</g>
+<g id="Vector 114">
+<use xlink:href="#path13_stroke" transform="translate(-1809 4226)"/>
+</g>
+<g id="Group">
+<g id="Rectangle 92">
+<use xlink:href="#path7_fill" transform="translate(-1801 4204)" fill="#4F4F4F"/>
+</g>
+<g id="Rectangle 92">
+<use xlink:href="#path8_fill" transform="translate(-1778.76 4205.23)" fill="#E0E0E0"/>
+</g>
+<g id="Ellipse 17">
+<use xlink:href="#path9_fill" transform="translate(-1798.53 4206.46)" fill="#F2C94C"/>
+</g>
+<g id="Rectangle 92">
+<use xlink:href="#path10_fill" transform="translate(-1791.74 4205.23)" fill="#828282"/>
+</g>
+</g>
+<g id="Vector 114">
+<use xlink:href="#path13_stroke" transform="translate(-1809 4202)"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_stroke" d="M 0 10L 0 9.5L -0.5 9.5L -0.5 10L 0 10ZM 8.5 9.5L 0 9.5L 0 10.5L 8.5 10.5L 8.5 9.5ZM -0.5 10L -0.5 33.5L 0.5 33.5L 0.5 10L -0.5 10ZM 0 34L 8.5 34L 8.5 33L 0 33L 0 34ZM -0.5 33.5L -0.5 59.5L 0.5 59.5L 0.5 33.5L -0.5 33.5ZM 0 60L 8.5 60L 8.5 59L 0 59L 0 60ZM -0.5 59.5L -0.5 67L 0.5 67L 0.5 59.5L -0.5 59.5ZM 0.5 67L 0.5 0L -0.5 0L -0.5 67L 0.5 67Z"/>
+<path id="path1_fill" d="M 0 0L 68 0L 68 13L 0 13L 0 0Z"/>
+<path id="path2_fill" d="M 0 0L 29 0L 29 9L 0 9L 0 0Z"/>
+<path id="path3_fill" d="M 6 3C 6 4.65685 4.65685 6 3 6C 1.34315 6 0 4.65685 0 3C 0 1.34315 1.34315 0 3 0C 4.65685 0 6 1.34315 6 3Z"/>
+<path id="path4_fill" d="M 0 0L 37 0L 37 9L 0 9L 0 0Z"/>
+<path id="path5_fill" d="M 0 0L 13 0L 13 9L 0 9L 0 0Z"/>
+<path id="path6_fill" d="M 0 0L 18 0L 18 9L 0 9L 0 0Z"/>
+<path id="path7_fill" d="M 0 0L 42 0L 42 8L 0 8L 0 0Z"/>
+<path id="path8_fill" d="M 0 0L 17.9118 0L 17.9118 5.53846L 0 5.53846L 0 0Z"/>
+<path id="path9_fill" d="M 3.70588 1.84615C 3.70588 2.86576 2.87629 3.69231 1.85294 3.69231C 0.82959 3.69231 0 2.86576 0 1.84615C 0 0.826551 0.82959 0 1.85294 0C 2.87629 0 3.70588 0.826551 3.70588 1.84615Z"/>
+<path id="path10_fill" d="M 0 0L 11.1176 0L 11.1176 5.53846L 0 5.53846L 0 0Z"/>
+<path id="path11_fill" d="M 0 0L 9 0L 9 9L 0 9L 0 0Z"/>
+<path id="path12_fill" d="M 0 0L 32 0L 32 9L 0 9L 0 0Z"/>
+<path id="path13_stroke" d="M 0 6L -0.5 6L -0.5 6.5L 0 6.5L 0 6ZM -0.5 0L -0.5 6L 0.5 6L 0.5 0L -0.5 0ZM 0 6.5L 8 6.5L 8 5.5L 0 5.5L 0 6.5Z"/>
+</defs>
+</svg>

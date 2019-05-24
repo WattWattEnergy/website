@@ -1,0 +1,276 @@
+body {
+  background: rgba(255, 255, 255, 0.678);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding-bottom: 14rem;
+}
+
+#top {
+  position: relative;
+}
+
+#connectM {
+  margin-top: 0.5rem;
+  width: 60%;
+  margin: auto;
+  position: relative;
+}
+
+.metamask {
+  display: inline;
+  margin: auto;
+}
+
+.wyre {
+  right: 0;
+  position: absolute;
+  display: inline;
+}
+
+#amount {
+  width: 8rem;
+  font-size: 1.5rem;
+}
+
+.text {
+  margin-left: 3rem !important;
+}
+
+.tag {
+  position: relative;
+  width: 40%;
+  padding: 1rem 0.2rem 1rem 2rem;
+}
+
+.tag::after {
+  position: absolute;
+  right: 1rem;
+  -webkit-transition: all .05s ease-in-out;
+  transition: all .05s ease-in-out;
+  content: 'USD';
+  font-size: 1.5rem;
+  display: inline;
+  top: 30%;
+  vertical-align: middle;
+}
+
+.container {
+  margin: 1em 3rem !important;
+}
+
+#transfer {
+  color: white;
+}
+
+#title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: AvenirNext-Medium;
+  margin-top: 4rem;
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.right-top {
+  position: fixed;
+  text-align: center;
+  right: 0;
+  top: 0;
+  padding: 1rem 0rem 1rem 0rem;
+}
+
+#signup {
+  background: white;
+  padding: 1rem 1rem 1rem 1rem;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 9em;
+  font-size: 0.9em;
+}
+
+.center {
+  position: relative;
+}
+
+/* DYNAMIC NAVIGATION BAR
+   ================================================================= */
+#topnav {
+  padding: 2rem 0rem 2rem 0rem;
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  width: 100%;
+  top: 0;
+  background: #1a2d61;
+  -webkit-transition: all, 650ms, cubic-bezier(0.22, 1, 0.25, 1);
+  transition: all, 650ms, cubic-bezier(0.22, 1, 0.25, 1);
+  color: #1a2d61;
+  content: "";
+}
+
+#topnav1 {
+  position: relative;
+  margin-bottom: 0.4rem;
+}
+
+ul {
+  position: relative;
+  margin: 0;
+  z-index: 2;
+  text-align: center;
+}
+
+ul li {
+  display: inline-block;
+  font-size: 0.9em;
+}
+
+ul li a {
+  margin-left: 3rem;
+  margin-right: 9em;
+  text-decoration: none;
+  color: #fff;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+ul li #logo {
+  position: absolute;
+  width: 3rem;
+  height: auto;
+  text-align: center;
+  left: 1rem;
+  vertical-align: middle;
+  top: 0;
+  margin-left: 3rem;
+}
+
+.cards {
+  margin: 5rem 0.2rem 0 0.2rem;
+}
+
+.cards .card {
+  margin: 3rem 2rem 1rem;
+  border-bottom: 3px solid #000000;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.cards .card .projimage {
+  width: 100%;
+}
+
+.cards .card .container {
+  padding-bottom: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.cards .card .container #currency {
+  font-size: 2rem;
+}
+
+.cards .card .container .button {
+  position: relative;
+  float: right;
+  bottom: 2rem;
+  z-index: 1;
+}
+
+.cards .card .container .button .submittal {
+  color: #56568d;
+  border-radius: 3rem;
+  padding: 0.5rem 1rem 0.5rem;
+  font-size: 2rem;
+}
+
+.cards .card .container .button .submittal:hover {
+  -webkit-transform: scale(1.05);
+  /*Grows in size like Angry Birds button*/
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+@media only screen and (max-width: 950px) {
+  .metamask {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 0.7rem;
+    margin: auto;
+    position: relative;
+  }
+  .wyre {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 0.7rem;
+    margin: auto;
+    position: relative;
+  }
+  .tag {
+    margin-bottom: 1rem;
+  }
+  .button {
+    position: relative;
+    float: right;
+    bottom: 0rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #title {
+    font-size: 1rem;
+    margin: 0.5rem 0.2rem 0rem 0.2rem;
+  }
+  .cards {
+    margin-top: 7rem;
+  }
+  /* DYNAMIC NAVIGATION BAR
+   ================================================================= */
+  #topnav ul {
+    padding-left: 2rem;
+    right: 0;
+  }
+  #topnav ul li {
+    margin-right: 0.5em;
+    font-size: 0.5em;
+  }
+  #topnav ul li a {
+    margin-left: 1rem;
+    margin-right: .5rem;
+  }
+  #topnav ul li #logo {
+    left: 0.5rem;
+    top: -1.5rem;
+  }
+  .submittal {
+    padding: 0.5rem 1.5rem 0.5rem;
+    font-size: 1.5rem;
+  }
+  #connectM {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .metamask {
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    left: 0;
+    position: relative;
+  }
+  .wyre {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 2.5rem;
+    margin-right: 0rem;
+    left: 0;
+    display: inline-block;
+    margin-bottom: 3rem;
+  }
+}
+/*# sourceMappingURL=crowdfunding.component.css.map */

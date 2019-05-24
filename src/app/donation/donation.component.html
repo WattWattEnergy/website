@@ -1,0 +1,341 @@
+  <!-- <head>
+
+    
+      <script type="text/javascript">
+        window.addEventListener('load', async () => {
+          // Modern dapp browsers...
+          if (window.ethereum) {
+            window.web3 = new Web3(ethereum);
+            try {
+              // Request account access if needed
+              await ethereum.enable();
+              // Acccounts now exposed
+              web3.eth.sendTransaction({/* ... */ });
+            } catch (error) {
+              // User denied account access...
+            }
+          }
+          // Legacy dapp browsers...
+          else if (window.web3) {
+            window.web3 = new Web3(web3.currentProvider);
+            // Acccounts always exposed
+            web3.eth.sendTransaction({/* ... */ });
+          }
+          // Non-dapp browsers...
+          else {
+            console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
+          }
+        });
+      </script>
+    
+      <script>
+        function startApp() {
+          var donationContractAddress = "DONATION_ADDRESS";
+          donationContract = new web3js.eth.Contract(donationContractABI, donationContractAddress);
+    
+          var accountInterval = setInterval(function () {
+            // Check if account has changed
+            if (web3.eth.accounts[0] !== userAccount) {
+              userAccount = web3.eth.accounts[0];
+              // Call a function to update the UI with the new account
+              getDonationsByOwner(userAccount)
+                .then(displayDonations);
+            }
+          }, 100);
+        }
+      </script>
+    
+      <script>
+        function SendDonation() {
+          // Tell user donation is on the way
+          $("#txStatus").text("Sending your donation. Just a minute!");
+          // Send the tx to our contract:
+          return donationContract.methods.SendDonation()
+            .send({ from: userAccount })
+            .on("receipt", function (receipt) {
+              $("#txStatus").text("Thank you for your donation! ");
+            })
+            .on("error", function (error) {
+              // Do something to alert the user their transaction has failed
+              $("#txStatus").text(error);
+            });
+        }
+      </script>
+    
+      <script>
+        var inWei = web3.toWei('10', 'ether')
+        function listenForClicks(miniToken) {
+          var button = document.querySelector('button.transferFunds')
+          button.addEventListener('click', function () {
+            miniToken.transfer(toAddress, value, { from: addr })
+              .then(function (txHash) {
+                console.log('Transaction sent')
+                console.dir(txHash)
+                waitForTxToBeMined(txHash)
+              })
+              .catch(console.error)
+          })
+        }
+      </script>
+    
+      <script>
+        async function waitForTxToBeMined(txHash) {
+          let txReceipt
+          while (!txReceipt) {
+            try {
+              txReceipt = await eth.getTransactionReceipt(txHash)
+            } catch (err) {
+              return indicateFailure(err)
+            }
+          }
+          indicateSuccess()
+        }
+      </script>
+
+  </head> -->
+
+
+<div style="display:inline-grid; grid-column-gap:50px; grid-gap:50px;">
+  <h2>Puerto Rican Solar</h2>
+
+  <h2>(Page in Construction)</h2>
+
+  <img src="../assets/images/SanJuan.jpeg" alt="" style="width:100%;height:100;">
+  <img src="../assets/images/PRSolar2.jpg" alt="" style="width:100%;height:100;">
+  <p>WattWatt has partnered with local Puerto Rican initiatives, including Off Grid Relief, to fundraise the money used to install
+    solar generation and battery backup for homes in the mountains of Puerto Rico. If you chose to donate using this page,
+    your capital will be collected by a smart contract and transfered to the address of the installers. You can see this
+    smart contract, its code, and its transactions by clicking See Crowdfunding Contract.</p>
+</div>
+
+<div style="display:flex;">
+
+
+  <button> <span icon bar-chart negative></span> Donate</button>
+
+  <a href="https://etherscan.io/address/0xba30092ddb563ff13e55d8fd8ee428b87fe52499">
+  <button> <span icon negative code></span> Smart Contract</button>
+
+  </a>
+</div>
+
+<div>
+  <img src="../assets/images/PRGrid2.jpg" alt="" style="width:100%;height:100%;">
+</div>
+  
+
+
+
+
+
+
+
+<!--<button class="transferFunds">Send Money!</button>-->
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CryptoZombies front-end</title>
+    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="web3.min.js"></script>
+    <script language="javascript" type="text/javascript" src="cryptozombies_abi.js"></script>
+  </head>
+  <body>
+    <div id="txStatus"></div>
+    <div id="zombies"></div>
+
+    <script>
+      var cryptoZombies;
+      var userAccount;
+
+      function startApp() {
+        var cryptoZombiesAddress = "YOUR_CONTRACT_ADDRESS";
+        cryptoZombies = new web3js.eth.Contract(cryptoZombiesABI, cryptoZombiesAddress);
+
+        var accountInterval = setInterval(function() {
+          // Check if account has changed
+          if (web3.eth.accounts[0] !== userAccount) {
+            userAccount = web3.eth.accounts[0];
+            // Call a function to update the UI with the new account
+            getZombiesByOwner(userAccount)
+            .then(displayZombies);
+          }
+        }, 100);
+      }
+
+      function displayZombies(ids) {
+        $("#zombies").empty();
+        for (id of ids) {
+          // Look up zombie details from our contract. Returns a `zombie` object
+          getZombieDetails(id)
+          .then(function(zombie) {
+            // Using ES6's "template literals" to inject variables into the HTML.
+            // Append each one to our #zombies div
+            $("#zombies").append(`<div class="zombie">
+              <ul>
+                <li>Name: ${zombie.name}</li>
+                <li>DNA: ${zombie.dna}</li>
+                <li>Level: ${zombie.level}</li>
+                <li>Wins: ${zombie.winCount}</li>
+                <li>Losses: ${zombie.lossCount}</li>
+                <li>Ready Time: ${zombie.readyTime}</li>
+              </ul>
+            </div>`);
+          });
+        }
+      }
+
+      // Start here
+
+      function getZombieDetails(id) {
+        return cryptoZombies.methods.zombies(id).call()
+      }
+
+      function zombieToOwner(id) {
+        return cryptoZombies.methods.zombieToOwner(id).call()
+      }
+
+      function getZombiesByOwner(owner) {
+        return cryptoZombies.methods.getZombiesByOwner(owner).call()
+      }
+
+      window.addEventListener('load', function() {
+
+        // Checking if Web3 has been injected by the browser (Mist/MetaMask)
+        if (typeof web3 !== 'undefined') {
+          // Use Mist/MetaMask's provider
+          web3js = new Web3(web3.currentProvider);
+        } else {
+          // Handle the case where the user doesn't have Metamask installed
+          // Probably show them a message prompting them to install Metamask
+        }
+
+        // Now you can start your app & access web3 freely:
+        startApp()
+
+      })
+    </script>
+  </body>
+</html>-->
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CryptoZombies front-end</title>
+    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="web3.min.js"></script>
+    <script language="javascript" type="text/javascript" src="cryptozombies_abi.js"></script>
+  </head>
+  <body>
+    <div id="txStatus"></div>
+    <div id="zombies"></div>
+
+    <script>
+      var cryptoZombies;
+      var userAccount;
+
+      function startApp() {
+        var cryptoZombiesAddress = "YOUR_CONTRACT_ADDRESS";
+        cryptoZombies = new web3js.eth.Contract(cryptoZombiesABI, cryptoZombiesAddress);
+
+        var accountInterval = setInterval(function() {
+          // Check if account has changed
+          if (web3.eth.accounts[0] !== userAccount) {
+            userAccount = web3.eth.accounts[0];
+            // Call a function to update the UI with the new account
+            getZombiesByOwner(userAccount)
+            .then(displayZombies);
+          }
+        }, 100);
+      }
+
+      function displayZombies(ids) {
+        $("#zombies").empty();
+        for (id of ids) {
+          // Look up zombie details from our contract. Returns a `zombie` object
+          getZombieDetails(id)
+          .then(function(zombie) {
+            // Using ES6's "template literals" to inject variables into the HTML.
+            // Append each one to our #zombies div
+            $("#zombies").append(`<div class="zombie">
+              <ul>
+                <li>Name: ${zombie.name}</li>
+                <li>DNA: ${zombie.dna}</li>
+                <li>Level: ${zombie.level}</li>
+                <li>Wins: ${zombie.winCount}</li>
+                <li>Losses: ${zombie.lossCount}</li>
+                <li>Ready Time: ${zombie.readyTime}</li>
+              </ul>
+            </div>`);
+          });
+        }
+      }
+
+      function createRandomZombie(name) {
+        // This is going to take a while, so update the UI to let the user know
+        // the transaction has been sent
+        $("#txStatus").text("Creating new zombie on the blockchain. This may take a while...");
+        // Send the tx to our contract:
+        return cryptoZombies.methods.createRandomZombie(name)
+        .send({ from: userAccount })
+        .on("receipt", function(receipt) {
+          $("#txStatus").text("Successfully created " + name + "!");
+          // Transaction was accepted into the blockchain, let's redraw the UI
+          getZombiesByOwner(userAccount).then(displayZombies);
+        })
+        .on("error", function(error) {
+          // Do something to alert the user their transaction has failed
+          $("#txStatus").text(error);
+        });
+      }
+
+      function feedOnKitty(zombieId, kittyId) {
+        $("#txStatus").text("Eating a kitty. This may take a while...");
+        return cryptoZombies.methods.feedOnKitty(zombieId, kittyId)
+        .send({ from: userAccount })
+        .on("receipt", function(receipt) {
+          $("#txStatus").text("Ate a kitty and spawned a new Zombie!");
+          getZombiesByOwner(userAccount).then(displayZombies);
+        })
+        .on("error", function(error) {
+          $("#txStatus").text(error);
+        });
+      }
+
+      // Start here
+
+      function getZombieDetails(id) {
+        return cryptoZombies.methods.zombies(id).call()
+      }
+
+      function zombieToOwner(id) {
+        return cryptoZombies.methods.zombieToOwner(id).call()
+      }
+
+      function getZombiesByOwner(owner) {
+        return cryptoZombies.methods.getZombiesByOwner(owner).call()
+      }
+
+      window.addEventListener('load', function() {
+
+        // Checking if Web3 has been injected by the browser (Mist/MetaMask)
+        if (typeof web3 !== 'undefined') {
+          // Use Mist/MetaMask's provider
+          web3js = new Web3(web3.currentProvider);
+        } else {
+          // Handle the case where the user doesn't have Metamask installed
+          // Probably show them a message prompting them to install Metamask
+        }
+
+        // Now you can start your app & access web3 freely:
+        startApp()
+
+      })
+    </script>
+  </body>
+</html>
+-->
