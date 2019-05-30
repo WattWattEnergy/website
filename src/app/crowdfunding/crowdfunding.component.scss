@@ -180,7 +180,7 @@ ul {
 .cards {
   margin: 5rem 0.2rem 0 0.2rem;
   .card {
-    margin: 3rem 2rem 1rem;
+    // margin: 3rem 2rem 1rem;
     border-bottom: 3px solid #000000;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -220,6 +220,12 @@ ul {
   }
 }
 
+@media only screen and (min-width: 950px) {
+  .card {
+    margin: 3rem 6rem 1rem;
+  }
+}
+
 @media only screen and (max-width: 950px) {
   .metamask {
     display: flex;
@@ -233,11 +239,14 @@ ul {
     margin-top: 0.7rem;
     margin: auto;
     position: relative;
-    
   }
 
   .tag {
     margin-bottom: 1rem;
+  }
+
+  .card {
+    margin: 3rem 2rem 1rem;
   }
 
   .button {
