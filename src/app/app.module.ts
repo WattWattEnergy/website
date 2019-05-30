@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { PanelModule, AutoCompleteModule, LayoutModule, TabsComponent, TabsModule } from "@eamode/eang";
+import { PanelModule, AutoCompleteModule, LayoutModule, TabsModule } from "@eamode/eang";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { LandingComponent } from "./landing/landing.component";
@@ -39,7 +39,7 @@ import {LocationStrategy, HashLocationStrategy} from '@angular/common';
     AutoCompleteModule,
     LayoutModule,
     PdfViewerModule,
-    TabsModule
+    // TabsModule
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

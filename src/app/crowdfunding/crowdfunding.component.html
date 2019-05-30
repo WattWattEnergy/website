@@ -10,57 +10,52 @@
   </head>
 
   <body>
-    <p id="title">Welcome to Decentralized Energy Financing</p>
+      <div id="connectM" class="buttons">
+
+            <button
+            outline
+            rounded
+              onClick="Connect()"
+              id="connect"
+              class="metamask"
+              target="_blank;"
+            >
+              Connect Metamask
+            </button>
+
+            <button
+            outline
+            rounded
+              onClick="WyreW()"
+              id="connect"
+              class="wyre"
+              target="_blank;"
+              id="verifyButton"
+            >
+               Wyre Onboarding
+            </button>
+
+        </div>
+    <h1>Solar Projects Raising Capital</h1>
+    <h3></h3>
     <div id="top">
     <div id="topnav1">
-      <nav id="topnav">
-        <ul>
-          <!-- <li><img id="logo" src="../../assets/images/WattWattLogo.png" /></li> -->
-          <!-- <li><a href="#section1">Find A Loan</a></li>
-        <li><a href="#section2">Your Loans</a></li> -->
-          <!-- <li><a href="#section3">Borrow</a></li>
-        <li><a href="#section4">Learn</a></li> -->
-          <!-- <li><a id="signup1" href="#section4">Signup ▼</a></li> -->
-        </ul>
-      </nav>
-    </div>
-    <div id="connectM" class="buttons">
-      <span>
-        <button
-          onClick="Connect()"
-          id="connect"
-          class="metamask"
-          target="_blank;"
-        >
-          Connect to Metamask!
-        </button>
 
-        <button
-          onClick="WyreW()"
-          id="connect"
-          class="wyre"
-          target="_blank;"
-          id="verifyButton"
-        >
-          Onboard through Wyre!
-        </button>
-      </span>
     </div>
+
   </div>
-  
-    <div class="cards">
-      <div class="card">
+
+    <div class="cards" multi-col>
+      <div class="ea-card">
         <img
           src="../../assets/images/MexicoComm.jpeg"
           alt="Comm"
-          class="projimage"
         />
         <div class="container">
           <div>
-            <p>Loan 1</p>
+            <h2>Loan 1</h2>
             <p>Puerto Rico</p>
           </div>
-          <div class="tag">
             <input
               type="number"
               size="50"
@@ -69,9 +64,6 @@
               min="1"
               id="currency"
             />
-          </div>
-
-          <div class="button">
             <button
               onClick="PayE()"
               id="transfer"
@@ -80,18 +72,18 @@
             >
               Fund!
             </button>
-          </div>
+
         </div>
       </div>
 
-      <div class="card">
+      <div class="ea-card">
         <img
           src="../../assets/images/commroof1.jpeg"
           alt="Comm"
           class="projimage"
         />
         <div class="container">
-          <p>Loan 2</p>
+          <h2>Loan 2</h2>
           <p>Puerto Rico</p>
           <div class="tag">
             <input
@@ -116,14 +108,14 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="ea-card">
         <img
           src="../../assets/images/commroof2.jpeg"
           alt="Comm"
           class="projimage"
         />
         <div class="container">
-          <p>Loan 3</p>
+          <h2>Loan 3</h2>
           <p>Mexico</p>
           <div class="tag">
             <input
@@ -148,14 +140,14 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="ea-card">
         <img
           src="../../assets/images/PRSolar2.JPG"
           alt="Comm"
           class="projimage"
         />
         <div class="container">
-          <p>Loan 4</p>
+          <h2>Loan 4</h2>
           <p>Mexico</p>
           <div class="tag">
             <input
