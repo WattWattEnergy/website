@@ -179,26 +179,8 @@
         var PayContract = web3.eth.contract(payContractABI);
         var payContract = PayContract.at(escrowContract);
 
-        // web3.eth.getBlock(48, function (error, result) {
-        //     if (!error)
-        //         console.log(JSON.stringify(result));
-        //     else
-        //         console.error(error);
-        // })
-        // one USD: 10000000000000000
-        // donationContract.deposit(payee, { "from": web3.eth.accounts[0] })
-        // console.log(donationContract)
-        // var b = web3.toWei(wad, "ether")
-
         payContract.deposit(payee, { gas: 200000, value: B }, console.log);
-        // donationContract.deposit(payee, { gas: 200000, value: Amount }, console.log)
-        // .on("receipt", function (receipt) {
-        //     $("#txStatus").text("Thank you for your donation! ");
-        // })
-        // .on("error", function (error) {
-        //     // Do something to alert the user their transaction has failed
-        //     $("#txStatus").text(error);
-        // });
+
         var accountInterval = setInterval(function() {
           // Check if account has changed
           if (web3.eth.accounts[0] !== userAccount) {
@@ -574,20 +556,7 @@
 
         var PayContract = web3.eth.contract(payContractABI);
         var payContract = PayContract.at(DaiContract);
-
-        // web3.eth.getBlock(48, function (error, result) {
-        //     if (!error)
-        //         console.log(JSON.stringify(result));
-        //     else
-        //         console.error(error);
-        // })
-        // one USD: 10000000000000000
-        // donationContract.deposit(payee, { "from": web3.eth.accounts[0] })
-        // console.log(donationContract)
-        // var b = web3.toWei(wad, "ether")
-        console.log(src);
-        console.log(dst);
-        console.log(wad);
+        
         payContract
           .transfer(dst, wad, { gas: 50000 }, console.log)
           // donationContract.deposit(payee, { gas: 200000, value: Amount }, console.log)
