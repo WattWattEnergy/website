@@ -13,8 +13,8 @@ import { PdfViewerModule } from "ng2-pdf-viewer";
 import { WhitepaperComponent } from './whitepaper/whitepaper.component';
 import { TestpageComponent } from './testpage/testpage.component';
 import { OnboardComponent } from './onboard/onboard.component';
-
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
+import {Web3Service} from './web3.service';
 // import { OnboardComponent } from './onboard/onboard.component';
 // import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
@@ -39,9 +39,11 @@ import {LocationStrategy, HashLocationStrategy} from '@angular/common';
     AutoCompleteModule,
     LayoutModule,
     PdfViewerModule,
+    BrowserModule,
     // TabsModule
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [Web3Service,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 
 })

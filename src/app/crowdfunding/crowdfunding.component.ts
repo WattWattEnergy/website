@@ -1,5 +1,18 @@
-import { Component, HostListener, OnInit } from '@angular/core';
-import web3 from 'web3';
+import { Component, HostListener, OnInit, InjectionToken, Injectable } from '@angular/core';
+import Web3 from 'web3';
+import { Web3Service } from '../web3.service';
+
+// export const WEB3 = new InjectionToken<Web3>('web3', {
+//   providedIn: 'root',
+//   factory: () => {
+//     try {
+//       const provider = ('ethereum' in window) ? window['ethereum'] : Web3.givenProvider;
+//       return new Web3(provider);
+//     } catch (err) {
+//       throw new Error('Non-Ethereum browser detected. You should consider trying Mist or MetaMask!');
+//     }
+//   }
+// });
 
 
 
@@ -11,13 +24,27 @@ import web3 from 'web3';
 })
 export class CrowdfundingComponent implements OnInit {
 
-  constructor() {
+  constructor(private _web3service: Web3Service) {
 // import data services like web3
 // const web3 = new Web3("ws://localhost:8546");
    }
 
   ngOnInit() {
+    // const web3 = new Web3("ws://localhost:8546");
+
+    // var web3 = window.web3
+    // ? new Web3(window.web3.currentProvider)
+    // : new Web3(
+    //     new Web3.providers.HttpProvider()
+    //   );
   }
+  run() {
+    this._web3service.run();
+  }
+  // run() {
+  //   console.log('run2');
+  // }
+  //THIS WORKED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 //   @HostListener('document:onclick', ['$event']) 
 //     onclick(connectM) {
