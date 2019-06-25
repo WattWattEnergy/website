@@ -1,18 +1,8 @@
 import { Component, HostListener, OnInit, InjectionToken, Injectable } from '@angular/core';
 import Web3 from 'web3';
 import { Web3Service } from '../web3.service';
+import { WyreService } from '../wyre.service';
 
-// export const WEB3 = new InjectionToken<Web3>('web3', {
-//   providedIn: 'root',
-//   factory: () => {
-//     try {
-//       const provider = ('ethereum' in window) ? window['ethereum'] : Web3.givenProvider;
-//       return new Web3(provider);
-//     } catch (err) {
-//       throw new Error('Non-Ethereum browser detected. You should consider trying Mist or MetaMask!');
-//     }
-//   }
-// });
 
 
 
@@ -24,7 +14,10 @@ import { Web3Service } from '../web3.service';
 })
 export class CrowdfundingComponent implements OnInit {
 
-  constructor(private _web3service: Web3Service) {
+  
+
+
+  constructor(private _web3service: Web3Service, private _wyreservice: WyreService) {
 // import data services like web3
 // const web3 = new Web3("ws://localhost:8546");
    }
@@ -38,9 +31,35 @@ export class CrowdfundingComponent implements OnInit {
     //     new Web3.providers.HttpProvider()
     //   );
   }
+
+  sendwyre() {
+    this._wyreservice.sendwyre();
+  }
+
+  Transfer() {
+    this._wyreservice.Transfer();
+  }
+
   run() {
     this._web3service.run();
   }
+
+  Connect() {
+    this._web3service.Connect();
+  }
+
+  PayE() {
+    this._web3service.PayE();
+  }
+
+  Pay() {
+    this._web3service.Pay();
+  }
+
+  PayT() {
+    this._web3service.PayT();
+  }
+  
   // run() {
   //   console.log('run2');
   // }

@@ -13,9 +13,9 @@
       <div id="connectM" class="buttons">
 
             <button
+            (click) = "Connect()"
             outline
             rounded
-              onClick="Connect()"
               id="connect"
               class="metamask"
               target="_blank;"
@@ -26,7 +26,7 @@
             <button
             outline
             rounded
-              onClick="WyreW()"
+              (click) = "sendwyre()"
               id="connect"
               class="wyre"
               target="_blank;"
@@ -65,7 +65,7 @@
               id="currency"
             />
             <button
-              onClick="PayE()"
+              (click) = "PayE()"
               id="transfer"
               class="submittal"
               target="_blank;"
@@ -97,7 +97,7 @@
           </div>
           <div class="button">
             <button
-              onClick="Pay()"
+              (click) = "Pay()"
               id="transfer"
               class="submittal"
               target="_blank;"
@@ -128,7 +128,8 @@
             />
           </div>
           <div class="button">
-            <button (click) ="run()"
+            <button 
+              onclick = "PayT()"
               id="transfer"
               class="submittal"
               target="_blank;"
@@ -160,7 +161,7 @@
           </div>
           <div class="button">
             <button
-              onClick="Transfer()"
+              (click) = "Transfer()"
               id="transfer"
               class="submittal"
               target="_blank;"
@@ -199,47 +200,6 @@
       console.log("hello11");
       import Web3 from "web3";
     </script>
-    <script>
-      window.addEventListener("load", async () => {
-        // Modern dapp browsers...
-        if (window.ethereum) {
-          window.web3 = new Web3(ethereum);
-          try {
-            // Request account access if needed
-            await ethereum.enable();
-            // Acccounts now exposed
-            web3.eth.sendTransaction({
-              /* ... */
-            });
-          } catch (error) {
-            // User denied account access...
-          }
-        }
-        // Legacy dapp browsers...
-        else if (window.web3) {
-          window.web3 = new Web3(web3.currentProvider);
-          // Acccounts always exposed
-          web3.eth.sendTransaction({
-            /* ... */
-          });
-        }
-        // Non-dapp browsers...
-        else {
-          console.log(
-            "Non-Ethereum browser detected. You should consider trying MetaMask!"
-          );
-        }
-      });
-    </script>
+    <script src="https://verify.sendwyre.com/js/widget-loader.js"></script>
   </body>
-
-  <script rtype="text/javascript" href="./js/balance.js"></script>
-  <!-- <script type="text/javascript" src="portal/js/changecurrency.js"></script> -->
-  <script type="text/javascript" src="./js/Dai.js"></script>
-  <script type="text/javascript" src="./js/sendeth.js"></script>
-  <!-- <script type="text/javascript" src="/pay/js/balance.js"></script> -->
-  <!-- <script type="text/javascript" src=”portal/js/web3.min.js”></script> -->
-  <script type="text/javascript" src="./js/bignumber.js"></script>
-  <script type="text/javascript" src="./js/ethjs.min.js"></script>
-  <!-- <script type="text/javascript" src="/pay/js/copy.js"></script> -->
 </html>
