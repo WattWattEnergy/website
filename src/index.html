@@ -18,11 +18,11 @@
       // configure the widget for metamask authentication
       var widget = new Wyre.Widget({
         env: "test",
-        type: "onramp",
+        type: "debitcard",
         accountId: "AC-EPLB2VQTJNH",
         auth: { type: "default" },
         operation: {
-          type: "onramp",
+          type: "debitcard",
           dest: "ethereum:0x98B031783d0efb1E65C4072C6576BaCa0736A912",
           sourceCurrency: "USD",
           destCurrency: "ETH",
@@ -32,7 +32,7 @@
 
     </script>
 
-    <script>
+    <!-- <script>
       function PayT() {
         console.log("Sending Fake Ether!");
         // const Web3 = require('web3');
@@ -180,6 +180,6 @@
           }
         }
       }
-    </script>
+    </script> -->
   </body>
 </html>
