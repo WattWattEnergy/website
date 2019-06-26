@@ -47,12 +47,13 @@ export class WyreService {
       accountId: "AC-EPLB2VQTJNH",
       auth: { type: "default" },
       operation: {
-        type: "onramp",
+        type: "debitcard",
         dest: "ethereum:0x98B031783d0efb1E65C4072C6576BaCa0736A912",
         sourceCurrency: "USD",
-        destCurrency: "ETH",
+        destCurrency: "DAI",
         destAmount: 0.02
-      }
+      },
+      autoConfirm:true 
     });
   }
 
@@ -63,12 +64,13 @@ export class WyreService {
     var transfer2 = new Wyre.Widget({
       env: "test",
       accountId: "AC-EPLB2VQTJNH",
-      auth: { type: "default" },
+      auth: { type: "secretKey",
+      secretKey: "testertestertestertestertestertester" },
       operation: {
-        type: "debitcard",
+        type: "onramp",
         dest: "ethereum:0x98B031783d0efb1E65C4072C6576BaCa0736A912",
         sourceCurrency: "USD",
-        destCurrency: "ETH",
+        destCurrency: "DAI",
         destAmount: 0.03
       }
     });
