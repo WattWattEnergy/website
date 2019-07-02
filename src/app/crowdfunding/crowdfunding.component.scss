@@ -67,9 +67,10 @@ body {
 .tag::after {
   position: absolute;
   // top: 2px;
-  right: 1rem;
+  // right: 3em;
+  // margin-left: 2em;
   transition: all .05s ease-in-out;
-  content: 'USD';
+  // content: 'USD';
   font-size: 1.5rem;
   display: inline;
   top: 30%;
@@ -206,6 +207,7 @@ ul {
       .button {
         position: relative;
         float: right;
+        padding-top: 1em;
         bottom: 0rem;
         z-index: 1;
         .submittal {

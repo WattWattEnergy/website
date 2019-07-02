@@ -38,41 +38,41 @@ export class WyreService {
 //     console.log(event);
 //   });
 
-  Transfer1() {
-    console.log('Wyre Transfer');
-    widget.open();
+  // Transfer1() {
+  //   console.log('Wyre Transfer');
+  //   widget.open();
 
-    var transfer1 = new Wyre.Widget({
-      env: "test",
-      accountId: "AC-EPLB2VQTJNH",
-      auth: { type: "default" },
-      operation: {
-        type: "debitcard",
-        dest: "ethereum:0x98B031783d0efb1E65C4072C6576BaCa0736A912",
-        sourceCurrency: "USD",
-        destCurrency: "DAI",
-        destAmount: 0.02
-      },
-      autoConfirm:true 
-    });
-  }
+  //   var transfer1 = new Wyre.Widget({
+  //     env: "test",
+  //     accountId: "AC-EPLB2VQTJNH",
+  //     auth: { type: "default" },
+  //     operation: {
+  //       type: "debitcard",
+  //       dest: "ethereum:0x98B031783d0efb1E65C4072C6576BaCa0736A912",
+  //       sourceCurrency: "USD",
+  //       destCurrency: "DAI",
+  //       destAmount: 0.02
+  //     },
+  //     autoConfirm:true 
+  //   });
+  // }
 
 
-  Transfer2() {
-    widget.open();
+  // Transfer2() {
+  //   widget.open();
 
-    var transfer2 = new Wyre.Widget({
-      env: "test",
-      accountId: "AC-EPLB2VQTJNH",
-      auth: { type: "secretKey",
-      secretKey: "testertestertestertestertestertester" },
-      operation: {
-        type: "onramp",
-        dest: "ethereum:0x98B031783d0efb1E65C4072C6576BaCa0736A912",
-        sourceCurrency: "USD",
-        destCurrency: "DAI",
-        destAmount: 0.03
-      }
-    });
-  }
+  //   var transfer2 = new Wyre.Widget({
+  //     env: "test",
+  //     accountId: "AC-EPLB2VQTJNH",
+  //     auth: { type: "secretKey",
+  //     secretKey: "testertestertestertestertestertester" },
+  //     operation: {
+  //       type: "onramp",
+  //       dest: "ethereum:0x98B031783d0efb1E65C4072C6576BaCa0736A912",
+  //       sourceCurrency: "USD",
+  //       destCurrency: "DAI",
+  //       destAmount: 0.03
+  //     }
+  //   });
+  // }
 }

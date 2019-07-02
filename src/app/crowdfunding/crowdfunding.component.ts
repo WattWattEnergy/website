@@ -36,13 +36,13 @@ export class CrowdfundingComponent implements OnInit {
     this._wyreservice.sendwyre();
   }
 
-  Transfer1() {
-    this._wyreservice.Transfer1();
-  }
+  // Transfer1() {
+  //   this._wyreservice.Transfer1();
+  // }
 
-  Transfer2() {
-    this._wyreservice.Transfer2();
-  }
+  // Transfer2() {
+  //   this._wyreservice.Transfer2();
+  // }
 
   run() {
     this._web3service.run();

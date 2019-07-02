@@ -20,7 +20,7 @@ export class EducationComponent implements OnInit {
   // };
   }
 
-  openCont(evt, Content) {
+  openCont(event, Content) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -31,7 +31,7 @@ export class EducationComponent implements OnInit {
       tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
     document.getElementById(Content).style.display = "block";
-    // evt.currentTarget.className += " active";
+    event.currentTarget.className += " active";
   }
 
 }

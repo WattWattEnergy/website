@@ -51,14 +51,15 @@
             <h2>Loan 1</h2>
             <p>Puerto Rico</p>
           </div>
-            <input
+            <!-- <input
               type="number"
               size="50"
               id="amount"
               value="0.10"
               min="1"
               id="currency"
-            />
+            /> -->
+            <span class="currencyinput">$<input type="text" name="currency"></span>
           <div class="button">
             <button
               (click) = "Pay()"
@@ -81,7 +82,7 @@
         <div class="container">
           <h2>Loan 2</h2>
           <p>Puerto Rico</p>
-          <div class="tag">
+          <!-- <div class="tag">
             <input
               type="number"
               size="50"
@@ -90,7 +91,9 @@
               min="1"
               id="currency"
             />
-          </div>
+          </div> -->
+          <span class="currencyinput">$<input type="text" name="currency"></span>
+
           <div class="button">
             <button
               (click) = "PayT()"
@@ -113,7 +116,7 @@
         <div class="container">
           <h2>Loan 3</h2>
           <p>Mexico</p>
-          <div class="tag">
+          <!-- <div class="tag">
             <input
               type="number"
               size="50"
@@ -122,10 +125,11 @@
               min="1"
               id="currency"
             />
-          </div>
+          </div> -->
+          <span class="currencyinput">$<input type="text" name="currency"></span>
           <div class="button">
             <button 
-              (click) = "Transfer1()"
+              (click) = "Pay()"
               id="transfer"
               class="submittal"
               target="_blank;"
@@ -145,7 +149,7 @@
         <div class="container">
           <h2>Loan 4</h2>
           <p>Mexico</p>
-          <div class="tag">
+          <!-- <div class="tag">
             <input
               type="number"
               size="50"
@@ -154,10 +158,12 @@
               min="1"
               id="currency"
             />
-          </div>
+          </div> -->
+            <span class="currencyinput">$<input type="text" name="currency"></span>
+
           <div class="button">
             <button
-              (click) = "Transfer2()"
+              (click) = "Pay()"
               id="transfer"
               class="submittal"
               target="_blank;"
