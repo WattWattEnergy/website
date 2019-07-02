@@ -25,7 +25,7 @@
     "ethjs": "^0.4.0",
     "ng2-pdf-viewer": "^5.2.0",
     "rxjs": "~6.3.3",
-    "web3": "github:ethereum/web3.js",
+    "web3": "^0.19.1",
     "web3-service-lib": "0.0.3",
     "web3x-es": "^4.0.0",
     "zone.js": "~0.8.26"

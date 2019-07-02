@@ -5,8 +5,18 @@
   <p>In this portal, you can find education on:</p>
   </div>
   <span></span>
-  <!-- <ea-tabs>
-    <ea-tab name="Smart Contracts">
+  <div class="tabs">
+
+      <div class="tab">
+          <a class="tablinks" (click)="openCont(event, 'Contracts')">Contracts</a>
+          <a class="tablinks" (click)="openCont(event, 'Solar')">Solar PV</a>
+          <a class="tablinks" (click)="openCont(event, 'Finance')">Finance</a>
+          <a class="tablinks" (click)="openCont(event, 'Token')">Tokenomics</a>
+          <a class="tablinks" (click)="openCont(event, 'Auctions')">Auctions</a>
+        </div>
+
+    <div id="content">
+    <div class="tabcontent" id="Contracts" name="Smart Contracts">
       <div class="info" id="smartcontracts">
         <img src="../../assets/images/ethereumsmartcontract.jpeg" />
         <h3>Smart Contracts</h3>
@@ -248,8 +258,8 @@
           </p>
         </div>
       </div>
-    </ea-tab>
-    <ea-tab name="Solar PV Energy">
+    </div>
+    <div class="tabcontent" id="Solar" name="Solar PV Energy">
       <div class="ea-card" class="info" id="pvenergy">
         <h3>Solar PV Energy</h3>
         <p>
@@ -472,8 +482,8 @@
           </p>
         </div>
       </div>
-    </ea-tab>
-    <ea-tab name="Project Finance">
+    </div>
+    <div class="tabcontent" id="Finance" name="Project Finance">
       <div class="ea-card" class="info" id="projectfinance">
         <h3>Project Finance</h3>
         <p>
@@ -549,8 +559,8 @@
           in turn improve generator's effeciency and cost.
         </p>
       </div>
-    </ea-tab>
-    <ea-tab name="Tokenomics Examples">
+    </div>
+    <div class="tabcontent" id="Token" name="Tokenomics Examples">
       <div class="info">
         <h3 id="tokenomics">Tokenomics</h3>
         <p>
@@ -673,8 +683,8 @@
           </p>
         </div>
       </div>
-    </ea-tab>
-    <ea-tab name="Auctions and Prices">
+    </div>
+    <div class="tabcontent" id="Auctions" name="Auctions and Prices">
       <div class="ea-card" class="info" id="auctions" unset>
         <h3>Auctions</h3>
         <p>
@@ -751,6 +761,7 @@
           </p>
         </div>
       </div>
-    </ea-tab>
-  </ea-tabs> -->
+    </div>
+    </div>
+  </div>
 </section>

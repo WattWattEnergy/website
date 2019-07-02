@@ -2,6 +2,8 @@ import { Injectable, InjectionToken } from '@angular/core';
 import Web3 from 'web3';
 import { HttpClient } from '@angular/common/http';
 import Big from 'big.js';
+declare let Web3: any;
+declare let web3;
 
 // export const WEB3 = new InjectionToken<Web3>('web3');
 // const Web3 = require("web3");
