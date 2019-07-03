@@ -9,6 +9,11 @@ app-education {
     // }
 }
 
+.mat-tab-nav-bar {
+    white-space: nowrap;
+    overflow: auto;
+  }
+
 .title {
     margin: 0.4em 1em 1em 1em;
 }

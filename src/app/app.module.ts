@@ -14,6 +14,9 @@ import { WhitepaperComponent } from './whitepaper/whitepaper.component';
 import { TestpageComponent } from './testpage/testpage.component';
 import { OnboardComponent } from './onboard/onboard.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatTabsModule} from '@angular/material/tabs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Web3Service } from './web3.service';
 import { WyreService } from './wyre.service';
 // import { OnboardComponent } from './onboard/onboard.component';
@@ -41,6 +44,9 @@ import { WyreService } from './wyre.service';
     LayoutModule,
     PdfViewerModule,
     BrowserModule,
+    MatNativeDateModule,
+    MatTabsModule,
+    BrowserAnimationsModule,
     // TabsModule
   ],
   providers: [Web3Service,
