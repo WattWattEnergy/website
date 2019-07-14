@@ -1,14 +1,3 @@
-app-education {
-    // display: block;
-    // justify-content: center;
-    // margin: 0 0 0 0;
-    // position: fixed;
-    // width: 100%;
-    // & > section {
-    //     // width: 60%;
-    // }
-}
-
 .mat-tab-nav-bar {
     white-space: nowrap;
     overflow: auto;
@@ -61,6 +50,19 @@ a.tablinks {
         text-decoration: underline;
     }
 }
+.mat-tab-label-container {
+    white-space: nowrap;
+    overflow: auto;
+  }
+
+// #mat-tab-content-0-1 {
+//     flex-basis: 0 !important;
+// }
+
+.mat-tab-body {
+    flex-basis: 0 !important;
+    // max-width: 0;
+}
 
 #content {
     padding-top: 1em;
@@ -77,10 +79,6 @@ a.tablinks {
     .llist {
         list-style-type: square;
         margin-top: 2rem;
-    }
-
-    .contractlist {
-        // text-align: left;
     }
 
     .smartlist {

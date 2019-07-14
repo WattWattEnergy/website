@@ -26,6 +26,7 @@
     "@eamode/eang": "^2.6.6",
     "@material/tab-scroller": "^3.0.0",
     "@material/tabs": "^2.3.0",
+    "@ng-bootstrap/ng-bootstrap": "^5.0.0",
     "core-js": "^2.5.4",
     "ethjs": "^0.4.0",
     "ng2-pdf-viewer": "^5.2.0",
