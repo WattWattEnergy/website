@@ -35,6 +35,23 @@ body {
   font-size: 1.5rem;
 }
 
+.card img {
+  width: 15em;
+  height: auto;
+  float: right;
+}
+
+.datas {
+  overflow: hidden;
+  text-align: center;
+}
+
+.data {
+  display: inline-block;
+  padding-right: 1em;
+  left: 0;
+}
+
 .text {
   margin-left: 3rem !important;
 }
@@ -56,7 +73,7 @@ body {
 }
 
 .container {
-  margin: 1em 3rem !important;
+  margin: 1em 1rem !important;
 }
 
 #transfer {
@@ -146,63 +163,56 @@ ul li #logo {
   margin-left: 3rem;
 }
 
-.cards {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+#listings {
+  padding: 0;
 }
 
-.cards .ea-card {
+#listings .ea-card {
   border-bottom: 3px solid #000000;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   margin-top: 2em;
+  width: 40%;
 }
 
-.cards .ea-card .projimage {
+#listings .ea-card .projimage {
   width: 100%;
 }
 
-.cards .ea-card .container {
+#listings .ea-card .container {
   padding-bottom: 3rem;
   margin-left: 1rem;
   margin-right: 1rem;
 }
 
-.cards .ea-card .container #currency {
+#listings .ea-card .container #currency {
   width: 60%;
   font-size: 2rem;
 }
 
-.cards .ea-card .container .button {
+#listings .ea-card .container .button {
   position: relative;
   float: right;
-  padding-top: 1em;
+  margin-top: 1em;
   bottom: 0rem;
   z-index: 1;
 }
 
-.cards .ea-card .container .button .submittal {
+#listings .ea-card .container .button .submittal {
   color: #56568d;
   border-radius: 3rem;
   padding: 0.5rem 1rem 0.5rem;
   font-size: 2rem;
 }
 
-.cards .ea-card .container .button .submittal:hover {
+#listings .ea-card .container .button .submittal:hover {
   -webkit-transform: scale(1.05);
   /*Grows in size like Angry Birds button*/
   -moz-transform: scale(1.05);
   -ms-transform: scale(1.05);
   -o-transform: scale(1.05);
-}
-
-@media only screen and (min-width: 950px) {
-  .card {
-    margin: 3rem 6rem 1rem;
-  }
 }
 
 @media only screen and (max-width: 950px) {
@@ -225,13 +235,14 @@ ul li #logo {
   .tag {
     margin-bottom: 1rem;
   }
-  .card {
+  .cardss {
     margin: 3rem 2rem 1rem;
   }
   .button {
     position: relative;
     float: right;
     bottom: 0rem;
+    margin-top: 1em;
   }
 }
 
@@ -260,6 +271,10 @@ ul li #logo {
   }
   .button {
     margin-right: 3rem;
+    margin-top: 1em;
+  }
+  .currencyinput {
+    width: 80%;
   }
   .submittal {
     padding: 0.5rem 1.5rem 0.5rem;
@@ -287,10 +302,6 @@ ul li #logo {
     display: inline-block;
     margin-bottom: 2rem;
   }
-}
-
-img {
-  width: 100%;
 }
 
 h2 {

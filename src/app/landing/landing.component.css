@@ -6,6 +6,27 @@ a:-webkit-any-link {
   margin: 0 4% 0 4%;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (3rem 1fr)[1];
+      grid-template-columns: repeat(1, 3rem 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+ul li span[icon] {
+  height: 1.4rem;
+  width: 100%;
+}
+
 p {
   --ea-font-1-family: 'Roboto';
 }
@@ -53,5 +74,9 @@ h2 {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.mode span {
+  margin-right: 2em;
 }
 /*# sourceMappingURL=landing.component.css.map */

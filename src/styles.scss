@@ -30,20 +30,20 @@
       background-image: url("assets/images/discord.svg");
     }
   }
-  ul {
-    margin: 0;
-    padding: 0;
-    & li {
-      display: grid;
-      grid-template-columns: repeat(1, 3rem 1fr);
-      align-items: center;
-      justify-items: center;
-      & span[icon] {
-        height: 1.4rem;
-        width: 100%;
-      }
-    }
-  }
+  // ul {
+  //   margin: 0;
+  //   padding: 0;
+  //   & li {
+  //     display: grid;
+  //     grid-template-columns: repeat(1, 3rem 1fr);
+  //     align-items: center;
+  //     justify-items: center;
+  //     & span[icon] {
+  //       height: 1.4rem;
+  //       width: 100%;
+  //     }
+  //   }
+  // }
 
   & ea-layout {
     & ea-drawer {

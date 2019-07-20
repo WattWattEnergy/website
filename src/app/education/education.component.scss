@@ -11,8 +11,20 @@
     margin: 0 2rem 0 2rem;
 }
 
+#tabbings {
+    list-style: none !important;
+}
+
+ul {
+    list-style: none !important;
+}
+
+li {
+    list-style: none !important;
+}
+
 .tabs {
-    text-align:center;
+    // text-align:center;
     // overflow:hidden;
     // padding: 0 0.95em 0 0.95em;
     // padding-left: 0.95em;
@@ -50,6 +62,11 @@ a.tablinks {
         text-decoration: underline;
     }
 }
+
+.tabcontent {
+    padding-top: 2em;
+}
+
 .mat-tab-label-container {
     white-space: nowrap;
     overflow: auto;
@@ -85,14 +102,14 @@ a.tablinks {
         text-align: left;
     }
 
-    ul li {
-    // padding-left:0px;
-    // text-align:center;
-    text-indent: 1rem;
-    list-style-type: square;
-    display: block;
-    margin: 1rem 0 1rem 0;
-    }
+    // ul li {
+    // // padding-left:0px;
+    // // text-align:center;
+    // text-indent: 1rem;
+    // list-style-type: square;
+    // display: block;
+    // margin: 1rem 0 1rem 0;
+    // }
     ul li p {
         padding-right:24px;
         list-style:none;

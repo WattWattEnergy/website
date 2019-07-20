@@ -11,8 +11,19 @@
   margin: 0 2rem 0 2rem;
 }
 
+#tabbings {
+  list-style: none !important;
+}
+
+ul {
+  list-style: none !important;
+}
+
+li {
+  list-style: none !important;
+}
+
 .tabs {
-  text-align: center;
   margin-top: 0.2em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -51,9 +62,13 @@ a.tablinks :hover {
   text-decoration: underline;
 }
 
+.tabcontent {
+  padding-top: 2em;
+}
+
 .mat-tab-label-container {
-  white-space: nowrap !important;
-  overflow: auto !important;
+  white-space: nowrap;
+  overflow: auto;
 }
 
 .mat-tab-body {
@@ -78,13 +93,6 @@ a.tablinks :hover {
 
 .smartlist {
   text-align: left;
-}
-
-ul li {
-  text-indent: 1rem;
-  list-style-type: square;
-  display: block;
-  margin: 1rem 0 1rem 0;
 }
 
 ul li p {
