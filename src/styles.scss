@@ -21,7 +21,7 @@
   --ea-color-1-light:hsl(208, 39%, 40%);
   & ea-layout {
     & ea-body {
-      display: flex;
+      // display: flex;
       justify-content: center;
     }
   }
@@ -30,20 +30,20 @@
       background-image: url("assets/images/discord.svg");
     }
   }
-  ul {
-    margin: 0;
-    padding: 0;
-    & li {
-      display: grid;
-      grid-template-columns: repeat(1, 3rem 1fr);
-      align-items: center;
-      justify-items: center;
-      & span[icon] {
-        height: 1.4rem;
-        width: 100%;
-      }
-    }
-  }
+  // ul {
+  //   margin: 0;
+  //   padding: 0;
+  //   & li {
+  //     display: grid;
+  //     grid-template-columns: repeat(1, 3rem 1fr);
+  //     align-items: center;
+  //     justify-items: center;
+  //     & span[icon] {
+  //       height: 1.4rem;
+  //       width: 100%;
+  //     }
+  //   }
+  // }
 
   & ea-layout {
     & ea-drawer {
@@ -51,9 +51,17 @@
       display: none;
       @media only screen and (max-width: 650px) {
         display: flex;
+        width: 15em;
       }
       & section {
-        & a,
+        & a {
+          margin: 1em 4em 0 1em;
+          width: 50%;
+          color: red;
+          word-wrap: break-word;
+          display: block;
+        }
+  
         a:visited {
           color: black;
           border-bottom: 1px solid #355a7a3b;

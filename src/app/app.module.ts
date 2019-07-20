@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { PanelModule, AutoCompleteModule, LayoutModule, TabsComponent, TabsModule } from "@eamode/eang";
+import { PanelModule, AutoCompleteModule, LayoutModule } from "@eamode/eang";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { LandingComponent } from "./landing/landing.component";
@@ -13,8 +13,13 @@ import { PdfViewerModule } from "ng2-pdf-viewer";
 import { WhitepaperComponent } from './whitepaper/whitepaper.component';
 import { TestpageComponent } from './testpage/testpage.component';
 import { OnboardComponent } from './onboard/onboard.component';
-
-import {LocationStrategy, HashLocationStrategy} from '@angular/common';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatTabsModule } from '@angular/material/tabs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Web3Service } from './web3.service';
+import { WyreService } from './wyre.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import { OnboardComponent } from './onboard/onboard.component';
 // import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
@@ -39,9 +44,15 @@ import {LocationStrategy, HashLocationStrategy} from '@angular/common';
     AutoCompleteModule,
     LayoutModule,
     PdfViewerModule,
-    TabsModule
+    BrowserModule,
+    MatNativeDateModule,
+    MatTabsModule,
+    BrowserAnimationsModule,
+    NgbModule,
+    // TabsModule
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [Web3Service,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 
 })

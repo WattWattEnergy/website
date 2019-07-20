@@ -18,12 +18,16 @@ body {
   background: $backgroundcolor;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  padding-bottom: 14rem;
+  padding: 0 2em 8em 2em;
 }
 
 #top {
   position: relative;
 
+}
+
+#title {
+  margin: 3em 0 0 0;
 }
 
 #connectM {
@@ -50,6 +54,26 @@ body {
   font-size: 1.5rem;
 }
 
+.card {
+  
+  img {
+    width: 15em;
+    height: auto;
+    float: right;
+  }
+}
+
+.datas {
+  overflow:hidden;  
+  text-align: center;
+}
+
+.data {
+  display: inline-block;
+  padding-right: 1em;
+  left: 0;
+}
+
 .text {
   margin-left: 3rem !important;
 }
@@ -63,9 +87,10 @@ body {
 .tag::after {
   position: absolute;
   // top: 2px;
-  right: 1rem;
+  // right: 3em;
+  // margin-left: 2em;
   transition: all .05s ease-in-out;
-  content: 'USD';
+  // content: 'USD';
   font-size: 1.5rem;
   display: inline;
   top: 30%;
@@ -73,7 +98,7 @@ body {
 }
 
 .container {
-  margin: 1em 3rem !important;
+  margin: 1em 1rem !important;
 }
 
 #transfer {
@@ -177,13 +202,20 @@ ul {
 }
 
 // Cards
-.cards {
-  margin: 5rem 0.2rem 0 0.2rem;
-  .card {
+#listings {
+  // margin-top: 5rem;
+  // margin-left: auto;
+  // margin-right: auto;
+  // display:block;
+  padding: 0;
+
+  .ea-card {
     // margin: 3rem 2rem 1rem;
     border-bottom: 3px solid #000000;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
+    margin-top: 2em;
+    width: 40%;
     .projimage {
       width: 100%;
     }
@@ -192,13 +224,14 @@ ul {
         margin-left: 1rem;
         margin-right: 1rem;
       #currency {
-
+        width: 60%;
         font-size: 2rem;
       }
       .button {
         position: relative;
         float: right;
-        bottom: 2rem;
+        margin-top: 1em;
+        bottom: 0rem;
         z-index: 1;
         .submittal {
           color: rgb(86, 86, 141);
@@ -221,8 +254,8 @@ ul {
 }
 
 @media only screen and (min-width: 950px) {
-  .card {
-    margin: 3rem 6rem 1rem;
+  .cardss {
+    // margin: 3rem 6rem 1rem;
   }
 }
 
@@ -239,13 +272,14 @@ ul {
     margin-top: 0.7rem;
     margin: auto;
     position: relative;
+
   }
 
   .tag {
     margin-bottom: 1rem;
   }
 
-  .card {
+  .cardss {
     margin: 3rem 2rem 1rem;
   }
 
@@ -253,17 +287,18 @@ ul {
     position: relative;
     float: right;
     bottom: 0rem;
+    margin-top: 1em;
   }
 }
 
 @media only screen and (max-width: 600px) {
   #title {
-    font-size: 1rem;
-    margin: 0.5rem 0.2rem 0rem 0.2rem;
+    font-size: 2rem;
+    margin: 0.5rem 0rem 0rem 0rem;
   }
 
   .cards {
-    margin-top: 7rem;
+
   }
 
   /* DYNAMIC NAVIGATION BAR
@@ -301,6 +336,11 @@ ul {
 
   .button {
     margin-right: 3rem;
+    margin-top: 1em;
+  }
+
+  .currencyinput {
+    width: 80%;
   }
 
   .submittal {
@@ -309,7 +349,8 @@ ul {
   }
   #connectM {
     text-align: center;
-    margin-bottom: 3rem;
+    padding: 0;
+    // margin-bottom: 3rem;
   }
 
   .metamask {
@@ -326,6 +367,11 @@ ul {
     margin-right: 0rem;
     left: 0;
     display: inline-block;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
+}
+
+
+h2 {
+  margin-bottom: 0;
 }

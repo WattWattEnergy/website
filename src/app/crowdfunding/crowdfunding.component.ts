@@ -1,5 +1,8 @@
-import { Component, HostListener, OnInit } from '@angular/core';
-import web3 from 'web3';
+import { Component, HostListener, OnInit, InjectionToken, Injectable } from '@angular/core';
+import Web3 from 'web3';
+import { Web3Service } from '../web3.service';
+import { WyreService } from '../wyre.service';
+
 
 
 
@@ -11,13 +14,60 @@ import web3 from 'web3';
 })
 export class CrowdfundingComponent implements OnInit {
 
-  constructor() {
+  
+
+
+  constructor(private _web3service: Web3Service, private _wyreservice: WyreService) {
 // import data services like web3
 // const web3 = new Web3("ws://localhost:8546");
    }
 
   ngOnInit() {
+    // const web3 = new Web3("ws://localhost:8546");
+
+    // var web3 = window.web3
+    // ? new Web3(window.web3.currentProvider)
+    // : new Web3(
+    //     new Web3.providers.HttpProvider()
+    //   );
   }
+
+  sendwyre() {
+    this._wyreservice.sendwyre();
+  }
+
+  // Transfer1() {
+  //   this._wyreservice.Transfer1();
+  // }
+
+  // Transfer2() {
+  //   this._wyreservice.Transfer2();
+  // }
+
+  run() {
+    this._web3service.run();
+  }
+
+  Connect() {
+    this._web3service.Connect();
+  }
+
+  PayE() {
+    this._web3service.PayE();
+  }
+
+  Pay() {
+    this._web3service.Pay();
+  }
+
+  PayT() {
+    this._web3service.PayT();
+  }
+  
+  // run() {
+  //   console.log('run2');
+  // }
+  //THIS WORKED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 //   @HostListener('document:onclick', ['$event']) 
 //     onclick(connectM) {

@@ -10,70 +10,62 @@
   </head>
 
   <body>
-    <p id="title">Welcome to Decentralized Energy Financing</p>
-    <div id="top">
-    <div id="topnav1">
-      <nav id="topnav">
-        <ul>
-          <!-- <li><img id="logo" src="../../assets/images/WattWattLogo.png" /></li> -->
-          <!-- <li><a href="#section1">Find A Loan</a></li>
-        <li><a href="#section2">Your Loans</a></li> -->
-          <!-- <li><a href="#section3">Borrow</a></li>
-        <li><a href="#section4">Learn</a></li> -->
-          <!-- <li><a id="signup1" href="#section4">Signup ▼</a></li> -->
-        </ul>
-      </nav>
-    </div>
-    <div id="connectM" class="buttons">
-      <span>
-        <button
-          onClick="Connect()"
-          id="connect"
-          class="metamask"
-          target="_blank;"
-        >
-          Connect to Metamask!
-        </button>
+      <div id="connectM" class="buttons">
 
-        <button
-          onClick="WyreW()"
-          id="connect"
-          class="wyre"
-          target="_blank;"
-          id="verifyButton"
-        >
-          Onboard through Wyre!
-        </button>
-      </span>
-    </div>
-  </div>
-  
-    <div class="cards">
+            <button
+            (click) = "Connect()"
+            outline
+            rounded
+              id="connect"
+              class="metamask"
+              target="_blank;"
+            >
+              Use Metamask
+            </button>
+
+            <button
+            outline
+            rounded
+              (click) = "sendwyre()"
+              id="connect"
+              class="wyre"
+              target="_blank;"
+              id="verifyButton"
+            >
+               Onboard
+            </button>
+
+        </div>
+    <h1 id="title">Solar Projects Raising Capital</h1>
+    <!-- <h3></h3>
+    <div id="top"><div id="topnav1"></div></div> -->
+
+    <div multi-col p id="listings">
       <div class="card">
         <img
           src="../../assets/images/MexicoComm.jpeg"
           alt="Comm"
-          class="projimage"
         />
         <div class="container">
           <div>
-            <p>Loan 1</p>
-            <p>Puerto Rico</p>
+            <h2>Bayamon, PR 3</h2>
+            <div class="datas">
+                <span style="left: 0;"><p class="data">8.1%</p> <p class="data">$300,000</p> <a class="data">More..</a></span>
+            </div>
+
           </div>
-          <div class="tag">
-            <input
+            <!-- <input
               type="number"
               size="50"
               id="amount"
               value="0.10"
               min="1"
               id="currency"
-            />
-          </div>
-
+            /> -->
+            <span class="currencyinput">$<input type="text" name="currency"></span>
           <div class="button">
             <button
-              onClick="PayE()"
+              (click) = "Pay()"
               id="transfer"
               class="submittal"
               target="_blank;"
@@ -91,9 +83,11 @@
           class="projimage"
         />
         <div class="container">
-          <p>Loan 2</p>
-          <p>Puerto Rico</p>
-          <div class="tag">
+          <h2>San Juan, PR</h2>
+          <div class="datas">
+              <span style="left: 0;"><p class="data">8.0%</p> <p class="data">$500,000</p> <a class="data">More..</a></span>
+          </div>
+          <!-- <div class="tag">
             <input
               type="number"
               size="50"
@@ -102,10 +96,12 @@
               min="1"
               id="currency"
             />
-          </div>
+          </div> -->
+          <span class="currencyinput">$<input type="text" name="currency"></span>
+
           <div class="button">
             <button
-              onClick="Pay()"
+              (click) = "PayT()"
               id="transfer"
               class="submittal"
               target="_blank;"
@@ -123,9 +119,11 @@
           class="projimage"
         />
         <div class="container">
-          <p>Loan 3</p>
-          <p>Mexico</p>
-          <div class="tag">
+          <h2>Loan 3</h2>
+          <div class="datas">
+              <span style="left: 0;"><p class="data">12.2%</p> <p class="data">$800,000</p> <a class="data">More..</a></span>
+          </div>
+          <!-- <div class="tag">
             <input
               type="number"
               size="50"
@@ -134,10 +132,11 @@
               min="1"
               id="currency"
             />
-          </div>
+          </div> -->
+          <span class="currencyinput">$<input type="text" name="currency"></span>
           <div class="button">
-            <button
-              onClick="Pay()"
+            <button 
+              (click) = "Pay()"
               id="transfer"
               class="submittal"
               target="_blank;"
@@ -155,9 +154,11 @@
           class="projimage"
         />
         <div class="container">
-          <p>Loan 4</p>
-          <p>Mexico</p>
-          <div class="tag">
+          <h2>Loan 4</h2>
+          <div class="datas">
+              <span style="left: 0;"><p class="data">7.4%</p> <p class="data">$600,000</p> <a class="data">More..</a></span>
+          </div>
+          <!-- <div class="tag">
             <input
               type="number"
               size="50"
@@ -166,10 +167,12 @@
               min="1"
               id="currency"
             />
-          </div>
+          </div> -->
+            <span class="currencyinput">$<input type="text" name="currency"></span>
+
           <div class="button">
             <button
-              onClick="Transfer()"
+              (click) = "Pay()"
               id="transfer"
               class="submittal"
               target="_blank;"
@@ -208,47 +211,6 @@
       console.log("hello11");
       import Web3 from "web3";
     </script>
-    <script>
-      window.addEventListener("load", async () => {
-        // Modern dapp browsers...
-        if (window.ethereum) {
-          window.web3 = new Web3(ethereum);
-          try {
-            // Request account access if needed
-            await ethereum.enable();
-            // Acccounts now exposed
-            web3.eth.sendTransaction({
-              /* ... */
-            });
-          } catch (error) {
-            // User denied account access...
-          }
-        }
-        // Legacy dapp browsers...
-        else if (window.web3) {
-          window.web3 = new Web3(web3.currentProvider);
-          // Acccounts always exposed
-          web3.eth.sendTransaction({
-            /* ... */
-          });
-        }
-        // Non-dapp browsers...
-        else {
-          console.log(
-            "Non-Ethereum browser detected. You should consider trying MetaMask!"
-          );
-        }
-      });
-    </script>
+    <script src="https://verify.sendwyre.com/js/widget-loader.js"></script>
   </body>
-
-  <script rtype="text/javascript" href="./js/balance.js"></script>
-  <!-- <script type="text/javascript" src="portal/js/changecurrency.js"></script> -->
-  <script type="text/javascript" src="./js/Dai.js"></script>
-  <script type="text/javascript" src="./js/sendeth.js"></script>
-  <!-- <script type="text/javascript" src="/pay/js/balance.js"></script> -->
-  <!-- <script type="text/javascript" src=”portal/js/web3.min.js”></script> -->
-  <script type="text/javascript" src="./js/bignumber.js"></script>
-  <script type="text/javascript" src="./js/ethjs.min.js"></script>
-  <!-- <script type="text/javascript" src="/pay/js/copy.js"></script> -->
 </html>

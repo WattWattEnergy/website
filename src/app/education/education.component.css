@@ -1,47 +1,98 @@
+.mat-tab-nav-bar {
+  white-space: nowrap;
+  overflow: auto;
+}
+
 .title {
-  margin-left: 65px;
-  margin-right: 35px;
+  margin: 0.4em 1em 1em 1em;
 }
 
-#ea-tab {
-  margin: 0.1em !important;
+#top {
+  margin: 0 2rem 0 2rem;
 }
 
-.glossary {
-  border: 2px solid #305b8a;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-right: 50px;
-  margin-left: 50px;
-  width: 100%;
-  height: 400px;
-  background-color: rgba(128, 128, 128, 0.201);
+#tabbings {
+  list-style: none !important;
+}
+
+ul {
+  list-style: none !important;
+}
+
+li {
+  list-style: none !important;
+}
+
+.tabs {
+  margin-top: 0.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tab {
+  background-color: #f0eaea;
+  margin: 0.1em 0 1em 0;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+a.tablinks {
+  background-color: #f0eaea;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1em 2em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin: 0 1em 0 1em;
+}
+
+a.tablinks :hover {
+  background-color: #d8cece;
+  text-decoration: underline;
+}
+
+.tabcontent {
+  padding-top: 2em;
+}
+
+.mat-tab-label-container {
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.mat-tab-body {
+  -ms-flex-preferred-size: 0 !important;
+      flex-basis: 0 !important;
+}
+
+#content {
+  padding-top: 1em;
 }
 
 .info {
-  margin-bottom: 50px;
-  padding: 20px;
-  margin-right: 20px;
+  margin-bottom: 4em;
+  padding: auto;
   text-align: justify;
 }
 
 .llist {
   list-style-type: square;
-}
-
-.contractlist {
-  text-align: left;
+  margin-top: 2rem;
 }
 
 .smartlist {
   text-align: left;
-}
-
-ul li {
-  padding-left: 0px;
-  list-style: none;
-  text-align: left;
-  text-indent: 0px;
 }
 
 ul li p {
@@ -50,11 +101,6 @@ ul li p {
   margin-bottom: 4px;
   text-indent: 0px;
   text-align: left;
-}
-
-.floatleft {
-  float: left;
-  margin-top: 80px;
 }
 
 .titles {
@@ -67,16 +113,12 @@ img {
   border-radius: 8px;
 }
 
-app-education {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.sections {
+  margin-top: 3rem;
 }
 
-app-education > section {
-  width: 60%;
+#ether {
+  width: 20%;
+  height: 20%;
 }
 /*# sourceMappingURL=education.component.css.map */

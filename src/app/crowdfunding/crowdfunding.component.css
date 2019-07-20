@@ -1,11 +1,15 @@
 body {
   background: rgba(255, 255, 255, 0.678);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  padding-bottom: 14rem;
+  padding: 0 2em 8em 2em;
 }
 
 #top {
   position: relative;
+}
+
+#title {
+  margin: 3em 0 0 0;
 }
 
 #connectM {
@@ -31,6 +35,23 @@ body {
   font-size: 1.5rem;
 }
 
+.card img {
+  width: 15em;
+  height: auto;
+  float: right;
+}
+
+.datas {
+  overflow: hidden;
+  text-align: center;
+}
+
+.data {
+  display: inline-block;
+  padding-right: 1em;
+  left: 0;
+}
+
 .text {
   margin-left: 3rem !important;
 }
@@ -43,10 +64,8 @@ body {
 
 .tag::after {
   position: absolute;
-  right: 1rem;
   -webkit-transition: all .05s ease-in-out;
   transition: all .05s ease-in-out;
-  content: 'USD';
   font-size: 1.5rem;
   display: inline;
   top: 30%;
@@ -54,7 +73,7 @@ body {
 }
 
 .container {
-  margin: 1em 3rem !important;
+  margin: 1em 1rem !important;
 }
 
 #transfer {
@@ -144,48 +163,51 @@ ul li #logo {
   margin-left: 3rem;
 }
 
-.cards {
-  margin: 5rem 0.2rem 0 0.2rem;
+#listings {
+  padding: 0;
 }
 
-.cards .card {
-  margin: 3rem 2rem 1rem;
+#listings .ea-card {
   border-bottom: 3px solid #000000;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  margin-top: 2em;
+  width: 40%;
 }
 
-.cards .card .projimage {
+#listings .ea-card .projimage {
   width: 100%;
 }
 
-.cards .card .container {
+#listings .ea-card .container {
   padding-bottom: 3rem;
   margin-left: 1rem;
   margin-right: 1rem;
 }
 
-.cards .card .container #currency {
+#listings .ea-card .container #currency {
+  width: 60%;
   font-size: 2rem;
 }
 
-.cards .card .container .button {
+#listings .ea-card .container .button {
   position: relative;
   float: right;
-  bottom: 2rem;
+  margin-top: 1em;
+  bottom: 0rem;
   z-index: 1;
 }
 
-.cards .card .container .button .submittal {
+#listings .ea-card .container .button .submittal {
   color: #56568d;
   border-radius: 3rem;
   padding: 0.5rem 1rem 0.5rem;
   font-size: 2rem;
 }
 
-.cards .card .container .button .submittal:hover {
+#listings .ea-card .container .button .submittal:hover {
   -webkit-transform: scale(1.05);
   /*Grows in size like Angry Birds button*/
   -moz-transform: scale(1.05);
@@ -213,20 +235,21 @@ ul li #logo {
   .tag {
     margin-bottom: 1rem;
   }
+  .cardss {
+    margin: 3rem 2rem 1rem;
+  }
   .button {
     position: relative;
     float: right;
     bottom: 0rem;
+    margin-top: 1em;
   }
 }
 
 @media only screen and (max-width: 600px) {
   #title {
-    font-size: 1rem;
-    margin: 0.5rem 0.2rem 0rem 0.2rem;
-  }
-  .cards {
-    margin-top: 7rem;
+    font-size: 2rem;
+    margin: 0.5rem 0rem 0rem 0rem;
   }
   /* DYNAMIC NAVIGATION BAR
    ================================================================= */
@@ -246,13 +269,20 @@ ul li #logo {
     left: 0.5rem;
     top: -1.5rem;
   }
+  .button {
+    margin-right: 3rem;
+    margin-top: 1em;
+  }
+  .currencyinput {
+    width: 80%;
+  }
   .submittal {
     padding: 0.5rem 1.5rem 0.5rem;
     font-size: 1.5rem;
   }
   #connectM {
     text-align: center;
-    margin-bottom: 3rem;
+    padding: 0;
   }
   .metamask {
     margin: auto;
@@ -270,7 +300,11 @@ ul li #logo {
     margin-right: 0rem;
     left: 0;
     display: inline-block;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
+}
+
+h2 {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=crowdfunding.component.css.map */

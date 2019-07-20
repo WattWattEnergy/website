@@ -1,4 +1,82 @@
 a:-webkit-any-link {
   text-decoration: none;
 }
+
+#total {
+  margin: 0 4% 0 4%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (3rem 1fr)[1];
+      grid-template-columns: repeat(1, 3rem 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+ul li span[icon] {
+  height: 1.4rem;
+  width: 100%;
+}
+
+p {
+  --ea-font-1-family: 'Roboto';
+}
+
+#head {
+  padding: 8em 0 0 0;
+}
+
+h1 {
+  font-size: 3em;
+  font-family: var(--ea-h1-font-family, var(--ea-font-1));
+  font-weight: lighter;
+  margin-bottom: .6em;
+  color: var(--ea-color, var(--ea-h1-color, var(--ea-text-color)));
+}
+
+h2 {
+  font-family: var(--ea-font-1);
+  font-size: var(--ea-h2-font-size, 2.125rem);
+  font-weight: lighter;
+  margin-bottom: .4em;
+  color: var(--ea-color, var(--ea-h2-color, var(--ea-text-color)));
+}
+
+#main {
+  margin: 10em 2em 0 0;
+}
+
+.text {
+  text-align: justify;
+  padding: 0 1em 0 1em;
+}
+
+.ea-card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 10.5em;
+}
+
+.pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mode span {
+  margin-right: 2em;
+}
 /*# sourceMappingURL=landing.component.css.map */
