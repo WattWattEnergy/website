@@ -25,9 +25,24 @@ p{
     --ea-font-1-family: 'Roboto';
 }
 
-#head {
-    padding: 8em 0 0 0;
+#banner {
+    width: 40%;
+    height: auto;
+    margin-bottom: 2em;
 }
+
+.btext {
+    margin: 0 !important;
+    color: white;
+    padding-left: 0.6em;
+}
+
+// #head {
+//     padding: 8em 0 1em 1em;
+//     background-color: rgba(194, 194, 233, 0.678);
+//     border-radius: 2em;
+//     width: 60%;
+// }
 
  h1 {
     font-size: 3em;
