@@ -10,33 +10,34 @@ export class WyreService {
 
   constructor() { }
   // private Http: HttpClient
-  sendwyre() {
-    console.log('Wyre Service Works!');
-  }
+  // sendwyre() {
+  //   console.log('Wyre Service Works!');
+  //   widget.open();
+  // }
 
-//   // configure the widget for metamask authentication
-//   widget = new Wyre.Widget({
-//     env: "test",
-//     type: "onramp",
-//     accountId: "AC-EPLB2VQTJNH",
-//     auth: { type: "default" },
-//     operation: {
-//       type: "onramp",
-//       dest: "ethereum:0x98B031783d0efb1E65C4072C6576BaCa0736A912",
-//       sourceCurrency: "USD",
-//       destCurrency: "ETH",
-//       destAmount: 0.03
-//     }
-//   });
+  // configure the widget for metamask authentication
+  // widget = new Wyre.Widget({
+  //   env: "test",
+  //   type: "onramp",
+  //   accountId: "AC-EPLB2VQTJNH",
+  //   auth: { type: "default" },
+  //   operation: {
+  //     type: "onramp",
+  //     dest: "ethereum:0x98B031783d0efb1E65C4072C6576BaCa0736A912",
+  //     sourceCurrency: "USD",
+  //     destCurrency: "ETH",
+  //     destAmount: 0.03
+  //   }
+  // });
 //   // open the widget when the user presses the button
   // WyreW(e) {
   //   widget.open();
   // }
 
-//   //add events here
-//   widget.on("complete", function(event) {
-//     console.log(event);
-//   });
+  //add events here
+  // widget.on("complete", function(event) {
+  //   console.log(event);
+  // });
 
   // Transfer1() {
   //   console.log('Wyre Transfer');

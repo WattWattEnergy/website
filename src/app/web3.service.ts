@@ -4,7 +4,9 @@ import { HttpClient } from '@angular/common/http';
 import Big from 'big.js';
 declare let Web3: any;
 declare let web3;
+// let tokenABI = require('./escrowContract.json');
 
+// import * as Web3 from 'web3';
 // export const WEB3 = new InjectionToken<Web3>('web3');
 // const Web3 = require("web3");
 // import { tsGen } from "ts-generator";
@@ -37,12 +39,12 @@ export class Web3Service {
   }
 
   Connect() {
-    console.log('Connected');
-    // web3 = new Web3();
-    // web3.setProvider(new web3.providers.HttpProvider());
-    // web3.eth.getAccounts().then(function(accounts) {
-    // console.log(accounts);
-    // });
+    console.log('Connecting Metamask');
+    web3 = new Web3();
+    web3.setProvider(new web3.providers.HttpProvider());
+    web3.eth.getAccounts().then(function(accounts) {
+    console.log(accounts);
+    });
 }
 
 
@@ -67,6 +69,7 @@ export class Web3Service {
     // console.log(Amount);
     var B = web3.toWei(Amount, "ether");
     // var B = 1;
+    
     var payContractABI = [
     {
       constant: false,
@@ -202,7 +205,7 @@ export class Web3Service {
   // }
 }
 
-Pay() {
+Pay(Amount: string) {
   console.log("Sending Dai!");
   const Web3 = require('web3');
 
@@ -211,7 +214,7 @@ Pay() {
   var dst = "0x76c67F724d155bf2725350bDF809460f5636bEc9";
   // var wad = 1000000000000000000;
   // var Amount =  document.getElementById('amount').value;
-  var Amount = 10;
+  // var Amount = 10;
   var wad = web3.toWei(Amount, "ether");
   // var wad = Amount;
   console.log(Amount);

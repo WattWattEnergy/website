@@ -11,17 +11,17 @@
     margin: 0 2rem 0 2rem;
 }
 
-#tabbings {
-    list-style: none !important;
-}
+// #tabbings {
+//     list-style: none !important;
+// }
 
-ul {
-    list-style: none !important;
-}
+// ul {
+//     list-style: none !important;
+// }
 
-li {
-    list-style: none !important;
-}
+// li {
+//     list-style: none !important;
+// }
 
 .tabs {
     // text-align:center;
@@ -68,6 +68,11 @@ a.tablinks {
     padding: 1em 2em 1em 2em;
     background-color: white;
     border-radius: 2em;
+}
+
+#escrow {
+    width: 25em;
+    height: auto;
 }
 
 .mat-tab-label-container {
@@ -141,3 +146,7 @@ a.tablinks {
         width:20%;
         height:20%;
     }
+
+.link {
+    font-size: 1.5em;
+}

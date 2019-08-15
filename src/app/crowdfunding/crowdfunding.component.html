@@ -9,11 +9,12 @@
     <!-- <link rel="stylesheet" href="style.css" /> -->
   </head>
 
+
   <body>
       <div id="connectM" class="buttons">
 
             <button
-            (click) = "Connect()"
+            onclick = "Metamask()"
             outline
             rounded
               id="connect"
@@ -32,7 +33,7 @@
               target="_blank;"
               id="verifyButton"
             >
-               Onboard
+               Get Verified
             </button>
 
         </div>
@@ -63,9 +64,9 @@
               id="currency"
             /> -->
             <span class="currencyinput">$<input type="text" name="currency"></span>
-          <div class="button">
+          <div class="button" style="margin-top:1em;">
             <button
-              (click) = "Pay()"
+              onclick = "Pay()"
               id="transfer"
               class="submittal"
               target="_blank;"
@@ -97,11 +98,19 @@
               id="currency"
             />
           </div> -->
-          <span class="currencyinput">$<input type="text" name="currency"></span>
+          <span class="currencyinput">$<input 
+            type="number"
+            size="50"
+            id="amount"
+            value="0.10"
+            min="1"
+            id="currency"
+
+            ></span>
 
           <div class="button">
             <button
-              (click) = "PayT()"
+              onclick = "Transfer1()"
               id="transfer"
               class="submittal"
               target="_blank;"
@@ -172,7 +181,7 @@
 
           <div class="button">
             <button
-              (click) = "Pay()"
+              (click) = "Transfer1()"
               id="transfer"
               class="submittal"
               target="_blank;"
@@ -208,7 +217,6 @@
     </section> -->
 
     <script>
-      console.log("hello11");
       import Web3 from "web3";
     </script>
     <script src="https://verify.sendwyre.com/js/widget-loader.js"></script>

@@ -2,8 +2,13 @@ h1 {
   margin-bottom: 0;
 }
 
-img {
+.pic {
   width: 10em;
   height: 10em;
+}
+
+.link {
+  width: auto;
+  height: 3em;
 }
 /*# sourceMappingURL=about.component.css.map */
