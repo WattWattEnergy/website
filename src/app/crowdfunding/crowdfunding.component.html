@@ -14,7 +14,7 @@
       <div id="connectM" class="buttons">
 
             <button
-            onclick = "Metamask()"
+            (click) = "Metamask()"
             outline
             rounded
               id="connect"
@@ -142,10 +142,10 @@
               id="currency"
             />
           </div> -->
-          <span class="currencyinput">$<input type="text" name="currency"></span>
+          <span class="currencyinput">$<input type="text" name="currency" [(ngModel)]="amount" name="amount" required></span>
           <div class="button">
             <button 
-              (click) = "Pay()"
+              (click) = "multi()"
               id="transfer"
               class="submittal"
               target="_blank;"

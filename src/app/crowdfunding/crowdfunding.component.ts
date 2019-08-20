@@ -62,6 +62,29 @@ export class CrowdfundingComponent implements OnInit {
   //   this._wyreservice.Transfer2();
   // }
 
+  check1 () {
+    this._web3service.check1();
+  }
+
+  check2 () {
+    console.log('02');
+  }
+
+  check3 () {
+    console.log('03');
+  }
+
+  async multi() {
+    console.log("multi");
+    const one = await this.check1();
+    const two = await this.check2();
+    const three = await this.check3();
+  }
+
+  Metamask() {
+    this._web3service.Metamask();
+  }
+
   run() {
     this._web3service.run();
   }
@@ -70,22 +93,23 @@ export class CrowdfundingComponent implements OnInit {
     this._web3service.Connect();
   }
 
-  PayE() {
-    this._web3service.PayE();
+  PayE(amount) {
+    this._web3service.PayE(amount);
   }
 
   // Transfer1() {
   //   this._wyreservice.Transfer1();
   // }
 
-  // Pay() {
-  //   this._web3service.Pay(Amount: string);
-  // }
+  Pay() {
+    this._web3service.Pay();
+  }
 
   PayT() {
     this._web3service.PayT();
   }
-public value;
+
+  public value;
 
   PayA(amount: number) {
     console.log("Sending Dai!");
