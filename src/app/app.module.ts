@@ -29,6 +29,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { AddtofireService } from "src/app/addtofire.service";
 import { ProjectsComponent } from './projects/projects.component';
+import { FormsModule } from '@angular/forms';
+import { ApplyComponent } from './apply/apply.component';
 // import { OnboardComponent } from './onboard/onboard.component';
 // import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
@@ -60,7 +62,8 @@ require("firebase/firestore");
     WhitepaperComponent,
     TestpageComponent,
     OnboardComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ApplyComponent
   ],
   imports: [
     BrowserModule,
@@ -79,7 +82,8 @@ require("firebase/firestore");
     AngularFireModule,
     ReactiveFormsModule,
     // AngularFireDatabaseModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FormsModule
     // TabsModule
   ],
   providers: [Web3Service,

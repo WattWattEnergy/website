@@ -1,8 +1,15 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Injectable } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { AddtofireService } from '../addtofire.service';
+import { Projects } from '../models/projects';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { HttpClientModule } from '@angular/common/http';
+import * as firebase from 'firebase';
 
-
-export class Projects {
-  id?: string;
+export class Project {
+  // id?: string;
   city?: string;
   size?: string;
 }
@@ -14,13 +21,17 @@ export class Projects {
 })
 
 export class ProjectsComponent implements OnInit {
-
-  @Input() project
   
-  constructor() { }
+  // project: Project[];
+  @Input() project: Project[];
   
-
+  constructor(private _fireservice: AddtofireService,) { }
+  
   ngOnInit() {
+    this._fireservice.getProjects().subscribe(Projects => {
+      console.log(Projects);
+      this.project = Projects;
+    })
   }
 
 }

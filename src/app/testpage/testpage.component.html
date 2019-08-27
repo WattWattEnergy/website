@@ -1,24 +1,15 @@
-<!-- <div (mouseover)="boxup()" > hover me please.
-  <span class="only-show-on-hover">you see me on hovering the div next to me</span>
-</div> -->
-
-<div id="select">
-  <!-- <input type="file" (change)="onFileSelected($event)"> -->
-  <button type="button" (click)="createProject()">Add!</button>
-</div>
-
 <div>
   <div class="one" [innerHtml]="htmlToAdd"></div>
 </div>
 
 <div id="select">
   <!-- <input type="file" (change)="onFileSelected($event)"> -->
-  <button type="button" (click)="getProjects()">Check Projects</button>
+  <!-- <button type="button" (click)="getProjects()">Check Projects</button> -->
 </div>
 
-<app-projects [project]="Projects">
+<app-apply></app-apply>
 
-</app-projects>
+<app-projects [project]="Projects"></app-projects>
 <!-- <div>
   {{Projects}}
 </div>

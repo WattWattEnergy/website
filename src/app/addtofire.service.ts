@@ -4,9 +4,14 @@ import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument 
 import { AngularFireDatabaseModule, AngularFireObject, AngularFireList } from 'angularfire2/database';
 import { HttpClientModule } from '@angular/common/http';
 import * as firebase from 'firebase';
-import { Projects } from './models/projects';
+// import { Projects } from './models/projects';
+import { NgForm } from '@angular/forms';
 
-
+export class Projects {
+  id?: string;
+  city?: string;
+  size?: string;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +20,14 @@ import { Projects } from './models/projects';
 export class AddtofireService {
   ProjectsCollection: AngularFirestoreCollection<Projects>;
   Projects: Observable<Projects[]>;
+  form: NgForm;
+
+  // public projects = {
+  //   city: '',
+  //   size: ''
+  // }
+  
+  // formData: Employee;
 
   constructor(private db: AngularFirestore) { 
     this.Projects = this.db.collection('Projects').valueChanges();
@@ -26,10 +39,28 @@ export class AddtofireService {
     // var li = document.createElement('li', initials )
   }
 
-  createProject() {
+  onSubmit(form) {
+    let data = form.value;
+    console.log("Submitting");
+    console.log(data);
+    this.db.collection("Projects").add({
+      data
+      // timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    })
+  .then(function(docRef) {
+      console.log("Document written with ID: ", docRef.id);
+      console.log(docRef);
+  })
+  .catch(function(error) {
+      console.error("Error adding document: ", error);
+  });
+  }  
+
+  createDefaultProject() {
     this.db.collection("Projects").add({
       city: "Mayaguez11",
-      capital: "10000"
+      size: "10 MW",
+      timestamp: firebase.firestore.FieldValue.serverTimestamp()
   })
   .then(function(docRef) {
       console.log("Document written with ID: ", docRef.id);

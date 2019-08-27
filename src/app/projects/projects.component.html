@@ -1,22 +1,40 @@
-<div class="ea-card" *ngFor="let _project of project">
-    <div class="ea-card-header" style="height: 4rem;">
-      <h2 style="margin: 0;">{{ _project.city }}</h2>
-      <div class="status">
-        <span>{{_project.id}}</span>
+<div>
+    <div class="one" [innerHtml]="htmlToAdd"></div>
+</div>
+
+<div *ngIf="project?.length > 0;else noProjects">
+<div multi-col p id="listings" class="ea-card" *ngFor="let _project of project">
+
+    <div class="card">
+        <img
+          src="../../assets/images/MexicoComm.jpeg"
+          alt="Comm"
+        />
+        <div class="container">
+          <div>
+            <h2>{{ _project.city }}</h2>
+            <div class="datas">
+                <span style="left: 0;"><p class="data">8.1%</p> <p>{{ _project.size }}</p> <a class="data">More..</a></span>
+            </div>
+
+          </div>
+            <span class="currencyinput">$<input type="text" name="currency"></span>
+          <div class="button">
+            <button
+              (click) = "Pay()"
+              id="transfer"
+              class="submittal"
+              target="_blank;"
+            >
+              Fund!
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="ea-card-body">
-      <!-- <img style="width: 100%;" src="{{listing.imageUrl}}" alt=""> -->
-      <h3 price>{{ _project.size }}</h3>
-      <!-- <div multi-col style="    grid-gap: 0.5rem; --ea-grid-col-min-width: 8rem;">
-        <h3>{{ listing.br }} Beds</h3>
-        <h3>{{ listing.bath }} Bath Rooms</h3>
-        <h3>{{ listing.rooms }} Rooms</h3>
-        <h3>{{ listing.sqft }} Sq. Ft.</h3>
-      </div>
-      <p style="margin-top: 0.5rem;">{{ listing.description }}</p> -->
-    </div>
-    <!-- <div class="ea-card-footer">
-      <button rounded flat>View More</button>
-    </div> -->
   </div>
+
+  <ng-template #noProjects>
+      <hr>
+      <h5>No listed projects!</h5>
+    </ng-template>
