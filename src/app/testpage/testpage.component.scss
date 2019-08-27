@@ -1,0 +1,10 @@
+div span.only-show-on-hover {
+    visibility: hidden;
+}
+div:hover span.only-show-on-hover  {
+    visibility: visible;
+}
+
+#select {
+    margin-top:10em;
+}
