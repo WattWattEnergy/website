@@ -1,0 +1,57 @@
+<!-- <h2>Create a default project:</h2>
+
+<div id="select">
+    <button type="button" (click)="createDefaultProject()">Add!</button>
+</div> -->
+
+    
+<h1 class="display-4">Project Application:</h1>
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+  <!-- <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service._fireservice.id"> -->
+  <div class="form-group">
+    <input name="city" #city="ngModel" [(ngModel)]="project.city" class="form-control" placeholder="Location of Project" required>
+    <div *ngIf="city.invalid && city.touched" class="validation-error">This field is required.</div>
+  </div>
+  <div class="form-group">
+    <input name="size" #size="ngModel" [(ngModel)]="project.size" class="form-control" placeholder="System Size">
+  </div>
+  <div class="form-group">
+    <input name="interest" #size="ngModel" [(ngModel)]="project.interest" class="form-control" placeholder="Interest Rate">
+  </div>
+  <div class="form-group">
+    <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-info">SUBMIT</button>
+  </div>
+
+</form>
+
+<!-- <form
+  [formGroup]="myForm"
+  (ngSubmit)="createProject()"
+  class="col s6"
+  *ngFor="let _project of project"
+>
+<div [formGroup]="myGroup">
+    <input formControlName="firstName">
+  </div>
+  <div class="row">
+    <div class="input-field col s6">
+      <input
+        type="text"
+        placeholder="Add Title"
+        [(ngModel)]="_project.city"
+        name="city"
+      />
+      <label>City</label>
+    </div>
+    <div class="input-field col s6">
+      <input
+        type="text"
+        placeholder="Add Description"
+        [(ngModel)]="_project.size"
+        name="size"
+      />
+      <label>Size</label>
+    </div>
+    <input type="submit" value="Submit" class="btn" />
+  </div>
+</form> -->

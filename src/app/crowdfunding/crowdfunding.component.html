@@ -26,7 +26,7 @@
             <button
             outline
             rounded
-              (click) = "sendwyre()"
+              onclick = "sendwyre()"
               id="connect"
               class="wyre"
               target="_blank;"
@@ -62,10 +62,11 @@
               min="1"
               id="currency"
             /> -->
-            <span class="currencyinput">$<input type="text" name="currency"></span>
+            <span class="currencyinput">$<input type="text" name="currency" id="amount"></span>
           <div class="button">
             <button
-              (click) = "Pay()"
+              onclick = "Transfer(amount)"
+
               id="transfer"
               class="submittal"
               target="_blank;"
@@ -97,11 +98,11 @@
               id="currency"
             />
           </div> -->
-          <span class="currencyinput">$<input type="text" name="currency"></span>
+          <span class="currencyinput">$<input type="text" name="currency" id="amount"></span>
 
           <div class="button">
             <button
-              (click) = "PayT()"
+            onclick = "Transfer(amount)"
               id="transfer"
               class="submittal"
               target="_blank;"
@@ -133,10 +134,10 @@
               id="currency"
             />
           </div> -->
-          <span class="currencyinput">$<input type="text" name="currency"></span>
+          <span class="currencyinput">$<input type="text" name="currency" id="amount"></span>
           <div class="button">
             <button 
-              (click) = "Pay()"
+            onclick = "Transfer(amount)"
               id="transfer"
               class="submittal"
               target="_blank;"
@@ -168,11 +169,11 @@
               id="currency"
             />
           </div> -->
-            <span class="currencyinput">$<input type="text" name="currency"></span>
+            <span class="currencyinput">$<input type="text" name="currency" id="amount"></span>
 
           <div class="button">
             <button
-              (click) = "Pay()"
+            onclick = "Transfer(amount)"
               id="transfer"
               class="submittal"
               target="_blank;"

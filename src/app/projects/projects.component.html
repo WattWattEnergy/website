@@ -1,0 +1,50 @@
+<!-- <div>
+    <div class="one" [innerHtml]="htmlToAdd"></div>
+</div> -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>WattWatt- Decentralized Lending</title>
+</head>
+
+<div *ngIf="project?.length > 0;else noProjects">
+<div  multi-col p id="listings">
+<div *ngFor="let _project of project">
+    <div class="card">
+        <img
+          src="../../assets/images/MexicoComm.jpeg"
+          alt="Comm"
+        />
+        <div class="container">
+          <div>
+            <h2>{{ _project.project.city }}</h2>
+            <div class="datas">
+                <span style="left: 0;"><p class="data">{{ _project.project.interest }}%</p> <p>{{ _project.project.size }}</p> </span>
+                <!-- <a class="data">More..</a> -->
+            </div>
+
+          </div>
+            <span class="currencyinput">$<input type="text" name="currency" id="amount"></span>
+          <div class="button">
+            <button
+
+              onclick = "Transfer(amount)"
+              id="transfer"
+              class="submittal"
+              target="_blank;"
+            >
+              Fund!
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <ng-template #noProjects>
+      <hr>
+      <h5>No listed projects!</h5>
+    </ng-template>

@@ -1,0 +1,14 @@
+form {
+    margin: 2em 2em 2em 2em;
+}
+
+div span.only-show-on-hover {
+    visibility: hidden;
+}
+div:hover span.only-show-on-hover  {
+    visibility: visible;
+}
+
+#select {
+    margin-top:1em;
+}

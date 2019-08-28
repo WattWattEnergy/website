@@ -1,7 +1,7 @@
 import { Component, HostListener, OnInit, InjectionToken, Injectable } from '@angular/core';
 import Web3 from 'web3';
-import { Web3Service } from '../web3.service';
-import { WyreService } from '../wyre.service';
+import { Web3Service } from '../shared/web3.service';
+import { WyreService } from '../shared/wyre.service';
 
 
 
@@ -32,9 +32,9 @@ export class CrowdfundingComponent implements OnInit {
     //   );
   }
 
-  sendwyre() {
-    this._wyreservice.sendwyre();
-  }
+  // sendwyre() {
+  //   this._wyreservice.sendwyre();
+  // }
 
   // Transfer1() {
   //   this._wyreservice.Transfer1();
@@ -64,11 +64,6 @@ export class CrowdfundingComponent implements OnInit {
     this._web3service.PayT();
   }
   
-  // run() {
-  //   console.log('run2');
-  // }
-  //THIS WORKED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 //   @HostListener('document:onclick', ['$event']) 
 //     onclick(connectM) {
 //       console.log('here');

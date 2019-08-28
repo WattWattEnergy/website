@@ -1,3 +1,193 @@
-<p>
-  testpage works!
-</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>WattWatt- Decentralized Lending</title>
+  <!-- <base href="https://vincenzbuhler.com/WattWatt/portal" /> -->
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+</head>
+
+<!-- <div>
+  <div class="one" [innerHtml]="htmlToAdd"></div>
+</div> -->
+
+<div id="select">
+  <!-- <input type="file" (change)="onFileSelected($event)"> -->
+  <!-- <button type="button" (click)="getProjects()">Check Projects</button> -->
+</div>
+
+<app-apply></app-apply>
+
+<app-projects [project]="Projects"></app-projects>
+<!-- <div>
+  {{Projects}}
+</div>
+
+
+    <div *ngFor "let Project of Projects"> 
+      <p>{{Project.city}}</p>
+    </div> -->
+
+      <!-- <tr *ngFor "let Project of Projects">
+        <td>{{Project.city}}</td>
+      </tr> -->
+
+
+
+<!-- <div>
+  {{Projects.city}}
+</div> -->
+
+<!-- <div *ngIf = "Projects?.length 0;else noProjects">
+  <ul *ngFor = "let Project of Projects" class="collection">
+    <li class="collect-project">{{Project.city}}</li>
+  </ul>
+</div>
+
+<ng-template #noProjects>
+  <hr>
+  <h5>No Items to List!</h5>
+</ng-template> -->
+
+<!-- <div>
+  <button (click)="googleLogin()">Log In</button>
+</div> -->
+
+<!-- <div>
+  <button(click)="add()">Add</button>
+</div> -->
+
+<!-- <div class="content columns" *ngIf="ad">
+  <div class="column is-6">
+    <h1>Ad Listing Preview</h1>
+
+    <article class="message">
+      <div class="message-header">
+        <p>{{(ad | async).title}}</p>
+      </div>
+      <div class="message-body">
+
+        <img [src]="(ad | async).image" width="350px"><br>
+        <p>{{ (ad | async).content }}</p>
+
+        <hr>
+
+        <h4>List Price: {{ (ad | async).price | currency}}</h4>
+      </div>
+    </article>
+
+    <h3>Form Values</h3>
+
+    <p>Form value: <br> {{ adForm.value | json }}</p>
+    <p>Form status: {{ adForm.status | json }}</p>
+
+  </div>
+
+
+  <div class="column">
+
+    <form  [formGroup]="adForm" novalidate>
+
+    <h1>Create your Listing</h1>
+
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Title</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input" type="text"
+                   formControlName="title"
+                   (change)="saveAdChanges()"
+                   [ngClass]="{
+                                'is-success' :  adForm.get('title').valid &&  adForm.get('title').dirty,
+                                'is-danger'  :  !adForm.get('title').valid
+                              }">
+          </div>
+
+          <p class="error is-danger" [hidden]="adForm.get('title').valid">
+            Title is required
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Image URL</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input" type="text"
+                   formControlName="image"
+                   (change)="saveAdChanges()"
+                   [ngClass]="{
+                               'is-success' :  adForm.get('image').valid &&  adForm.get('image').dirty,
+                               'is-danger'  :  !adForm.get('image').valid
+                             }">
+          </div>
+          <p class="error is-danger" [hidden]="adForm.get('image').valid">
+            Image is required
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+      <div class="field is-horizontal">
+        <div class="field-label is-normal"><label class="label">Price</label></div>
+        <div class="field-body">
+          <div class="field is-expanded">
+            <div class="field has-addons">
+              <p class="control">
+                <a class="button is-static">
+                  $
+                </a>
+              </p>
+              <p class="control is-expanded">
+                <input class="input" type="number"
+                       formControlName="price"
+                       (change)="saveAdChanges()"
+                       [ngClass]="{
+                                   'is-success' :  adForm.get('price').valid &&  adForm.get('price').dirty,
+                                   'is-danger'  :  !adForm.get('price').valid
+                                 }">
+              </p>
+            </div>
+            <p class="error" [hidden]="adForm.get('price').valid">Price is not valid</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Details</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <textarea class="textarea"
+                  formControlName="content"
+                  (change)="saveAdChanges()"
+                  [ngClass]="{
+                               'is-success' :  adForm.get('content').valid &&  adForm.get('content').dirty,
+                               'is-danger'  :  !adForm.get('content').valid
+                             }">
+              </textarea>
+              <p class="error" [hidden]="adForm.get('content').valid">Content is not valid</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div> -->
+
+
+<!-- <button class="button is-success" (click)="startNewAdListing()" *ngIf="!ad" >Start New Ad Listing</button> -->
