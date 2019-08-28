@@ -9,12 +9,61 @@
   color: darkgray;
 }
 
-.card {
-  margin: 1em 2em 1em 2em;
-}
-
 .button {
   margin-top: 0.75em;
+}
+
+#listings {
+  padding: 0;
+  margin: 1em 1em 1em 1em;
+}
+
+#listings .ea-card {
+  border-bottom: 3px solid #000000;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-top: 2em;
+  width: 40%;
+}
+
+#listings .ea-card .projimage {
+  width: 100%;
+}
+
+#listings .ea-card .container {
+  padding-bottom: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+#listings .ea-card .container #currency {
+  width: 60%;
+  font-size: 2rem;
+}
+
+#listings .ea-card .container .button {
+  position: relative;
+  float: right;
+  margin-top: 1em;
+  bottom: 0rem;
+  z-index: 1;
+}
+
+#listings .ea-card .container .button .submittal {
+  color: #56568d;
+  border-radius: 3rem;
+  padding: 0.5rem 1rem 0.5rem;
+  font-size: 2rem;
+}
+
+#listings .ea-card .container .button .submittal:hover {
+  -webkit-transform: scale(1.05);
+  /*Grows in size like Angry Birds button*/
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
 }
 
 .ea-card-body {
@@ -36,7 +85,6 @@
 
 .datas {
   overflow: hidden;
-  text-align: center;
 }
 
 .data {
