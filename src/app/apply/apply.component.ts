@@ -15,6 +15,7 @@ export interface Project {
   // id?: string;
   city?: string;
   size?: string;
+  interest?: string;
 }
 
 @Component({
@@ -26,7 +27,8 @@ export class ApplyComponent implements OnInit {
   // project: Project;
   public project = {
     city: '',
-    size: ''
+    size: '',
+    interest: ''
   }
 
   @Input() Project: Project [];
@@ -41,8 +43,8 @@ export class ApplyComponent implements OnInit {
 
   ngOnInit() {
     this._fireservice.getProjects().subscribe(project => {
-      console.log("Showing Projects");
-      console.log(Projects);
+      // console.log("Showing Projects");
+      // console.log(Projects);
       this.Project = this.Project;
     })
     // this.resetForm();
@@ -77,8 +79,8 @@ export class ApplyComponent implements OnInit {
   // }
   form: NgForm
   
-  onSubmit(form){
-    console.log(form);
+  onSubmit(form: NgForm){
+    // console.log(form);
     // if(this.project.city != '' && this.project.size != ''){
       this._fireservice.onSubmit(form);
     //   this.project.city = '';

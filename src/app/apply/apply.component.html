@@ -1,9 +1,8 @@
-<h2>Create a default project:</h2>
+<!-- <h2>Create a default project:</h2>
 
 <div id="select">
-    <!-- <input type="file" (change)="onFileSelected($event)"> -->
     <button type="button" (click)="createDefaultProject()">Add!</button>
-</div>
+</div> -->
 
     
 <h1 class="display-4">Project Application:</h1>
@@ -16,14 +15,9 @@
   <div class="form-group">
     <input name="size" #size="ngModel" [(ngModel)]="project.size" class="form-control" placeholder="System Size">
   </div>
-  <!-- <div class="form-row">
-    <div class="form-group col-md-6">
-      <input name="empCode" #empCode="ngModel" [(ngModel)]="service.formData.empCode" class="form-control" placeholder="Emp. code">
-    </div>
-    <div class="form-group  col-md-6">
-      <input name="mobile" #mobile="ngModel" [(ngModel)]="service.formData.mobile" class="form-control" placeholder="Mobile">
-    </div>
-  </div> -->
+  <div class="form-group">
+    <input name="interest" #size="ngModel" [(ngModel)]="project.interest" class="form-control" placeholder="Interest Rate">
+  </div>
   <div class="form-group">
     <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-info">SUBMIT</button>
   </div>

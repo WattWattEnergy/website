@@ -29,7 +29,7 @@ export class ProjectsComponent implements OnInit {
   
   ngOnInit() {
     this._fireservice.getProjects().subscribe(Projects => {
-      console.log(Projects);
+      // console.log(Projects);
       this.project = Projects;
     })
   }

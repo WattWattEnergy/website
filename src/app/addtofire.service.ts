@@ -40,12 +40,12 @@ export class AddtofireService {
   }
 
   onSubmit(form) {
-    let data = form.value;
-    console.log("Submitting");
-    console.log(data);
+    let project = form.value;
+    console.log("Submitting your new project");
+    console.log(project);
     this.db.collection("Projects").add({
-      data
-      // timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      project,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp()
     })
   .then(function(docRef) {
       console.log("Document written with ID: ", docRef.id);
