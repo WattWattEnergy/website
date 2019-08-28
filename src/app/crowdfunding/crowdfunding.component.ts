@@ -1,7 +1,7 @@
 import { Component, HostListener, OnInit, InjectionToken, Injectable } from '@angular/core';
 import Web3 from 'web3';
-import { Web3Service } from '../web3.service';
-import { WyreService } from '../wyre.service';
+import { Web3Service } from '../shared/web3.service';
+import { WyreService } from '../shared/wyre.service';
 
 
 

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Injectable } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AddtofireService } from '../addtofire.service';
-import { Projects } from '../models/projects';
+import { AddtofireService } from '../shared/addtofire.service';
+import { Projects } from '../shared/models/projects';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { AngularFirestore } from 'angularfire2/firestore';

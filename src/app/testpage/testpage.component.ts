@@ -5,8 +5,8 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import { HttpClientModule } from '@angular/common/http';
 import * as firebase from 'firebase';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms'
-import { AddtofireService } from '../addtofire.service';
-import { Projects } from '../models/projects';
+import { AddtofireService } from '../shared/addtofire.service';
+import { Projects } from '../shared/models/projects';
 
 
 @Component({
