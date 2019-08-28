@@ -31,6 +31,13 @@ import { AddtofireService } from "src/app/shared/addtofire.service";
 import { ProjectsComponent } from './projects/projects.component';
 import { FormsModule } from '@angular/forms';
 import { ApplyComponent } from './apply/apply.component';
+import * as firebase from 'firebase/app';
+// import 'firebase/<PACKAGE>';
+// import firestore from 'firebase/firestore'
+// import firebase from 'firebase/app';
+// import 'firebase/app';
+import { firestore } from 'firebase/app';
+import { auth } from 'firebase/app';
 // import { OnboardComponent } from './onboard/onboard.component';
 // import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
@@ -44,7 +51,7 @@ import { ApplyComponent } from './apply/apply.component';
 //   appId: "1:1045010908290:web:3b8d3825a4cae080"
 // };
 
-const firebase = require("firebase");
+// const firebase = require("firebase");
 // Required for side-effects
 require("firebase/firestore");
 // Initialize Firebase

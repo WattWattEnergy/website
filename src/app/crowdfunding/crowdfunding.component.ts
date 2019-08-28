@@ -32,9 +32,9 @@ export class CrowdfundingComponent implements OnInit {
     //   );
   }
 
-  sendwyre() {
-    this._wyreservice.sendwyre();
-  }
+  // sendwyre() {
+  //   this._wyreservice.sendwyre();
+  // }
 
   // Transfer1() {
   //   this._wyreservice.Transfer1();
@@ -64,11 +64,6 @@ export class CrowdfundingComponent implements OnInit {
     this._web3service.PayT();
   }
   
-  // run() {
-  //   console.log('run2');
-  // }
-  //THIS WORKED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 //   @HostListener('document:onclick', ['$event']) 
 //     onclick(connectM) {
 //       console.log('here');

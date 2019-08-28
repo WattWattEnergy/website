@@ -37,9 +37,9 @@ export class ProjectsComponent implements OnInit {
     })
   }
 
-  Pay() {
-    console.log("Pay through SendWyre!");
-    this._wyreservice.sendwyre();
-  }
+  // Pay() {
+  //   console.log("Opening up SendWyre");
+  //   this._wyreservice.sendwyre();
+  // }
 
 }

@@ -18,10 +18,11 @@
             </div>
 
           </div>
-            <span class="currencyinput">$<input type="text" name="currency"></span>
+            <span class="currencyinput">$<input type="text" name="currency" id="amount"></span>
           <div class="button">
             <button
-              (click) = "Pay()"
+
+              onclick = "Transfer(amount)"
               id="transfer"
               class="submittal"
               target="_blank;"
