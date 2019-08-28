@@ -7,6 +7,9 @@ import { HttpClient } from '@angular/common/http';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { HttpClientModule } from '@angular/common/http';
 import * as firebase from 'firebase';
+import Web3 from 'web3';
+import { Web3Service } from '../shared/web3.service';
+import { WyreService } from '../shared/wyre.service';
 
 export class Project {
   // id?: string;
@@ -25,13 +28,18 @@ export class ProjectsComponent implements OnInit {
   // project: Project[];
   @Input() project: Project[];
   
-  constructor(private _fireservice: AddtofireService,) { }
+  constructor(private _fireservice: AddtofireService, private _web3service: Web3Service, private _wyreservice: WyreService) { }
   
   ngOnInit() {
     this._fireservice.getProjects().subscribe(Projects => {
       // console.log(Projects);
       this.project = Projects;
     })
+  }
+
+  Pay() {
+    console.log("Pay through SendWyre!");
+    this._wyreservice.sendwyre();
   }
 
 }

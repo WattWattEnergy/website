@@ -1,0 +1,23 @@
+ea-main {
+    position: relative; 
+    overflow-y: scroll; 
+    overflow-x: hidden;
+}
+
+ea-footer {
+    padding: 3rem 0;
+}
+
+.icons {
+    height:1em;
+}
+
+#crowdfundb {
+    --ea-button-padding:0;
+    width: 6rem; 
+    --ea-button-border: var(--ea-color-3);
+}
+
+.routers {
+    margin: 0;
+}

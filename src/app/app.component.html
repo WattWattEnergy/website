@@ -1,27 +1,25 @@
-<!-- The content below is only a placeholder and can be replaced. -->
 <ea-layout>
   <ea-toolbar>
     <header>
       <button icon flat>
         <img width="18" src="../assets/images/wattwatt-logo.svg" alt="" style="margin-right: 0.4em;">
-        <a style="margin: 0;" routerLink="">WattWatt</a>
+        <a class="routers" routerLink="">WattWatt</a>
       </button>
     </header>
    <aside>
       <button sm icon flat class="about-link">
-        <a style="margin: 0;" routerLink="/about">About</a>
+        <a class="routers" routerLink="/about">About</a>
       </button>
       <button icon flat class="whitepaper-link">
-        <a style="margin: 0;" routerLink="/whitepaper">Whitepaper</a>
+        <a class="routers" routerLink="/whitepaper">Whitepaper</a>
       </button>
       <button icon flat class="education-link">
-        <a style="margin: 0;" routerLink="/education">Education</a>
+        <a class="routers" routerLink="/education">Education</a>
       </button>
       <button
         outline
         rounded
-        style="--ea-button-padding:0;
-        width: 6rem; --ea-button-border: var(--ea-color-3);"
+        id="crowdfundb"
       >
         <a routerLink="/crowdfunding" target="_blank">Demo</a>
       </button>
@@ -35,24 +33,20 @@
       <a routerLink="/about">About</a>
       <!-- <a routerLink="/whitepaper">Whitepaper</a> -->
       <!-- <a routerLink="/donation">Donation Portal</a> -->
-
       <!-- <a style="margin: 0;" class="mobile" routerLink="/about">About</a>
       <a routerLink="/token" class="mobile">Token</a>
       <a style="margin: 0;"class="mobile" routerLink="/whitepaper">Whitepaper</a> -->
-
       <!--
         <a routerLink="/crowdfunding">Crowdfunding Portal</a>
               -->
         <a routerLink="/education">Education Portal</a>
-
-
     </section>
   </ea-drawer>
 
-  <ea-main style="position: relative; overflow-y: scroll; overflow-x: hidden;">
+  <ea-main>
 
     <ea-body> <router-outlet></router-outlet> </ea-body>
-    <ea-footer style="padding: 3rem 0;">
+    <ea-footer>
 
       <aside>
         <h2>WattWatt</h2>
@@ -61,27 +55,27 @@
       <main>
         <button icon sm flat>
           <a style="height:1em;" href="https://github.com/wattwattenergy">
-            <img             style="height:1em;"            src="../../assets/images/github.svg" alt="" />
+            <img class="icons" src="../../assets/images/github.svg" alt="" />
           </a>
         </button>
         <button icon sm flat>
-          <a style="height:1em;" href="https://twitter.com/wattwattenergy">
-            <img style="height:1em;" height="18" src="../../assets/images/twitterWhite.svg" alt=""/>
+          <a class="icons" href="https://twitter.com/wattwattenergy">
+            <img class="icons" height="18" src="../../assets/images/twitterWhite.svg" alt=""/>
           </a>
         </button>
         <button icon sm flat>
-          <a style="height:1em;" href="">
-            <img style="height:1em;" src="../../assets/images/youtube.svg" alt="" />
+          <a class="icons" href="">
+            <img class="icons" src="../../assets/images/youtube.svg" alt="" />
           </a>
         </button>
         <button icon sm flat>
-          <a style="height:1em;" href="https://medium.com/wattwattenergy">
-            <img style="height:1em;" src="../../assets/images/medium.svg" alt="" />
+          <a class="icons" href="https://medium.com/wattwattenergy">
+            <img class="icons" src="../../assets/images/medium.svg" alt="" />
           </a>
         </button>
         <button icon sm flat>
-          <a style="height:1em;" href="https://discord.gg/vqWYcCj">
-            <img style="height:1em;" src="../../assets/images/discord.svg" alt="" />
+          <a class="icons" href="https://discord.gg/vqWYcCj">
+            <img class="icons" src="../../assets/images/discord.svg" alt="" />
           </a>
         </button>
 

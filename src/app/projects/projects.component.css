@@ -10,7 +10,11 @@
 }
 
 .card {
-  margin: 0em 2em 0em 2em;
+  margin: 1em 2em 1em 2em;
+}
+
+.button {
+  margin-top: 0.75em;
 }
 
 .ea-card-body {
