@@ -9,24 +9,28 @@
   <title>WattWatt- Decentralized Lending</title>
 </head>
 
+<hr>
+<h1 style="text-decoration: underline; margin-left: 2em;">Active Projects:</h1>
+
 <div *ngIf="project?.length > 0;else noProjects">
-<div  multi-col p id="listings">
-<div *ngFor="let _project of project">
+<div  multi-col id="listings">
+<div *ngFor="let _project of project" class="cardtop">
     <div class="card">
         <img
           src="../../assets/images/MexicoComm.jpeg"
           alt="Comm"
+          class="projectphoto"
         />
         <div class="container">
           <div>
             <h2>{{ _project.project.city }}</h2>
             <div class="datas">
-                <span style="left: 0;"><p class="data">{{ _project.project.interest }}%</p> <p>{{ _project.project.size }}</p> </span>
+                <span><p class="data" id="interest">{{ _project.project.interest }}% Annual Interest</p> <p>{{ _project.project.size }}</p> </span>
                 <!-- <a class="data">More..</a> -->
             </div>
 
           </div>
-            <span class="currencyinput">$<input type="text" name="currency" id="amount"></span>
+            <span class="currencyinput">$<input type="text" name="currency" id="amount" placeholder="Amount to lend in USD"></span>
           <div class="button">
             <button
 
@@ -37,6 +41,10 @@
             >
               Fund!
             </button>
+
+            <!-- <button (click)="Delete(this.project)" id="transfer">
+            Delete
+            </button> -->
           </div>
         </div>
       </div>

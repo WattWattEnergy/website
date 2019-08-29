@@ -16,6 +16,7 @@ import { OnboardComponent } from './onboard/onboard.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Web3Service } from './shared/web3.service';
 import { WyreService } from './shared/wyre.service';
@@ -88,6 +89,7 @@ require("firebase/firestore");
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireModule,
     ReactiveFormsModule,
+    MatDialogModule,
     // AngularFireDatabaseModule,
     AngularFirestoreModule,
     FormsModule
@@ -96,6 +98,7 @@ require("firebase/firestore");
   providers: [Web3Service,
     {provide: LocationStrategy, useClass: HashLocationStrategy}, AngularFirestore, AddtofireService, WyreService],
   bootstrap: [AppComponent],
+  entryComponents: [ApplyComponent]
 
 })
 export class AppModule {}

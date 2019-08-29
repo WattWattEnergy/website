@@ -10,6 +10,7 @@ import * as firebase from 'firebase';
 import Web3 from 'web3';
 import { Web3Service } from '../shared/web3.service';
 import { WyreService } from '../shared/wyre.service';
+import {MatDialogModule} from '@angular/material/dialog';
 
 export class Project {
   // id?: string;
@@ -36,6 +37,10 @@ export class ProjectsComponent implements OnInit {
       this.project = Projects;
     })
   }
+  // project: Projects
+  // Delete(project) {
+  //   this._fireservice.Delete(this.project);
+  // }
 
   // Pay() {
   //   console.log("Opening up SendWyre");

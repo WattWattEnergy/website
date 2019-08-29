@@ -7,6 +7,9 @@ import * as firebase from 'firebase';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms'
 import { AddtofireService } from '../shared/addtofire.service';
 import { Projects } from '../shared/models/projects';
+import { MatTableDataSource, MatSort, MatPaginator, MatDialog, MatDialogConfig } from '@angular/material';
+import { ProjectsComponent } from 'src/app/projects/projects.component';
+import { ApplyComponent } from 'src/app/apply/apply.component';
 
 
 @Component({
@@ -19,9 +22,19 @@ export class TestpageComponent implements OnInit {
 
   Projects: Projects[];
   // constructor(private http:HttpClient, private db: AngularFireDatabase) { }
-  constructor(private _fireservice: AddtofireService) {}
+  constructor(private _fireservice: AddtofireService, private dialog: MatDialog) {}
 
   ngOnInit() { }
+
+  onCreate() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.width = "30em;";
+    dialogConfig.position = {
+      'top': '0'
+    };
+    this.dialog.open(ApplyComponent, dialogConfig);
+  }
 
   // getProjects() {
   //   console.log("fetching!");

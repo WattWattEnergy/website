@@ -15,6 +15,42 @@
 
 .button {
   margin-top: 0.75em;
+  left: 0;
+  display:flex; 
+  justify-content: center;
+  @media only screen and (min-width: 950px) {
+    margin-left: 1em;
+    width: 20%;
+  }
+  :hover {
+    transform: scale(1.2);
+  }
+}
+
+.mode p {
+  margin: 0em 0em 0em 0em;
+}
+
+#amount {
+  margin-left: 0.4em;
+}
+
+#interest {
+  font-size:2rem; 
+  text-decoration: underline;
+  // border-bottom: .1rem solid var(--ea-color-1);
+}
+
+.cardtop {
+  width: 90%;
+  border-radius: 3em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.card {
+  border-top-right-radius: 2em;
+  border-radius: 3em;
 }
 
 #listings {
@@ -22,8 +58,11 @@
   // margin-left: auto;
   // margin-right: auto;
   // display:block;
-  padding: 0;
-  margin: 1em 1em 1em 1em;
+  // padding: 0em 2em 0em 1em;
+  margin-right: 2em;
+  position: relative;
+  width: 100%;
+  // margin: 1em 1em 1em 1em;
 
   .ea-card {
     // margin: 3rem 2rem 1rem;
@@ -34,21 +73,17 @@
     width: 40%;
     .projimage {
       width: 100%;
+      border-top-right-radius: 2em;
     }
     .container {
         padding-bottom: 3rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
+        // margin-left: 1rem;
+        // margin-right: 1rem;
       #currency {
         width: 60%;
         font-size: 2rem;
       }
       .button {
-        position: relative;
-        float: right;
-        margin-top: 1em;
-        bottom: 0rem;
-        z-index: 1;
         .submittal {
           color: rgb(86, 86, 141);
           border-radius: 3rem;
@@ -80,9 +115,10 @@
   }
 
   .card img {
-    width: 15em;
+    width: 100%;
     height: auto;
     float: right;
+    border-top-right-radius: 2em;
   }
   
   .datas {
@@ -94,6 +130,7 @@
     display: inline-block;
     padding-right: 1em;
     left: 0;
+    margin: 0em 0em 0em 0em;
   }
   
   .text {
@@ -117,11 +154,15 @@
   }
   
   .container {
-    margin: 1em 1rem !important;
+    // margin: 1em 1rem !important;
+    padding: 1em;
   }
   
   #transfer {
     color: white;
+    justify-content:center;
+    position: relative;
+    width: 100%;
   }
   
   #title {
@@ -154,10 +195,6 @@
     position: relative;
   }
   
-  #listings {
-    padding: 0;
-  }
-  
   #listings .ea-card {
     border-bottom: 3px solid #000000;
     -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -184,8 +221,8 @@
   }
   
   #listings .ea-card .container .button {
-    position: relative;
-    float: right;
+    // position: relative;
+    // float: right;
     margin-top: 1em;
     bottom: 0rem;
     z-index: 1;
@@ -231,7 +268,7 @@
     }
     .button {
       position: relative;
-      float: right;
+      // float: right;
       bottom: 0rem;
       margin-top: 1em;
     }
@@ -243,8 +280,8 @@
       margin: 0.5rem 0rem 0rem 0rem;
     }
     .button {
-      margin-right: 3rem;
-      margin-top: 1em;
+      position: relative;
+      left: 0;
     }
     .currencyinput {
       width: 80%;

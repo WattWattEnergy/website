@@ -1,10 +1,36 @@
 form {
   margin: 1em;
+  background-color: rgba(125, 188, 218, 0.712);
+  padding: 1em;
+  border-radius: 0.8em;
+}
+
+@media only screen and (min-width: 700px) {
+  form {
+    width: 50%;
+  }
 }
 
 button {
   padding: 1em;
   margin-right: 5em;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  right: 0;
+}
+
+@media only screen and (min-width: 700px) {
+  button {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 699px) {
+  button {
+    width: 50%;
+  }
 }
 
 input {

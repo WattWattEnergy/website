@@ -21,6 +21,7 @@ export class AddtofireService {
   ProjectsCollection: AngularFirestoreCollection<Projects>;
   Projects: Observable<Projects[]>;
   form: NgForm;
+  ProjectsDoc: AngularFirestoreDocument<Projects>;
 
   // public projects = {
   //   city: '',
@@ -54,6 +55,27 @@ export class AddtofireService {
   .catch(function(error) {
       console.error("Error adding document: ", error);
   });
+  }  
+
+  
+  Delete(project: Projects) {
+    // let project = form.value;
+    console.log("Deleting a project");
+    console.log(project);
+    this.ProjectsDoc = this.db.doc('Projects/projects');
+    console.log(this.ProjectsDoc);
+    this.ProjectsDoc.delete();
+    // this.db.collection("Projects").delete({
+    //   project,
+    //   timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    // })
+  // .then(function(docRef) {
+  //     console.log("Document written with ID: ", docRef.id);
+  //     console.log(docRef);
+  // })
+  // .catch(function(error) {
+  //     console.error("Error adding document: ", error);
+  // });
   }  
 
   createDefaultProject() {
