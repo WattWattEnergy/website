@@ -1,24 +1,50 @@
 form {
-  margin: 1em;
-  background-color: rgba(125, 188, 218, 0.712);
-  padding: 1em;
+  background-color: rgba(69, 173, 221, 0.712);
+  padding: 0.3em;
   border-radius: 0.8em;
 }
 
 @media only screen and (min-width: 700px) {
   form {
-    width: 50%;
+    width: 90%;
   }
 }
 
+form #slider {
+  margin-bottom: 1em;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+#interest {
+  font-size: 2em;
+}
+
+mat-slider {
+  width: 100%;
+}
+
+.radiocontrol {
+  width: 50%;
+  display: inline-block;
+  padding-right: 25em;
+  white-space: nowrap;
+}
+
+.resiradio {
+  margin-bottom: 0em;
+}
+
+.commradio {
+  margin-bottom: 0em;
+}
+
 button {
-  padding: 1em;
-  margin-right: 5em;
   position: relative;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  right: 0;
 }
 
 @media only screen and (min-width: 700px) {
@@ -35,10 +61,5 @@ button {
 
 input {
   padding: 0.5em 1em 0.5em 1em;
-  margin: 1em 0em 1em 0em;
-}
-
-h1 {
-  margin-left: 1em;
 }
 /*# sourceMappingURL=apply.component.css.map */

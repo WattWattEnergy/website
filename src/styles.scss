@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@eamode/eang/css/all.css";
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 .mode {
   & ea-tabs{
@@ -16,6 +17,7 @@
         }
     }
 }
+
 
   --ea-color-1: hsl(208, 39%, 34%);
   --ea-color-1-light:hsl(208, 39%, 40%);

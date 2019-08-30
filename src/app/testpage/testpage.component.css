@@ -15,7 +15,8 @@ div:hover span.only-show-on-hover {
 }
 
 #demo {
-  margin-left: 2em;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media only screen and (max-width: 650px) {
@@ -26,7 +27,9 @@ div:hover span.only-show-on-hover {
 }
 
 ::ng-deep .mat-dialog-container {
-  padding: 0em;
+  padding: 0em !important;
+  margin-top: 3em !important;
+  width: 90%;
 }
 
 ::ng-deep .cdk-overlay-container {

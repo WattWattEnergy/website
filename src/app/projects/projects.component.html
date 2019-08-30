@@ -25,12 +25,12 @@
           <div>
             <h2>{{ _project.project.city }}</h2>
             <div class="datas">
-                <span><p class="data" id="interest">{{ _project.project.interest }}% Annual Interest</p> <p>{{ _project.project.size }}</p> </span>
+                <span><p class="data" id="interest">{{ _project.project.interest }}% Annual Interest</p> <p>${{ _project.project.size }}</p> <h3>[{{ _project.project.type}}]</h3> <h3>{{ _project.project.term}} Year Debt Term</h3></span>
                 <!-- <a class="data">More..</a> -->
             </div>
 
           </div>
-            <span class="currencyinput">$<input type="text" name="currency" id="amount" placeholder="Amount to lend in USD"></span>
+            <div class="amountinput"><span class="currencyinput">$<input type="text" name="currency" id="amount" placeholder="Amount to lend in USD"></span></div>
           <div class="button">
             <button
 

@@ -3,7 +3,8 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import Web3 from 'web3';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import 'hammerjs';
 
 
 if (environment.production) {

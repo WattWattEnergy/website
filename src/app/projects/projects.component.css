@@ -23,7 +23,7 @@
 @media only screen and (min-width: 950px) {
   .button {
     margin-left: 1em;
-    width: 20%;
+    width: 40%;
   }
 }
 
@@ -43,6 +43,12 @@
 #interest {
   font-size: 2rem;
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 400px) {
+  #interest {
+    font-size: 1.5em;
+  }
 }
 
 .cardtop {
@@ -161,7 +167,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  width: 100%;
+  width: 40%;
 }
 
 #title {
@@ -281,6 +287,15 @@
   }
   .currencyinput {
     width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .submittal {
     padding: 0.5rem 1.5rem 0.5rem;

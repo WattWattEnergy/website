@@ -1,4 +1,4 @@
-import { Component, OnInit, Injectable } from '@angular/core';
+import { Component, OnInit, Injectable, HostListener, Inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { AngularFirestore } from 'angularfire2/firestore';
@@ -10,6 +10,8 @@ import { Projects } from '../shared/models/projects';
 import { MatTableDataSource, MatSort, MatPaginator, MatDialog, MatDialogConfig } from '@angular/material';
 import { ProjectsComponent } from 'src/app/projects/projects.component';
 import { ApplyComponent } from 'src/app/apply/apply.component';
+import { NotificationService } from '../shared/notification.service';
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material";
 
 
 @Component({
@@ -19,21 +21,37 @@ import { ApplyComponent } from 'src/app/apply/apply.component';
 })
 
 export class TestpageComponent implements OnInit {
-
+  @Inject(MAT_DIALOG_DATA) private data: any;
   Projects: Projects[];
   // constructor(private http:HttpClient, private db: AngularFireDatabase) { }
-  constructor(private _fireservice: AddtofireService, private dialog: MatDialog) {}
+  constructor(private _fireservice: AddtofireService, 
+    private dialog: MatDialog, 
+    private _notification: NotificationService,
+    // private dialogRef: MatDialogRef<TestpageComponent>
+  ) {}
 
   ngOnInit() { }
 
   onCreate() {
     const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = true;
+    dialogConfig.hasBackdrop = false;
+    dialogConfig.disableClose = false;
+    dialogConfig.autoFocus = true;
     dialogConfig.width = "30em;";
     dialogConfig.position = {
-      'top': '0'
+      'top': '1em'
     };
     this.dialog.open(ApplyComponent, dialogConfig);
+    
+  }
+
+  close() {
+    const dialogConfig = new MatDialogConfig();
+    // this.dialogRef.close();
+  }
+
+  @HostListener('window:keyup.esc') onKeyUp() {
+    // this.dialogRef.close();
   }
 
   // getProjects() {

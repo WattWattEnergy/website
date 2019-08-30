@@ -16,15 +16,18 @@ import { OnboardComponent } from './onboard/onboard.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatTabsModule } from '@angular/material/tabs';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Web3Service } from './shared/web3.service';
 import { WyreService } from './shared/wyre.service';
+import { NotificationService } from './shared/notification.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
 import { ReactiveFormsModule } from "@angular/forms";
+import { MatSliderModule } from '@angular/material/slider';
+import { MatCardModule } from '@angular/material/card';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
@@ -33,6 +36,10 @@ import { ProjectsComponent } from './projects/projects.component';
 import { FormsModule } from '@angular/forms';
 import { ApplyComponent } from './apply/apply.component';
 import * as firebase from 'firebase/app';
+import 'hammerjs';
+import { MaterialModule } from "./material/material.module";
+import { DatePipe } from '@angular/common';
+import { MAT_DIALOG_DATA } from '@angular/material';
 // import 'firebase/<PACKAGE>';
 // import firestore from 'firebase/firestore'
 // import firebase from 'firebase/app';
@@ -90,13 +97,16 @@ require("firebase/firestore");
     AngularFireModule,
     ReactiveFormsModule,
     MatDialogModule,
+    MatSliderModule,
+    MatCardModule,
+    MaterialModule,
     // AngularFireDatabaseModule,
     AngularFirestoreModule,
     FormsModule
     // TabsModule
   ],
   providers: [Web3Service,
-    {provide: LocationStrategy, useClass: HashLocationStrategy}, AngularFirestore, AddtofireService, WyreService],
+    {provide: LocationStrategy, useClass: HashLocationStrategy}, AngularFirestore, AddtofireService, WyreService, NotificationService, DatePipe, { provide: MAT_DIALOG_DATA, useValue: [] }],
   bootstrap: [AppComponent],
   entryComponents: [ApplyComponent]
 

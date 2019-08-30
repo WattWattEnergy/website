@@ -9,6 +9,13 @@ import { AddtofireService } from '../shared/addtofire.service';
 import { Projects } from '../shared/models/projects';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { AngularFireDatabaseModule, AngularFireObject, AngularFireList } from 'angularfire2/database';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatCardModule } from '@angular/material/card';
+import 'hammerjs';
+import { NotificationService } from '../shared/notification.service';
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material";
+// import { MatDialogRef } from '@angular/material';
+// import { MatTableDataSource, MatSort, MatPaginator, MatDialog, MatDialogConfig } from '@angular/material';
 
 
 export interface Project {
@@ -16,6 +23,8 @@ export interface Project {
   city?: string;
   size?: string;
   interest?: string;
+  type?: string;
+  term?: string;
 }
 
 @Component({
@@ -25,10 +34,23 @@ export interface Project {
 })
 export class ApplyComponent implements OnInit {
   // project: Project;
+  autoTicks = true;
+  disabled = false;
+  invert = false;
+  max = 15;
+  min = 0;
+  showTicks = true;
+  step = .1;
+  thumbLabel = true;
+  value = 0;
+  vertical = false;
+
   public project = {
     city: '',
     size: '',
-    interest: ''
+    interest: '',
+    type: '',
+    term: '',
   }
 
   @Input() Project: Project [];
@@ -37,7 +59,8 @@ export class ApplyComponent implements OnInit {
 
   
   // Projects: Projects[];
-  constructor(public _fireservice: AddtofireService, private fb: FormBuilder) { 
+  constructor(public _fireservice: AddtofireService, private fb: FormBuilder,
+    private notificationService: NotificationService) { 
     // this.Project = this._fireservice.collection('Projects').valueChanges();
   }
 
@@ -83,10 +106,21 @@ export class ApplyComponent implements OnInit {
     // console.log(form);
     // if(this.project.city != '' && this.project.size != ''){
       this._fireservice.onSubmit(form);
+      this.notificationService.success(':: Submitted successfully');
+      // await (function(){location.reload()});
+      // this.onClose();
+      // const dialogConfig = new MatDialogConfig();
+      // this.dialog.close(ApplyComponent, dialogConfig);
     //   this.project.city = '';
     //   this.project.size = '';
     // }
   }
+
+  // onClose() {
+  //   this.service.form.reset();
+  //   this.service.initializeFormGroup();
+  //   this.dialogRef.close();
+  // }
 
   // doc:docRef.id
 

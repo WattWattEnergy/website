@@ -11,6 +11,7 @@ export class Projects {
   id?: string;
   city?: string;
   size?: string;
+  type?: string;
 }
 
 @Injectable({
