@@ -1,8 +1,20 @@
-import { Component, HostListener, OnInit, InjectionToken, Injectable } from '@angular/core';
+import { Component, HostListener, OnInit, InjectionToken, Injectable, Inject } from '@angular/core';
 import Web3 from 'web3';
 import { Web3Service } from '../shared/web3.service';
 import { WyreService } from '../shared/wyre.service';
-
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { HttpClientModule } from '@angular/common/http';
+import * as firebase from 'firebase';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms'
+import { AddtofireService } from '../shared/addtofire.service';
+import { Projects } from '../shared/models/projects';
+import { MatTableDataSource, MatSort, MatPaginator, MatDialog, MatDialogConfig } from '@angular/material';
+import { ProjectsComponent } from 'src/app/projects/projects.component';
+import { ApplyComponent } from 'src/app/apply/apply.component';
+import { NotificationService } from '../shared/notification.service';
+import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
 
 
 
@@ -14,10 +26,12 @@ import { WyreService } from '../shared/wyre.service';
 })
 export class CrowdfundingComponent implements OnInit {
 
-  
+  @Inject(MAT_DIALOG_DATA) private data: any;
+  Projects: Projects[];
 
-
-  constructor(private _web3service: Web3Service, private _wyreservice: WyreService) {
+  constructor(private _web3service: Web3Service, private _wyreservice: WyreService, private _fireservice: AddtofireService, 
+    private dialog: MatDialog, 
+    private _notification: NotificationService,) {
 // import data services like web3
 // const web3 = new Web3("ws://localhost:8546");
    }
@@ -30,6 +44,19 @@ export class CrowdfundingComponent implements OnInit {
     // : new Web3(
     //     new Web3.providers.HttpProvider()
     //   );
+  }
+
+  onCreate() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.hasBackdrop = false;
+    dialogConfig.disableClose = false;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = "30em;";
+    dialogConfig.position = {
+      'top': '1em'
+    };
+    this.dialog.open(ApplyComponent, dialogConfig);
+    
   }
 
   // sendwyre() {

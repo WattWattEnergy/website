@@ -46,6 +46,12 @@ import { MAT_DIALOG_DATA } from '@angular/material';
 // import 'firebase/app';
 import { firestore } from 'firebase/app';
 import { auth } from 'firebase/app';
+import { UploadComponent } from './upload/upload.component';
+import { UploaderService } from "src/app/shared/uploader.service";
+import { DropzoneDirective } from './shared/dropzone.directive';
+import { UploadTaskComponent } from './upload-task/upload-task.component';
+import { AngularFireStorageModule } from "@angular/fire/storage";
+import { UploaderComponent } from './uploader/uploader.component';
 // import { OnboardComponent } from './onboard/onboard.component';
 // import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
@@ -78,7 +84,11 @@ require("firebase/firestore");
     TestpageComponent,
     OnboardComponent,
     ProjectsComponent,
-    ApplyComponent
+    ApplyComponent,
+    UploadComponent,
+    DropzoneDirective,
+    UploadTaskComponent,
+    UploaderComponent
   ],
   imports: [
     BrowserModule,
@@ -102,13 +112,14 @@ require("firebase/firestore");
     MaterialModule,
     // AngularFireDatabaseModule,
     AngularFirestoreModule,
+    AngularFireStorageModule,
     FormsModule
     // TabsModule
   ],
   providers: [Web3Service,
-    {provide: LocationStrategy, useClass: HashLocationStrategy}, AngularFirestore, AddtofireService, WyreService, NotificationService, DatePipe, { provide: MAT_DIALOG_DATA, useValue: [] }],
+    {provide: LocationStrategy, useClass: HashLocationStrategy}, AngularFirestore, AddtofireService, WyreService, NotificationService, UploaderService, DatePipe, UploadTaskComponent, { provide: MAT_DIALOG_DATA, useValue: [] }],
   bootstrap: [AppComponent],
-  entryComponents: [ApplyComponent]
+  entryComponents: [ApplyComponent, UploadTaskComponent]
 
 })
 export class AppModule {}

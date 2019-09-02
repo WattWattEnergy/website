@@ -11,7 +11,7 @@ import { MatTableDataSource, MatSort, MatPaginator, MatDialog, MatDialogConfig }
 import { ProjectsComponent } from 'src/app/projects/projects.component';
 import { ApplyComponent } from 'src/app/apply/apply.component';
 import { NotificationService } from '../shared/notification.service';
-import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material";
+import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
 
 
 @Component({

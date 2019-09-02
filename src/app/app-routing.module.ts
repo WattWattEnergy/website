@@ -11,6 +11,7 @@ import { TestpageComponent } from './testpage/testpage.component';
 import { OnboardComponent } from './onboard/onboard.component';
 import { ApplyComponent } from './apply/apply.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { UploadComponent } from './upload/upload.component';
 
 const routes: Routes =
 [{ path: '', redirectTo: 'landing', pathMatch: 'full' },
@@ -24,6 +25,7 @@ const routes: Routes =
 { path: 'testpage', component: TestpageComponent },
 { path: 'onboard', component: OnboardComponent },
 { path: 'projects', component: ProjectsComponent },
+{ path: 'upload', component: UploadComponent },
 { path: 'apply', component: ApplyComponent }];
 
 @NgModule({
