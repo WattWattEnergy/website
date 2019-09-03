@@ -29,9 +29,14 @@
 
 <div class="dropzone" 
      dropzone
+     (dropped)="uploadFile($event)"
+     >
+     <!-- <div class="dropzone" 
+     dropzone
      (hovered)="toggleHover($event)"
      (dropped)="uploadFile($event)"
-     [class.hovering]="isHovering">
+     [class.hovering]="isHovering"
+     > -->
 
      <h3>AngularFire Drop Zone</h3>
      <p>Drag and Drop a File</p>
@@ -44,12 +49,12 @@
 
 <div id="select">
   <!-- <input type="file" (change)="onFileSelected($event)"> -->
-  <button type="button" (click)="uploadFile()">Check Projects</button>
+  <button type="button" (click)="uploadFile($event)">Check Projects</button>
 </div>
 
 <div id="select">
     <!-- <input type="file" (change)="onFileSelected($event)"> -->
-    <button type="button" (click)="getUrl()">Check Projects</button>
+    <!-- <button type="button" (click)="getUrl()">Check Projects</button> -->
   </div>
   
 

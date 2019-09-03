@@ -9,7 +9,7 @@ form {
     }
 
     #slider {
-        margin-bottom: 1em;
+        // margin-bottom: 1em;
         // padding-right: 1em;
         margin-right: auto;
         margin-left: auto;
@@ -19,6 +19,12 @@ form {
     // @media only screen and (max-width: 680px) {
     //     margin: 0em;
     // }
+}
+
+h1 {
+    @media only screen and (max-width: 600px) {
+        display: none;
+    }
 }
 
 #interest {

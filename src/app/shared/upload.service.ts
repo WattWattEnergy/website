@@ -31,8 +31,8 @@ export class UploadService {
   }
 
   //method to retrieve download url
-  private getUrl(snap: firebase.storage.UploadTaskSnapshot) {
-    const url = snap.ref.getDownloadURL();
+  private async getUrl(snap: firebase.storage.UploadTaskSnapshot) {
+    const url = await snap.ref.getDownloadURL();
     this.url = url;  //store the URL
     console.log(this.url);
   }

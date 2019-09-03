@@ -46,10 +46,10 @@ export class TestpageComponent implements OnInit {
     this._upload.uploadFile(file);
   }
 
-  getUrl() {
-    console.log("uploading");
-    this._upload.getUrl();
-  }
+  // getUrl() {
+  //   console.log("uploading");
+  //   this._upload.getUrl();
+  // }
 
   onCreate() {
     const dialogConfig = new MatDialogConfig();
