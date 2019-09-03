@@ -2,6 +2,7 @@ import { Component, OnInit, Injectable, HostListener, Inject } from '@angular/co
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { AngularFirestore } from 'angularfire2/firestore';
+import { AngularFireStorage, AngularFireStorageReference } from '@angular/fire/storage';
 import { HttpClientModule } from '@angular/common/http';
 import * as firebase from 'firebase';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms'
@@ -12,6 +13,7 @@ import { ProjectsComponent } from 'src/app/projects/projects.component';
 import { ApplyComponent } from 'src/app/apply/apply.component';
 import { NotificationService } from '../shared/notification.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
+import { UploadService } from "../shared/upload.service";
 
 
 @Component({
@@ -21,16 +23,33 @@ import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
 })
 
 export class TestpageComponent implements OnInit {
+
   @Inject(MAT_DIALOG_DATA) private data: any;
+
   Projects: Projects[];
+  images: Observable<any[]>;
+
   // constructor(private http:HttpClient, private db: AngularFireDatabase) { }
-  constructor(private _fireservice: AddtofireService, 
+  constructor(
+    private _fireservice: AddtofireService, 
     private dialog: MatDialog, 
     private _notification: NotificationService,
+    private storage: AngularFireStorage,
+    private _upload: UploadService
     // private dialogRef: MatDialogRef<TestpageComponent>
   ) {}
 
   ngOnInit() { }
+
+  uploadFile(file) {
+    console.log("uploading");
+    this._upload.uploadFile(file);
+  }
+
+  getUrl() {
+    console.log("uploading");
+    this._upload.getUrl();
+  }
 
   onCreate() {
     const dialogConfig = new MatDialogConfig();
@@ -42,7 +61,6 @@ export class TestpageComponent implements OnInit {
       'top': '1em'
     };
     this.dialog.open(ApplyComponent, dialogConfig);
-    
   }
 
   close() {

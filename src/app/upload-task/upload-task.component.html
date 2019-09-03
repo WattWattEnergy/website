@@ -1,9 +1,9 @@
+<h1>Upload Task Component</h1>
+
 <div *ngIf="percentage | async as pct">
     <progress [value]="pct" max="100"></progress>
     {{ pct | number }}%
   </div>
-  
-  
   
   <div *ngIf="snapshot | async as snap">
   

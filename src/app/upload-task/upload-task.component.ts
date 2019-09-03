@@ -35,7 +35,9 @@ export class UploadTaskComponent implements OnInit {
   startUpload() {
 
     // The storage path
-    const path = `projects/SanJuan.jpeg`;
+    // const path = `projects/SanJuan.jpeg`;
+    // const path = `projects/${Date.now()}_${this.file.name}`;
+    const path = `projects/${Date.now()}_Solar.jpeg`;
 
     // Reference to storage bucket
     const ref = this.storage.ref(path);
@@ -46,10 +48,11 @@ export class UploadTaskComponent implements OnInit {
     // Progress monitoring
     this.percentage = this.task.percentageChanges();
 
-    this.snapshot   = this.task.snapshotChanges().pipe(
+    this.snapshot = this.task.snapshotChanges().pipe(
       tap(console.log),
       // The file's download URL
       finalize( async() =>  {
+        console.log("async");
         this.downloadURL = await ref.getDownloadURL().toPromise();
 
         this.db.collection('files').add( { downloadURL: this.downloadURL, path });

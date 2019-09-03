@@ -11,6 +11,7 @@ import { TestpageComponent } from './testpage/testpage.component';
 import { OnboardComponent } from './onboard/onboard.component';
 import { ApplyComponent } from './apply/apply.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { UploadTaskComponent } from './upload-task/upload-task.component';
 import { UploadComponent } from './upload/upload.component';
 
 const routes: Routes =
@@ -26,6 +27,7 @@ const routes: Routes =
 { path: 'onboard', component: OnboardComponent },
 { path: 'projects', component: ProjectsComponent },
 { path: 'upload', component: UploadComponent },
+{ path: 'uploadtask', component: UploadTaskComponent },
 { path: 'apply', component: ApplyComponent }];
 
 @NgModule({
