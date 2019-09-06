@@ -14,6 +14,13 @@ export class Projects {
   type?: string;
 }
 
+export class Active {
+  id?: string;
+  city?: string;
+  size?: string;
+  type?: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -21,6 +28,7 @@ export class Projects {
 export class AddtofireService {
   ProjectsCollection: AngularFirestoreCollection<Projects>;
   Projects: Observable<Projects[]>;
+  Active: Observable<Active[]>;
   form: NgForm;
   ProjectsDoc: AngularFirestoreDocument<Projects>;
 
@@ -33,12 +41,17 @@ export class AddtofireService {
 
   constructor(private db: AngularFirestore) { 
     this.Projects = this.db.collection('Projects').valueChanges();
+    this.Active = this.db.collection('Active').valueChanges();
   }
 
   getProjects() {
     return this.Projects;
     // console.log(this.Projects);
     // var li = document.createElement('li', initials )
+  }
+
+  getActives() {
+    return this.Active;
   }
 
   onSubmit(form) {

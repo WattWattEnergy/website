@@ -106,7 +106,7 @@ export class ApplyComponent implements OnInit {
     // console.log(form);
     // if(this.project.city != '' && this.project.size != ''){
       this._fireservice.onSubmit(form);
-      this.notificationService.success(':: Application Accepted! (For demo)');
+      this.notificationService.success(':: Application Pending! (For demo)');
       // await (function(){location.reload()});
       // this.onClose();
       // const dialogConfig = new MatDialogConfig();

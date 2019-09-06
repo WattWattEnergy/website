@@ -10,13 +10,13 @@ import * as firebase from 'firebase';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms'
 import { AddtofireService } from '../shared/addtofire.service';
 import { Projects } from '../shared/models/projects';
+import { Actives } from '../shared/models/actives';
 import { MatTableDataSource, MatSort, MatPaginator, MatDialog, MatDialogConfig } from '@angular/material';
 import { ProjectsComponent } from 'src/app/projects/projects.component';
+import { ActiveComponent } from 'src/app/active/active.component';
 import { ApplyComponent } from 'src/app/apply/apply.component';
 import { NotificationService } from '../shared/notification.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
-
-
 
 @Component({
   selector: 'app-crowdfunding',
@@ -28,6 +28,8 @@ export class CrowdfundingComponent implements OnInit {
 
   @Inject(MAT_DIALOG_DATA) private data: any;
   Projects: Projects[];
+  Actives: Actives[];
+
 
   constructor(private _web3service: Web3Service, private _wyreservice: WyreService, private _fireservice: AddtofireService, 
     private dialog: MatDialog, 

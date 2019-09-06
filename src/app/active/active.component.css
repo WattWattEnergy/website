@@ -1,0 +1,309 @@
+.status {
+  background: #d3d3d3;
+  padding: .25em .5em;
+  border-radius: 4rem;
+}
+
+.status span {
+  text-transform: uppercase;
+  color: darkgray;
+}
+
+.button {
+  margin-top: 0.75em;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (min-width: 950px) {
+  .button {
+    margin-left: 1em;
+    width: 40%;
+  }
+}
+
+.button :hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.mode p {
+  margin: 0em 0em 0em 0em;
+}
+
+#amount {
+  margin-left: 0.4em;
+}
+
+#interest {
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 400px) {
+  #interest {
+    font-size: 1.5em;
+  }
+}
+
+.cardtop {
+  width: 90%;
+  border-radius: 3em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.card {
+  border-top-right-radius: 2em;
+  border-radius: 3em;
+}
+
+#listings {
+  margin-right: 2em;
+  position: relative;
+  width: 100%;
+}
+
+#listings .ea-card {
+  border-bottom: 3px solid #000000;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-top: 2em;
+  width: 40%;
+}
+
+#listings .ea-card .projimage {
+  width: 100%;
+  border-top-right-radius: 2em;
+}
+
+#listings .ea-card .container {
+  padding-bottom: 3rem;
+}
+
+#listings .ea-card .container #currency {
+  width: 60%;
+  font-size: 2rem;
+}
+
+#listings .ea-card .container .button .submittal {
+  color: #56568d;
+  border-radius: 3rem;
+  padding: 0.5rem 1rem 0.5rem;
+  font-size: 2rem;
+}
+
+#listings .ea-card .container .button .submittal:hover {
+  -webkit-transform: scale(1.05);
+  /*Grows in size like Angry Birds button*/
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.ea-card-body {
+  padding: 0 1em;
+}
+
+[price] {
+  font-size: 2.25rem;
+  font-weight: 800;
+  -webkit-text-decoration: underline var(--ea-color-2);
+          text-decoration: underline var(--ea-color-2);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  float: right;
+  border-top-right-radius: 2em;
+}
+
+.datas {
+  overflow: hidden;
+}
+
+.data {
+  display: inline-block;
+  padding-right: 1em;
+  left: 0;
+  margin: 0em 0em 0em 0em;
+}
+
+.text {
+  margin-left: 3rem !important;
+}
+
+.tag {
+  position: relative;
+  width: 40%;
+  padding: 1rem 0.2rem 1rem 2rem;
+}
+
+.tag::after {
+  position: absolute;
+  -webkit-transition: all .05s ease-in-out;
+  transition: all .05s ease-in-out;
+  font-size: 1.5rem;
+  display: inline;
+  top: 30%;
+  vertical-align: middle;
+}
+
+.container {
+  padding: 1em;
+}
+
+#transfer {
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 40%;
+}
+
+#title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: AvenirNext-Medium;
+  margin-top: 4rem;
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.right-top {
+  position: fixed;
+  text-align: center;
+  right: 0;
+  top: 0;
+  padding: 1rem 0rem 1rem 0rem;
+}
+
+#signup {
+  background: white;
+  padding: 1rem 1rem 1rem 1rem;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 9em;
+  font-size: 0.9em;
+}
+
+.center {
+  position: relative;
+}
+
+#listings .ea-card {
+  border-bottom: 3px solid #000000;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-top: 2em;
+  width: 40%;
+}
+
+#listings .ea-card .projimage {
+  width: 100%;
+}
+
+#listings .ea-card .container {
+  padding-bottom: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+#listings .ea-card .container #currency {
+  width: 60%;
+  font-size: 2rem;
+}
+
+#listings .ea-card .container .button {
+  margin-top: 1em;
+  bottom: 0rem;
+  z-index: 1;
+}
+
+#listings .ea-card .container .button .submittal {
+  color: #56568d;
+  border-radius: 3rem;
+  padding: 0.5rem 1rem 0.5rem;
+  font-size: 2rem;
+}
+
+#listings .ea-card .container .button .submittal:hover {
+  -webkit-transform: scale(1.05);
+  /*Grows in size like Angry Birds button*/
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+@media only screen and (max-width: 950px) {
+  .metamask {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 0.7rem;
+    margin: auto;
+    position: relative;
+  }
+  .wyre {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 0.7rem;
+    margin: auto;
+    position: relative;
+  }
+  .tag {
+    margin-bottom: 1rem;
+  }
+  .cardss {
+    margin: 3rem 2rem 1rem;
+  }
+  .button {
+    position: relative;
+    bottom: 0rem;
+    margin-top: 1em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #title {
+    font-size: 2rem;
+    margin: 0.5rem 0rem 0rem 0rem;
+  }
+  .button {
+    position: relative;
+    left: 0;
+  }
+  .currencyinput {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .submittal {
+    padding: 0.5rem 1.5rem 0.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+h2 {
+  margin-bottom: 0;
+}
+/*# sourceMappingURL=active.component.css.map */

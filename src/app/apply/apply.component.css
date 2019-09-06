@@ -11,10 +11,15 @@ form {
 }
 
 form #slider {
-  margin-bottom: 1em;
   margin-right: auto;
   margin-left: auto;
   width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    display: none;
+  }
 }
 
 #interest {

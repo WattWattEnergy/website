@@ -10,11 +10,11 @@
 </head>
 
 <hr>
-<h1 style="text-decoration: underline; margin-left: 2em;">Pending Projects:</h1>
+<h1 style="text-decoration: underline; margin-left: 2em;">Active Projects:</h1>
 
-<div *ngIf="project?.length > 0;else noProjects">
+<div *ngIf="active?.length > 0;else noActives">
 <div  multi-col id="listings">
-<div *ngFor="let _project of project" class="cardtop">
+<div *ngFor="let _active of active" class="cardtop">
     <div class="card">
         <img
           src="../../assets/images/MexicoComm.jpeg"
@@ -23,11 +23,11 @@
         />
         <div class="container">
           <div>
-            <h2>{{ _project.project.city }}</h2>
+            <h2>{{ _active.active.city }}</h2>
             <div class="datas">
-                <span><p class="data" id="interest">{{ _project.project.interest }}% Annual Interest</p> <p>${{ _project.project.size }}</p> 
+                <span><p class="data" id="interest">{{ _active.active.interest }}% Annual Interest</p> <p>${{ _active.active.size }}</p> 
                   <hr>
-                  <h3>[{{ _project.project.type}}]</h3> <h3>{{ _project.project.term}} Year Debt Term</h3></span>
+                  <h3>[{{ _active.active.type}}]</h3> <h3>{{ _active.active.term}} Year Debt Term</h3></span>
                 <!-- <a class="data">More..</a> -->
             </div>
 
@@ -43,10 +43,6 @@
             >
               Fund!
             </button>
-
-            <!-- <button (click)="Delete(this.project)" id="transfer">
-            Delete
-            </button> -->
           </div>
         </div>
       </div>
@@ -54,7 +50,7 @@
   </div>
   </div>
 
-  <ng-template #noProjects>
+  <ng-template #noActives>
       <hr>
       <h5>No listed projects!</h5>
     </ng-template>

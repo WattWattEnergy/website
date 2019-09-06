@@ -52,6 +52,7 @@ import { DropzoneDirective } from './shared/dropzone.directive';
 import { UploadTaskComponent } from './upload-task/upload-task.component';
 import { AngularFireStorageModule } from "@angular/fire/storage";
 import { UploaderComponent } from './uploader/uploader.component';
+import { ActiveComponent } from './active/active.component';
 // import { OnboardComponent } from './onboard/onboard.component';
 // import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
@@ -88,7 +89,8 @@ require("firebase/firestore");
     UploadComponent,
     DropzoneDirective,
     UploadTaskComponent,
-    UploaderComponent
+    UploaderComponent,
+    ActiveComponent
   ],
   imports: [
     BrowserModule,
