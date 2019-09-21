@@ -13,6 +13,7 @@ import { ApplyComponent } from './apply/apply.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { UploadTaskComponent } from './upload-task/upload-task.component';
 import { UploadComponent } from './upload/upload.component';
+import { LoadingSpinnerComponent } from './ui/loading-spinner/loading-spinner.component';
 
 const routes: Routes =
 [{ path: '', redirectTo: 'landing', pathMatch: 'full' },
@@ -28,6 +29,7 @@ const routes: Routes =
 { path: 'projects', component: ProjectsComponent },
 { path: 'upload', component: UploadComponent },
 { path: 'uploadtask', component: UploadTaskComponent },
+{ path: 'loadingspinner', component: LoadingSpinnerComponent },
 { path: 'apply', component: ApplyComponent }];
 
 @NgModule({

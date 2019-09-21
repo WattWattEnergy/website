@@ -2,6 +2,10 @@ a:-webkit-any-link {
     text-decoration: none;
 }
 
+.icon {
+    margin-right: 0.5em;
+}
+
 #total {
     margin: 0 4% 0 4%;
 }
@@ -62,6 +66,7 @@ p{
     display: flex; 
     justify-content: center;
     height: 10.5em;
+    // background: url("../../assets/images/transparent.png")
 }
 
 .pic {

@@ -53,6 +53,8 @@ import { UploadTaskComponent } from './upload-task/upload-task.component';
 import { AngularFireStorageModule } from "@angular/fire/storage";
 import { UploaderComponent } from './uploader/uploader.component';
 import { ActiveComponent } from './active/active.component';
+import { LoadingSpinnerComponent } from './ui/loading-spinner/loading-spinner.component';
+import { ItemService } from './shared/item.service';
 // import { OnboardComponent } from './onboard/onboard.component';
 // import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
@@ -90,7 +92,8 @@ require("firebase/firestore");
     DropzoneDirective,
     UploadTaskComponent,
     UploaderComponent,
-    ActiveComponent
+    ActiveComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -119,7 +122,7 @@ require("firebase/firestore");
     // TabsModule
   ],
   providers: [Web3Service,
-    {provide: LocationStrategy, useClass: HashLocationStrategy}, AngularFirestore, AddtofireService, WyreService, NotificationService, UploaderService, DatePipe, UploadTaskComponent, { provide: MAT_DIALOG_DATA, useValue: [] }],
+    {provide: LocationStrategy, useClass: HashLocationStrategy}, AngularFirestore, AddtofireService, WyreService, NotificationService, UploaderService, DatePipe, ItemService, UploadTaskComponent, { provide: MAT_DIALOG_DATA, useValue: [] }],
   bootstrap: [AppComponent],
   entryComponents: [ApplyComponent, UploadTaskComponent]
 

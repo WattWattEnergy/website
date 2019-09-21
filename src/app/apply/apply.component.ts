@@ -25,6 +25,7 @@ export interface Project {
   interest?: string;
   type?: string;
   term?: string;
+  img?: string;
 }
 
 @Component({
@@ -51,6 +52,7 @@ export class ApplyComponent implements OnInit {
     interest: '',
     type: '',
     term: '',
+    img: 'https://firebasestorage.googleapis.com/v0/b/wattwatt-c4160.appspot.com/o/projects%2FRooftop.jpeg?alt=media&token=d8865319-f9cb-42b9-a5cd-2e2db9032f82',
   }
 
   @Input() Project: Project [];
@@ -106,7 +108,7 @@ export class ApplyComponent implements OnInit {
     // console.log(form);
     // if(this.project.city != '' && this.project.size != ''){
       this._fireservice.onSubmit(form);
-      this.notificationService.success(':: Application Pending! (For demo)');
+      this.notificationService.success(':: Application Pending! (Esc to close)');
       // await (function(){location.reload()});
       // this.onClose();
       // const dialogConfig = new MatDialogConfig();

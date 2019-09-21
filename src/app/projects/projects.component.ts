@@ -11,11 +11,13 @@ import Web3 from 'web3';
 import { Web3Service } from '../shared/web3.service';
 import { WyreService } from '../shared/wyre.service';
 import { MatDialogModule } from '@angular/material/dialog';
+import { LoadingSpinnerComponent } from '../ui/loading-spinner/loading-spinner.component';
 
 export class Project {
   // id?: string;
   city?: string;
   size?: string;
+  img?: string;
 }
 
 @Component({
@@ -28,12 +30,17 @@ export class ProjectsComponent implements OnInit {
   
   // project: Project[];
   @Input() project: Project[];
+
+  showSpinner: boolean = true;
+
   
   constructor(private _fireservice: AddtofireService, private _web3service: Web3Service, private _wyreservice: WyreService) { }
   
   ngOnInit() {
+    // this._fireservice.subscribe(() => this.showSpinner = false)
     this._fireservice.getProjects().subscribe(Projects => {
       // console.log(Projects);
+      this.showSpinner = false;
       this.project = Projects;
     })
   }

@@ -121,9 +121,14 @@
       & .header-img {
         position: absolute;
         top: -6vw;
-        width: 39%;
+        width: 29em;
         right: -7vw;
         height: 40rem;
+
+        @media only screen and (max-width: 790px) {
+          width: 39%;
+          height: 26em;
+        }
 
         @media only screen and (max-width: 600px) {
           position: absolute;

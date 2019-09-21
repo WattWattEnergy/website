@@ -1,10 +1,31 @@
 .mat-tab-nav-bar {
     white-space: nowrap;
     overflow: auto;
-  }
+}
+
+ea-body {
+    margin-top: 0em;
+}
+
+ea-main {
+    margin-top: 0em;
+}
+
+body {
+    background-image: url("../../assets/images/grey_arrows.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    //   background: radial-gradient(circle, black, white);
+}
+
+// p {
+//     color: white;
+// }
 
 .title {
     margin: 0.4em 1em 1em 1em;
+    // color: white;
 }
 
 #top {
@@ -15,12 +36,28 @@
     list-style: none !important;
 }
 
+#equation {
+    width: 25em;
+    height: auto;
+    margin-bottom: 2em;
+
+    @media only screen and (max-width: 600px) {
+        width: 70%;
+        height: auto;
+    }
+}
+
 ul {
     list-style: none !important;
 }
 
 li {
-    list-style: none !important;
+    list-style-type: square;
+    margin-left: 0.5em;
+}
+
+h4 {
+    text-decoration: underline;
 }
 
 .tabs {
@@ -65,6 +102,11 @@ a.tablinks {
 
 .tabcontent {
     padding-top: 2em;
+
+    @media only screen and (min-width: 600px) {
+    margin-right: 10em;
+    margin-left: 10em;
+    }
 }
 
 .mat-tab-label-container {

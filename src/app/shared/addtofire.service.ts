@@ -12,6 +12,7 @@ export class Projects {
   city?: string;
   size?: string;
   type?: string;
+  img?: string;
 }
 
 export class Active {
@@ -19,6 +20,7 @@ export class Active {
   city?: string;
   size?: string;
   type?: string;
+  img?: string;
 }
 
 @Injectable({

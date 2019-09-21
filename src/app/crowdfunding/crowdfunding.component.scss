@@ -2,6 +2,48 @@ form {
   margin: 2em 2em 2em 2em;
 }
 
+#intro {
+  text-align: center;
+}
+
+// @media only screen and (min-width: 1100px) {
+//   #intro {
+//     // text-align: center;
+//     padding-left: 40%;
+//   }
+  
+//   ul {
+//     margin-bottom: 3em;
+//   }
+  
+//   li {
+//     position: relative;
+//     list-style-type: circle;
+//     text-align: left;
+//     // padding-left: 30%;
+//   }
+// }
+
+#try {
+  margin-left: 2em;
+  text-align: left;
+  position: relative;
+}
+
+ul {
+  list-style-type: circle;
+  list-style-position: inside;
+  margin-bottom: 3em;
+  margin-left: 2em;
+}
+
+li {
+  position: relative;
+  list-style-type: circle;
+  text-align: left;
+  // padding-left: 30%;
+}
+
 div span.only-show-on-hover {
   visibility: hidden;
 }

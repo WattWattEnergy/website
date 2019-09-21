@@ -17,7 +17,7 @@
 <div *ngFor="let _project of project" class="cardtop">
     <div class="card">
         <img
-          src="../../assets/images/MexicoComm.jpeg"
+          [src]= "_project.project.img"
           alt="Comm"
           class="projectphoto"
         />

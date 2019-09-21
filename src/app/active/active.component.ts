@@ -11,7 +11,7 @@ import * as firebase from 'firebase';
 import Web3 from 'web3';
 import { Web3Service } from '../shared/web3.service';
 import { WyreService } from '../shared/wyre.service';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 
 export class Active {
   // id?: string;

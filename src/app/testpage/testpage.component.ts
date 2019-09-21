@@ -14,6 +14,8 @@ import { ApplyComponent } from 'src/app/apply/apply.component';
 import { NotificationService } from '../shared/notification.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
 import { UploadService } from "../shared/upload.service";
+import { ItemService } from '../shared/item.service';
+import { LoadingSpinnerComponent } from '../ui/loading-spinner/loading-spinner.component';
 
 
 @Component({
@@ -29,17 +31,24 @@ export class TestpageComponent implements OnInit {
   Projects: Projects[];
   images: Observable<any[]>;
 
+  showSpinner: boolean = true;
+  items: any;
+
   // constructor(private http:HttpClient, private db: AngularFireDatabase) { }
   constructor(
     private _fireservice: AddtofireService, 
     private dialog: MatDialog, 
     private _notification: NotificationService,
     private storage: AngularFireStorage,
-    private _upload: UploadService
+    private _upload: UploadService,
+    private itemSvc: ItemService
     // private dialogRef: MatDialogRef<TestpageComponent>
   ) {}
 
-  ngOnInit() { }
+  ngOnInit() { 
+    // this.items = this.itemSvc.getItemsList({limitToLast: 5})
+    this.items.subscribe(() => this.showSpinner = false)
+  }
 
   uploadFile(file) {
     console.log("uploading");
