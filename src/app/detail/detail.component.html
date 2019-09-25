@@ -1,0 +1,16 @@
+<div class="card">
+  <p style="text-decoration: underline; text-align: center; margin-top: 0.5em;">Application Details</p>
+
+  <div *ngIf="project?.length > 0;else noProjects">
+    <div *ngFor="let _project of project" class="cardtop">
+        <h2>Risk: {{ _project.detail.risk }}</h2>
+    </div>
+  </div>
+    
+  <ng-template #noProjects>
+    <h3>No Details</h3>
+  </ng-template>
+
+</div>
+
+

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 // import {MDCTabScroller} from '@material/tab-scroller';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import { NgModule } from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
-import {NgbTabset, NgbTab, NgbTabContent, NgbTabTitle} from '@ng-bootstrap/ng-bootstrap';
+import { CommonModule } from '@angular/common';
+import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbTabset, NgbTab, NgbTabContent, NgbTabTitle } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-education',

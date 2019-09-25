@@ -3,6 +3,7 @@ export interface Projects {
     city?: string;
     size?: string;
     interest?: string;
+    img?: string;
   }
 
   export class Projects {
@@ -10,4 +11,5 @@ export interface Projects {
     city?: string;
     size?: string;
     interest?: string;
+    img?: string;
   }

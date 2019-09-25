@@ -1,0 +1,56 @@
+<!-- <div>
+    <div class="one" [innerHtml]="htmlToAdd"></div>
+</div> -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>WattWatt- Decentralized Lending</title>
+</head>
+
+<hr>
+<h1 style="text-decoration: underline; margin-left: 2em;">Active Projects:</h1>
+
+<div *ngIf="active?.length > 0;else noActives">
+<div  multi-col id="listings">
+<div *ngFor="let _active of active" class="cardtop">
+    <div class="card">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/wattwatt-c4160.appspot.com/o/projects%2Fcommroof2.jpeg?alt=media&token=11af7b27-2bb1-4181-9275-8023eca7eb20"
+          alt="Comm"
+          class="projectphoto"
+        />
+        <div class="container">
+          <div>
+            <h2>{{ _active.active.city }}</h2>
+            <div class="datas">
+                <span><p class="data" id="interest">{{ _active.active.interest }}% Annual Interest</p> <p>${{ _active.active.size }}</p> 
+                  <hr>
+                  <h3>[{{ _active.active.type}}]</h3> <h3>{{ _active.active.term}} Year Debt Term</h3></span>
+                <!-- <a class="data">More..</a> -->
+            </div>
+
+          </div>
+            <div class="amountinput"><span class="currencyinput">$<input type="text" name="currency" id="amount" placeholder="Amount to lend in USD"></span></div>
+          <div class="button">
+            <button
+
+              onclick = "Transfer(amount)"
+              id="transfer"
+              class="submittal"
+              target="_blank;"
+            >
+              Fund!
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <ng-template #noActives>
+      <hr>
+      <h5>No listed projects!</h5>
+  </ng-template>

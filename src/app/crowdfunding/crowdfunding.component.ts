@@ -1,20 +1,22 @@
-import { Component, HostListener, OnInit, InjectionToken, Injectable, Input, Inject } from '@angular/core';
+import { Component, HostListener, OnInit, InjectionToken, Injectable, Inject } from '@angular/core';
 import Web3 from 'web3';
 import { Web3Service } from '../shared/web3.service';
 import { WyreService } from '../shared/wyre.service';
-
-export const WEB3 = new InjectionToken<Web3>('web3', {
-  providedIn: 'root',
-  factory: () => {
-    try {
-      const provider = ('ethereum' in window) ? window['ethereum'] : Web3.givenProvider;
-      return new Web3(provider);
-    } catch (err) {
-      throw new Error('Non-Ethereum browser detected. You should consider trying Mist or MetaMask!');
-    }
-  }
-});
-
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { HttpClientModule } from '@angular/common/http';
+import * as firebase from 'firebase';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms'
+import { AddtofireService } from '../shared/addtofire.service';
+import { Projects } from '../shared/models/projects';
+import { Actives } from '../shared/models/actives';
+import { MatTableDataSource, MatSort, MatPaginator, MatDialog, MatDialogConfig } from '@angular/material';
+import { ProjectsComponent } from 'src/app/projects/projects.component';
+import { ActiveComponent } from 'src/app/active/active.component';
+import { ApplyComponent } from 'src/app/apply/apply.component';
+import { NotificationService } from '../shared/notification.service';
+import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
 
 @Component({
   selector: 'app-crowdfunding',
@@ -24,10 +26,14 @@ export const WEB3 = new InjectionToken<Web3>('web3', {
 })
 export class CrowdfundingComponent implements OnInit {
 
-  @Input('amount') amount:number;
+  @Inject(MAT_DIALOG_DATA) private data: any;
+  Projects: Projects[];
+  Actives: Actives[];
 
 
-  constructor(private _web3service: Web3Service, private _wyreservice: WyreService, @Inject(WEB3) private web3: Web3) {
+  constructor(private _web3service: Web3Service, private _wyreservice: WyreService, private _fireservice: AddtofireService, 
+    private dialog: MatDialog, 
+    private _notification: NotificationService,) {
 // import data services like web3
 // const web3 = new Web3("ws://localhost:8546");
    }
@@ -48,6 +54,19 @@ export class CrowdfundingComponent implements OnInit {
   //   //     new Web3.providers.HttpProvider()
   //   //   );
   // }
+
+  onCreate() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.hasBackdrop = false;
+    dialogConfig.disableClose = false;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = "30em;";
+    dialogConfig.position = {
+      'top': '1em'
+    };
+    this.dialog.open(ApplyComponent, dialogConfig);
+    
+  }
 
   // sendwyre() {
   //   this._wyreservice.sendwyre();
@@ -458,165 +477,6 @@ export class CrowdfundingComponent implements OnInit {
     var PayContract = web3.eth.contract(payContractABI);
     var payContract = PayContract.at(DaiContract);
   
-<<<<<<< HEAD
-=======
-    payContract
-      .transfer(dst, wad, { gas: 500000 }, console.log)
-  
-      var accountInterval = setInterval(function() {
-        // Check if account has changed
-        if (web3.eth.accounts[0] !== src) {
-          src = web3.eth.accounts[0];
-          // Call a function to update the UI with the new account
-          // getDonationsByOwner(userAccount)
-          //     .then(displayDonations);
-        }
-      }, 10000);
-    }
-  
-    // PayT() {
-    //   console.log("Sending Fake Ether!");
-    //   // const Web3 = require('web3');
-    //   var escrowContract = "0xc25a4f50dbb567d79adbc66344da5d72d6511cc3";
-  
-    //   var src = web3.eth.accounts[0];
-    //   var payee = "0x76c67F724d155bf2725350bDF809460f5636bEc9";
-  
-    //   var Amount = 0.1;
-    //   var B = web3.toWei(Amount, "ether");
-      
-    //   var payContractABI = [
-    //     {
-    //       constant: false,
-    //       inputs: [
-    //         {
-    //           name: "recipient",
-    //           type: "address"
-    //         }
-    //       ],
-    //       name: "transferPrimary",
-    //       outputs: [],
-    //       payable: false,
-    //       stateMutability: "nonpayable",
-    //       type: "function"
-    //     },
-    //     {
-    //       constant: false,
-    //       inputs: [
-    //         {
-    //           name: "payee",
-    //           type: "address"
-    //         }
-    //       ],
-    //       name: "withdraw",
-    //       outputs: [],
-    //       payable: false,
-    //       stateMutability: "nonpayable",
-    //       type: "function"
-    //     },
-    //     {
-    //       constant: true,
-    //       inputs: [],
-    //       name: "primary",
-    //       outputs: [
-    //         {
-    //           name: "",
-    //           type: "address"
-    //         }
-    //       ],
-    //       payable: false,
-    //       stateMutability: "view",
-    //       type: "function"
-    //     },
-    //     {
-    //       constant: true,
-    //       inputs: [
-    //         {
-    //           name: "payee",
-    //           type: "address"
-    //         }
-    //       ],
-    //       name: "depositsOf",
-    //       outputs: [
-    //         {
-    //           name: "",
-    //           type: "uint256"
-    //         }
-    //       ],
-    //       payable: false,
-    //       stateMutability: "view",
-    //       type: "function"
-    //     },
-    //     {
-    //       constant: false,
-    //       inputs: [
-    //         {
-    //           name: "payee",
-    //           type: "address"
-    //         }
-    //       ],
-    //       name: "deposit",
-    //       outputs: [],
-    //       payable: true,
-    //       stateMutability: "payable",
-    //       type: "function"
-    //     },
-    //     {
-    //       anonymous: false,
-    //       inputs: [
-    //         {
-    //           indexed: true,
-    //           name: "payee",
-    //           type: "address"
-    //         },
-    //         {
-    //           indexed: false,
-    //           name: "weiAmount",
-    //           type: "uint256"
-    //         }
-    //       ],
-    //       name: "Deposited",
-    //       type: "event"
-    //     },
-    //     {
-    //       anonymous: false,
-    //       inputs: [
-    //         {
-    //           indexed: true,
-    //           name: "payee",
-    //           type: "address"
-    //         },
-    //         {
-    //           indexed: false,
-    //           name: "weiAmount",
-    //           type: "uint256"
-    //         }
-    //       ],
-    //       name: "Withdrawn",
-    //       type: "event"
-    //     }
-    //   ];
-    //   var PayContract = web3.eth.contract(payContractABI);
-    //   var payContract = PayContract.at(escrowContract);
-    //   console.log(payContract);
-    //   payContract.deposit(payee, { gas: 2000000, value: B }, console.log);
-  
-    //   var accountInterval = setInterval(function() {
-    //     // Check if account has changed
-    //     if (web3.eth.accounts[0] !== src) {
-    //       src = web3.eth.accounts[0];
-    //     }
-    //   }, 10000);
-    // }
-  
-
-
-    // run() {
-  //   console.log('run2');
-  // }
-  //THIS WORKED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
->>>>>>> c1e240ef407f2fc7182ff87e27236f2515ac73f6
 //   @HostListener('document:onclick', ['$event']) 
 //     onclick(connectM) {
 //       console.log('here');

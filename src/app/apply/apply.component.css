@@ -1,18 +1,70 @@
 form {
-  margin: 1em;
+  background-color: rgba(69, 173, 221, 0.712);
+  padding: 0.3em;
+  border-radius: 0.8em;
+}
+
+@media only screen and (min-width: 700px) {
+  form {
+    width: 90%;
+  }
+}
+
+form #slider {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    display: none;
+  }
+}
+
+#interest {
+  font-size: 2em;
+}
+
+mat-slider {
+  width: 100%;
+}
+
+.radiocontrol {
+  width: 50%;
+  display: inline-block;
+  padding-right: 25em;
+  white-space: nowrap;
+}
+
+.resiradio {
+  margin-bottom: 0em;
+}
+
+.commradio {
+  margin-bottom: 0em;
 }
 
 button {
-  padding: 1em;
-  margin-right: 5em;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+@media only screen and (min-width: 700px) {
+  button {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 699px) {
+  button {
+    width: 50%;
+  }
 }
 
 input {
   padding: 0.5em 1em 0.5em 1em;
-  margin: 1em 0em 1em 0em;
-}
-
-h1 {
-  margin-left: 1em;
 }
 /*# sourceMappingURL=apply.component.css.map */

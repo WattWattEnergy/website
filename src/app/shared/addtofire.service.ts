@@ -11,6 +11,16 @@ export class Projects {
   id?: string;
   city?: string;
   size?: string;
+  type?: string;
+  img?: string;
+}
+
+export class Active {
+  id?: string;
+  city?: string;
+  size?: string;
+  type?: string;
+  img?: string;
 }
 
 @Injectable({
@@ -20,7 +30,9 @@ export class Projects {
 export class AddtofireService {
   ProjectsCollection: AngularFirestoreCollection<Projects>;
   Projects: Observable<Projects[]>;
+  Active: Observable<Active[]>;
   form: NgForm;
+  ProjectsDoc: AngularFirestoreDocument<Projects>;
 
   // public projects = {
   //   city: '',
@@ -31,12 +43,17 @@ export class AddtofireService {
 
   constructor(private db: AngularFirestore) { 
     this.Projects = this.db.collection('Projects').valueChanges();
+    this.Active = this.db.collection('Active').valueChanges();
   }
 
   getProjects() {
     return this.Projects;
     // console.log(this.Projects);
     // var li = document.createElement('li', initials )
+  }
+
+  getActives() {
+    return this.Active;
   }
 
   onSubmit(form) {
@@ -54,6 +71,27 @@ export class AddtofireService {
   .catch(function(error) {
       console.error("Error adding document: ", error);
   });
+  }  
+
+  
+  Delete(project: Projects) {
+    // let project = form.value;
+    console.log("Deleting a project");
+    console.log(project);
+    this.ProjectsDoc = this.db.doc('Projects/projects');
+    console.log(this.ProjectsDoc);
+    this.ProjectsDoc.delete();
+    // this.db.collection("Projects").delete({
+    //   project,
+    //   timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    // })
+  // .then(function(docRef) {
+  //     console.log("Document written with ID: ", docRef.id);
+  //     console.log(docRef);
+  // })
+  // .catch(function(error) {
+  //     console.error("Error adding document: ", error);
+  // });
   }  
 
   createDefaultProject() {

@@ -3,22 +3,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>WattWatt- Decentralized Lending</title>
-  <!-- <base href="https://vincenzbuhler.com/WattWatt/portal" /> -->
-  <!-- <link rel="stylesheet" href="style.css" /> -->
 </head>
+
+<!-- <div>
+  Testing Images
+  <img src="https://firebasestorage.googleapis.com/v0/b/wattwatt-c4160.appspot.com/o/projects%2F1567539190194_us%20population.jpg?alt=media&token=b498fb7b-f9f6-4a07-8fd9-18dccac8daff" alt="">
+</div> -->
+
+<!-- <div class="gal-list-view">
+    <div style="margin: 20px">
+        <div class="responsive" style="margin: 20px">
+            <div class="gallery" *ngFor="let image of images | async">
+              <a target="_blank">
+                <img src="https://firebasestorage.googleapis.com/v0/b/wattwatt-c4160.appspot.com/o/projects%2F1567539190194_us%20population.jpg?alt=media&token=b498fb7b-f9f6-4a07-8fd9-18dccac8daff" alt="" width="600" height="400">
+              </a>
+              <div class="desc">Img Title</div>
+            </div>
+        </div>         
+    </div>
+  </div> -->
 
 <!-- <div>
   <div class="one" [innerHtml]="htmlToAdd"></div>
 </div> -->
+<app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
+
+<div class="dropzone" 
+     dropzone
+     (dropped)="uploadFile($event)"
+     >
+     <!-- <div class="dropzone" 
+     dropzone
+     (hovered)="toggleHover($event)"
+     (dropped)="uploadFile($event)"
+     [class.hovering]="isHovering"
+     > -->
+
+     <h3>AngularFire Drop Zone</h3>
+     <p>Drag and Drop a File</p>
+    <div class="file">
+      <label class="file-label">
+        <input class="file-input" type="file" (change)="uploadFile($event)">
+      </label>
+    </div>
+</div>
 
 <div id="select">
   <!-- <input type="file" (change)="onFileSelected($event)"> -->
-  <!-- <button type="button" (click)="getProjects()">Check Projects</button> -->
+  <button type="button" (click)="uploadFile($event)">Check Projects</button>
 </div>
 
-<app-apply></app-apply>
+<div id="select">
+    <!-- <input type="file" (change)="onFileSelected($event)"> -->
+    <!-- <button type="button" (click)="getUrl()">Check Projects</button> -->
+  </div>
+  
 
-<app-projects [project]="Projects"></app-projects>
+<!-- <app-apply></app-apply> -->
+<!-- <button mat-raised-button id="demo" (click)=onCreate()>Submit a New Project</button>
+<app-projects [project]="Projects"></app-projects> -->
+
+
+
 <!-- <div>
   {{Projects}}
 </div>

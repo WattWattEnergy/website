@@ -13,4 +13,30 @@ div:hover span.only-show-on-hover {
 #select {
   margin-top: 1em;
 }
+
+#demo {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media only screen and (max-width: 650px) {
+  #cdk-overlay-0 {
+    width: 80%;
+    max-width: 100em;
+  }
+}
+
+::ng-deep .mat-dialog-container {
+  padding: 0em !important;
+  margin-top: 3em !important;
+  width: 90%;
+}
+
+::ng-deep .cdk-overlay-container {
+  padding: 0em;
+}
+
+::ng-deep .cdk-overlay-0 {
+  padding: 0em;
+}
 /*# sourceMappingURL=testpage.component.css.map */

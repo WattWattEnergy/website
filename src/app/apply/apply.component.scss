@@ -1,17 +1,89 @@
 form {
-    margin: 1em;
+    // margin: 1em;
+    background-color: rgba(69, 173, 221, 0.712);
+    padding: 0.3em;
+    border-radius: 0.8em;
+
+    @media only screen and (min-width: 700px) {
+        width:90%;
+    }
+
+    #slider {
+        // margin-bottom: 1em;
+        // padding-right: 1em;
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%;
+    }
+
+    // @media only screen and (max-width: 680px) {
+    //     margin: 0em;
+    // }
 }
 
+h1 {
+    @media only screen and (max-width: 600px) {
+        display: none;
+    }
+}
+
+#interest {
+    font-size: 2em;
+}
+
+mat-slider {
+    width: 100%;
+  }
+
+.radiocontrol {
+    width: 50%;
+    display: inline-block;
+    padding-right: 25em;
+    white-space: nowrap
+}
+
+.resiradio {
+    margin-bottom: 0em;
+}
+
+.commradio {
+    margin-bottom: 0em;
+}
+
+//   .mat-slider-vertical {
+//     height: 300px;
+//   }
+
+//   .mat-slider-horizontal {
+//     width: 300px;
+//   }
+
 button {
-    padding: 1em;
-    margin-right: 5em;
+    // padding: 1em;
+    // margin-right: 5em;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+    // right: 0;
+
+    @media only screen and (min-width: 700px) {
+        width:50%;
+    }
+
+    @media only screen and (max-width: 699px) {
+        width:50%;
+
+    }
 }
 
 input {
     padding: 0.5em 1em 0.5em 1em;
-    margin: 1em 0em 1em 0em;
+    // margin: 1em 0em 1em 0em;
 }
 
-h1 {
-    margin-left: 1em;
-}
+
+
+// h1 {
+//     margin-left: 1em;
+// }

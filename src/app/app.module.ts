@@ -16,14 +16,18 @@ import { OnboardComponent } from './onboard/onboard.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatDialogModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Web3Service } from './shared/web3.service';
 import { WyreService } from './shared/wyre.service';
+import { NotificationService } from './shared/notification.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
 import { ReactiveFormsModule } from "@angular/forms";
+import { MatSliderModule } from '@angular/material/slider';
+import { MatCardModule } from '@angular/material/card';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
@@ -32,12 +36,27 @@ import { ProjectsComponent } from './projects/projects.component';
 import { FormsModule } from '@angular/forms';
 import { ApplyComponent } from './apply/apply.component';
 import * as firebase from 'firebase/app';
+import 'hammerjs';
+import { MaterialModule } from "./material/material.module";
+import { DatePipe } from '@angular/common';
+import { MAT_DIALOG_DATA } from '@angular/material';
 // import 'firebase/<PACKAGE>';
 // import firestore from 'firebase/firestore'
 // import firebase from 'firebase/app';
 // import 'firebase/app';
 import { firestore } from 'firebase/app';
 import { auth } from 'firebase/app';
+import { UploadComponent } from './upload/upload.component';
+import { UploaderService } from "src/app/shared/uploader.service";
+import { DropzoneDirective } from './shared/dropzone.directive';
+import { UploadTaskComponent } from './upload-task/upload-task.component';
+import { AngularFireStorageModule } from "@angular/fire/storage";
+import { UploaderComponent } from './uploader/uploader.component';
+import { ActiveComponent } from './active/active.component';
+import { LoadingSpinnerComponent } from './ui/loading-spinner/loading-spinner.component';
+import { ItemService } from './shared/item.service';
+import { CurateComponent } from './curate/curate.component';
+import { DetailComponent } from './detail/detail.component';
 // import { OnboardComponent } from './onboard/onboard.component';
 // import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
@@ -70,7 +89,15 @@ require("firebase/firestore");
     TestpageComponent,
     OnboardComponent,
     ProjectsComponent,
-    ApplyComponent
+    ApplyComponent,
+    UploadComponent,
+    DropzoneDirective,
+    UploadTaskComponent,
+    UploaderComponent,
+    ActiveComponent,
+    LoadingSpinnerComponent,
+    CurateComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
@@ -88,14 +115,20 @@ require("firebase/firestore");
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireModule,
     ReactiveFormsModule,
+    MatDialogModule,
+    MatSliderModule,
+    MatCardModule,
+    MaterialModule,
     // AngularFireDatabaseModule,
     AngularFirestoreModule,
+    AngularFireStorageModule,
     FormsModule
     // TabsModule
   ],
   providers: [Web3Service,
-    {provide: LocationStrategy, useClass: HashLocationStrategy}, AngularFirestore, AddtofireService, WyreService],
+    {provide: LocationStrategy, useClass: HashLocationStrategy}, AngularFirestore, AddtofireService, WyreService, NotificationService, UploaderService, DatePipe, ItemService, UploadTaskComponent, { provide: MAT_DIALOG_DATA, useValue: [] }],
   bootstrap: [AppComponent],
+  entryComponents: [ApplyComponent, UploadTaskComponent]
 
 })
 export class AppModule {}

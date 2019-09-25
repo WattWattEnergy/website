@@ -1,12 +1,21 @@
-import { Component, OnInit, Injectable } from '@angular/core';
+import { Component, OnInit, Injectable, HostListener, Inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { AngularFirestore } from 'angularfire2/firestore';
+import { AngularFireStorage, AngularFireStorageReference } from '@angular/fire/storage';
 import { HttpClientModule } from '@angular/common/http';
 import * as firebase from 'firebase';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms'
 import { AddtofireService } from '../shared/addtofire.service';
 import { Projects } from '../shared/models/projects';
+import { MatTableDataSource, MatSort, MatPaginator, MatDialog, MatDialogConfig } from '@angular/material';
+import { ProjectsComponent } from 'src/app/projects/projects.component';
+import { ApplyComponent } from 'src/app/apply/apply.component';
+import { NotificationService } from '../shared/notification.service';
+import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
+import { UploadService } from "../shared/upload.service";
+import { ItemService } from '../shared/item.service';
+import { LoadingSpinnerComponent } from '../ui/loading-spinner/loading-spinner.component';
 
 
 @Component({
@@ -17,11 +26,60 @@ import { Projects } from '../shared/models/projects';
 
 export class TestpageComponent implements OnInit {
 
-  Projects: Projects[];
-  // constructor(private http:HttpClient, private db: AngularFireDatabase) { }
-  constructor(private _fireservice: AddtofireService) {}
+  @Inject(MAT_DIALOG_DATA) private data: any;
 
-  ngOnInit() { }
+  Projects: Projects[];
+  images: Observable<any[]>;
+
+  showSpinner: boolean = true;
+  items: any;
+
+  // constructor(private http:HttpClient, private db: AngularFireDatabase) { }
+  constructor(
+    private _fireservice: AddtofireService, 
+    private dialog: MatDialog, 
+    private _notification: NotificationService,
+    private storage: AngularFireStorage,
+    private _upload: UploadService,
+    private itemSvc: ItemService
+    // private dialogRef: MatDialogRef<TestpageComponent>
+  ) {}
+
+  ngOnInit() { 
+    // this.items = this.itemSvc.getItemsList({limitToLast: 5})
+    this.items.subscribe(() => this.showSpinner = false)
+  }
+
+  uploadFile(file) {
+    console.log("uploading");
+    this._upload.uploadFile(file);
+  }
+
+  // getUrl() {
+  //   console.log("uploading");
+  //   this._upload.getUrl();
+  // }
+
+  onCreate() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.hasBackdrop = false;
+    dialogConfig.disableClose = false;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = "30em;";
+    dialogConfig.position = {
+      'top': '1em'
+    };
+    this.dialog.open(ApplyComponent, dialogConfig);
+  }
+
+  close() {
+    const dialogConfig = new MatDialogConfig();
+    // this.dialogRef.close();
+  }
+
+  @HostListener('window:keyup.esc') onKeyUp() {
+    // this.dialogRef.close();
+  }
 
   // getProjects() {
   //   console.log("fetching!");

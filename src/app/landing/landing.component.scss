@@ -2,11 +2,15 @@ a:-webkit-any-link {
     text-decoration: none;
 }
 
+.icon {
+    margin-right: 0.5em;
+}
+
 #total {
     margin: 0 4% 0 4%;
 }
 
-  ul {
+ul {
     margin: 0;
     padding: 0;
     & li {
@@ -19,7 +23,7 @@ a:-webkit-any-link {
         width: 100%;
       }
     }
-  }
+}
 
 p{
     --ea-font-1-family: 'Roboto';
@@ -31,20 +35,7 @@ p{
     margin-bottom: 2em;
 }
 
-.btext {
-    margin: 0 !important;
-    color: white;
-    padding-left: 0.6em;
-}
-
-// #head {
-//     padding: 8em 0 1em 1em;
-//     background-color: rgba(194, 194, 233, 0.678);
-//     border-radius: 2em;
-//     width: 60%;
-// }
-
- h1 {
+h1 {
     font-size: 3em;
     font-family: var(--ea-h1-font-family,var(--ea-font-1));
     font-weight: lighter;
@@ -77,6 +68,7 @@ p{
     display: flex; 
     justify-content: center;
     height: 10.5em;
+    // background: url("../../assets/images/transparent.png")
 }
 
 .pic {
@@ -87,4 +79,8 @@ p{
 
 .mode span {
     margin-right: 2em;
+}
+
+#set2 {
+    margin-top: 2em;
 }
