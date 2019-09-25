@@ -476,7 +476,7 @@ export class CrowdfundingComponent implements OnInit {
   
     var PayContract = web3.eth.contract(payContractABI);
     var payContract = PayContract.at(DaiContract);
-  
+  }
 //   @HostListener('document:onclick', ['$event']) 
 //     onclick(connectM) {
 //       console.log('here');
@@ -523,5 +523,6 @@ export class CrowdfundingComponent implements OnInit {
   
   // });
 
-}
 
+
+}
