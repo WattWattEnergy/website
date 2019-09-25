@@ -55,6 +55,8 @@ import { UploaderComponent } from './uploader/uploader.component';
 import { ActiveComponent } from './active/active.component';
 import { LoadingSpinnerComponent } from './ui/loading-spinner/loading-spinner.component';
 import { ItemService } from './shared/item.service';
+import { CurateComponent } from './curate/curate.component';
+import { DetailComponent } from './detail/detail.component';
 // import { OnboardComponent } from './onboard/onboard.component';
 // import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
@@ -93,7 +95,9 @@ require("firebase/firestore");
     UploadTaskComponent,
     UploaderComponent,
     ActiveComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    CurateComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

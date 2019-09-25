@@ -1,0 +1,46 @@
+<h1>Welcome to Coordinated Due Diligence</h1>
+
+<div id="content">
+<span>
+<div id="applied">
+    <div id="applyt">
+        <h2>Projects Pending</h2>
+        <p>Vote to accept or deny projects:</p>
+    </div>
+
+    <div class="aproject">
+        <div *ngIf="project?.length > 0;else noProjects">
+            <div class="listings" >
+                <div *ngFor="let _project of project" class="cardtop" class="card">
+                    <div class="container">
+                        <div>
+                            <h2>{{ _project.project.city }}</h2>
+                            <div class="datas">
+                            <span><p class="data" id="interest">{{ _project.project.interest }}% Annual Interest</p> <p>${{ _project.project.size }}</p> 
+                            <hr>
+                            <h3>[{{ _project.project.type}}]</h3> <h3>{{ _project.project.term}} Year Debt Term</h3></span>
+                      </div>
+                      <div id="detail">
+                            <!-- <div class="amountinput"><span class="currencyinput">$<input type="text" name="currency" id="amount" placeholder="Amount to lend in USD"></span></div> -->
+                          <button (click)="choose(document)" id="document" value="{{ _project.project.document }}">Details</button>
+                      </div>
+                      <div>
+                        <div class="buttons">
+                            <span> <button id="accept">Vote Accept</button> <button id="decline">Vote Decline</button> </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-template #noProjects>
+        <hr>
+        <h5>No listed projects!</h5>
+    </ng-template>
+</div>
+
+<app-detail id="detailapp"></app-detail>
+</span>
+</div>

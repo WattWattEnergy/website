@@ -10,7 +10,7 @@ a:-webkit-any-link {
     margin: 0 4% 0 4%;
 }
 
-  ul {
+ul {
     margin: 0;
     padding: 0;
     & li {
@@ -23,7 +23,7 @@ a:-webkit-any-link {
         width: 100%;
       }
     }
-  }
+}
 
 p{
     --ea-font-1-family: 'Roboto';
@@ -33,7 +33,7 @@ p{
     padding: 8em 0 0 0;
 }
 
- h1 {
+h1 {
     font-size: 3em;
     font-family: var(--ea-h1-font-family,var(--ea-font-1));
     font-weight: lighter;
@@ -81,4 +81,8 @@ p{
 
 .mode span {
     margin-right: 2em;
+}
+
+#set2 {
+    margin-top: 2em;
 }
