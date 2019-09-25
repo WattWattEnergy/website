@@ -29,8 +29,10 @@ p{
     --ea-font-1-family: 'Roboto';
 }
 
-#head {
-    padding: 8em 0 0 0;
+#banner {
+    width: 40%;
+    height: auto;
+    margin-bottom: 2em;
 }
 
 h1 {
@@ -49,6 +51,10 @@ h1 {
     color: var(--ea-color,var(--ea-h2-color,var(--ea-text-color)));
  }
 
+ #fund {
+     padding-right: 2em;
+ }
+
 #main {
     margin: 10em 2em 0 0;
 }
@@ -56,10 +62,6 @@ h1 {
 .text {
     text-align: justify;
     padding: 0 1em 0 1em;
-}
-
-#summary {
-    // margin: 1em 1em 0 1em;
 }
 
 .ea-card-header {
@@ -73,10 +75,6 @@ h1 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-.ea-card-content {
-    
 }
 
 .mode span {

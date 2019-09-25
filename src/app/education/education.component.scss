@@ -32,9 +32,9 @@ body {
     margin: 0 2rem 0 2rem;
 }
 
-#tabbings {
-    list-style: none !important;
-}
+// #tabbings {
+//     list-style: none !important;
+// }
 
 #equation {
     width: 25em;
@@ -180,3 +180,7 @@ a.tablinks {
         width:20%;
         height:20%;
     }
+
+.link {
+    font-size: 1.5em;
+}

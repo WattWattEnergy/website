@@ -53,8 +53,19 @@ li {
 div span.only-show-on-hover {
   visibility: hidden;
 }
+<<<<<<< HEAD
 div:hover span.only-show-on-hover  {
   visibility: visible;
+=======
+
+.button {
+  margin-top: 1em;
+}
+
+#topnav1 {
+  position: relative;
+  margin-bottom: 0.4rem;
+>>>>>>> master
 }
 
 #select {

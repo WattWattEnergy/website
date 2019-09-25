@@ -4,7 +4,11 @@ import { HttpClient } from '@angular/common/http';
 import Big from 'big.js';
 declare let Web3: any;
 declare let web3;
+declare let require: any;
+declare let window: any;
+// let tokenABI = require('./escrowContract.json');
 
+// import * as Web3 from 'web3';
 // export const WEB3 = new InjectionToken<Web3>('web3');
 // const Web3 = require("web3");
 // import { tsGen } from "ts-generator";
@@ -31,26 +35,46 @@ export class Web3Service {
 
   constructor() { }
 
+  check1 () {
+    console.log('check1');
+  }
+
+  Metamask() {
+    console.log('Connecting Metamask');
+    web3 = new Web3();
+    console.log(web3);
+    web3.setProvider(new web3.providers.HttpProvider());
+    console.log(web3.setProvider);
+    web3.eth.getAccounts();
+    // .then(function(accounts) {
+    // console.log(accounts);
+    // });
+  };
 
   run() {
     console.log('Web3 Service Works!');
   }
 
-  Connect() {
-    console.log('Connected');
-    // web3 = new Web3();
-    // web3.setProvider(new web3.providers.HttpProvider());
-    // web3.eth.getAccounts().then(function(accounts) {
-    // console.log(accounts);
-    // });
-}
+  accounts(accounts) {
+    console.log(accounts);
+  }
+
+  async Connect() {
+    console.log('Connecting Metamask');
+    web3 = new Web3();
+    web3.setProvider(new web3.providers.HttpProvider());
+    web3.eth.getAccounts();
+
+    const account = await this.accounts(this.accounts);
+  }
 
 
-  PayE() {
+  PayE(amount) {
+    let that = this;
     console.log("Sending Ether!");
     const Web3 = require('web3');
     var escrowContract = "0x2ac4a0788FfCc9fb1E50F8BF81535974D8A1b710";
-
+    console.log(escrowContract);
     // web3 = window.web3
     //   ? new Web3(window.web3.currentProvider)
     //   : new Web3(
@@ -59,15 +83,17 @@ export class Web3Service {
 
     var src = web3.eth.accounts[0];
     console.log(src);
-
     var payee = "0x76c67F724d155bf2725350bDF809460f5636bEc9";
+    console.log(payee);
     var Amount = 0.1;
     //     var Amount =  document.getElementById('amount').value;
     // var wad =  web3.toWei(Amount, "ether");
     // console.log(Amount);
     var B = web3.toWei(Amount, "ether");
     // var B = 1;
-    var payContractABI = [
+    console.log(B);
+    
+    let payContractABI = [
     {
       constant: false,
       inputs: [
@@ -178,11 +204,19 @@ export class Web3Service {
       type: "event"
     }
   ];
-
+  
   var PayContract = web3.eth.contract(payContractABI);
+  console.log(PayContract);
   var payContract = PayContract.at(escrowContract);
+  console.log(payContract);
   payContract.deposit(payee, { gas: 200000, value: B }, console.log);
-
+  // instance.transferFund(
+  //   _transferTo,
+  //   {
+  //   from:_transferFrom,
+  //   value:web3.toWei(_amount, “ether”)
+  //   });
+    
   var accountInterval = setInterval(function() {
     // Check if account has changed
     if (web3.eth.accounts[0] !== src) {
@@ -215,6 +249,7 @@ Pay() {
   var wad = web3.toWei(Amount, "ether");
   // var wad = Amount;
   console.log(Amount);
+  console.log(wad);
   var payContractABI = [
     {
       constant: true,
@@ -542,7 +577,9 @@ Pay() {
   ];
 
   var PayContract = web3.eth.contract(payContractABI);
+  console.log(PayContract);
   var payContract = PayContract.at(DaiContract);
+  console.log(payContract);
 
   payContract
     .transfer(dst, wad, { gas: 500000 }, console.log)

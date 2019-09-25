@@ -31,8 +31,16 @@ p {
   --ea-font-1-family: 'Roboto';
 }
 
-#head {
-  padding: 8em 0 0 0;
+#banner {
+  width: 40%;
+  height: auto;
+  margin-bottom: 2em;
+}
+
+.btext {
+  margin: 0 !important;
+  color: white;
+  padding-left: 0.6em;
 }
 
 h1 {
@@ -49,6 +57,10 @@ h2 {
   font-weight: lighter;
   margin-bottom: .4em;
   color: var(--ea-color, var(--ea-h2-color, var(--ea-text-color)));
+}
+
+#fund {
+  padding-right: 2em;
 }
 
 #main {

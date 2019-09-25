@@ -11,6 +11,11 @@ import { Component, OnInit } from '@angular/core';
       [render-text]="true"
       style="display: block;"
     ></pdf-viewer>
+  //   <div style="height: 100%; width= 100%;">
+  //   <object style="height: 100%; width= 100%;" data="../assets/images/whitepaper.pdf" type="application/pdf">
+  //   <iframe style="height: 100%; width= 100%;" src="https://docs.google.com/viewer?url=../assets/images/whitepaper.pdf&embedded=true"></iframe>
+  // </object>
+  //   </div>
   `,
   styleUrls: ['./whitepaper.component.scss']
 })
